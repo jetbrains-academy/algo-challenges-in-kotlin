@@ -8,6 +8,6 @@ class Tests {
         val result = findAnyOccurrenceOf01("000101")
         assertTrue(result == 2 || result == 4)
 
-        assertEquals(findAnyOccurrenceOf01("000111"), 3)
+        assertEquals(findAnyOccurrenceOf01("000111"), 2)
     }
 }
