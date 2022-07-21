@@ -3,7 +3,7 @@
 You are given a sequence of bits ('0' and '1'). The sequence starts with '0' and ends with '1'.
 Find any occurrence of '1' coming right after '0'. Return an index of '0' that has '1' right after it.
 
-In [Task.kt](course://lesson1/task1/src/Task.kt) you already have slow solution implemented using standard library function.
+In [Task.kt](course://Divide and Conquer/Opposite Values/src/Task.kt) you already have slow solution implemented using standard library function.
 Make it work faster to pass the tests.
 
 <div class="hint">
