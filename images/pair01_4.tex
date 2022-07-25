@@ -1,0 +1,5 @@
+\foreach \s [count=\i from 0] in {0,~,~,~,~,~,~,~,~,~,0,~,~,~,~,~,~,~,~,1} {
+	\draw[mc] (0.5*\i,0) rectangle (0.5*\i + 0.5, 0.5);
+	\node[draw=none, text=mc] at (0.5*\i + 0.25, 0.25) {$\s$};
+}
+\draw[hc] (0.5*10,0) rectangle (0.5*20,0.5);
