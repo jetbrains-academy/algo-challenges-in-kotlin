@@ -6,3 +6,5 @@
 /build
 /*/*/build
 /.coursecreator
+*.DS_Store
+images/tmp.tex
