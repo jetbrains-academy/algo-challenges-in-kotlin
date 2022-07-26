@@ -29,9 +29,20 @@ class HiddenTests {
         private fun powersOfTwo(n: Int): IntArray {
             return IntArray(n) { 1 shl it }
         }
+
+        private fun collectIntoArray(vararg lists: IntArray): IntArray {
+            return lists.map { it.toList() }.flatten().toIntArray()
+        }
+
+        private fun validateTest(v: IntArray): Boolean {
+            return v.all { it > 0 }
+        }
     }
 
     private fun testCoins(v: IntArray, message: String) {
+        if (!validateTest(v)) {
+            throw AssertionError("Test is invalid")
+        }
         val expected = correctSolution(v)
         val found = findMinimumChange(v)
         assertEquals(expected, found, message)
@@ -55,6 +66,33 @@ class HiddenTests {
     }
 
     @ParameterizedTest
+    @ValueSource(ints = [10, 40, 100, 200, 300])
+    fun testRandomSmall(n: Int) {
+        val k = rng.nextInt(5) + 2
+        testCoins(
+            collectIntoArray(
+                generateRandomSequence(n - k, 200),
+                powersOfTwo(k)
+            ),
+            "Random test with values up to 200 of size $n"
+        )
+    }
+
+
+    @ParameterizedTest
+    @ValueSource(ints = [500, 1000, 3000, 5000, 10000, 15000])
+    fun testRandomMedium(n: Int) {
+        val k = rng.nextInt(10) + 3
+        testCoins(
+            collectIntoArray(
+                generateRandomSequence(n - k, 4000),
+                powersOfTwo(k)
+            ),
+            "Random test with values up to 4000 of size $n"
+        )
+    }
+
+    @ParameterizedTest
     @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ValueSource(ints = [MAX_N, MAX_N - 1])
     fun testTimeLimitRandom(n: Int) {
@@ -67,13 +105,22 @@ class HiddenTests {
     @ValueSource(ints = [MAX_N, MAX_N - 1])
     fun testTimeLimitNonTrivial(n: Int) {
         val k = 10 + rng.nextInt(10)
-        val v = listOf(
-            powersOfTwo(k).toList(),
-            generateRandomSequence(n - k, Int.MAX_VALUE).toList()
+        val v = collectIntoArray(
+            powersOfTwo(k),
+            generateRandomSequence(n - k, Int.MAX_VALUE)
         )
-            .flatten()
-            .toIntArray();
         v.shuffle(rng)
         testCoins(v, "Big random non-trivial test")
+    }
+
+    @Test
+    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
+    fun testMaxAnswer() {
+        val v = collectIntoArray(
+            powersOfTwo(31),
+            IntArray(MAX_N - 31) { Int.MAX_VALUE }
+        )
+        v.shuffle(rng)
+        testCoins(v, "Big array, max answer")
     }
 }
