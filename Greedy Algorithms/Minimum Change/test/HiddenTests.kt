@@ -53,7 +53,9 @@ class HiddenTests {
         val v = mutableListOf<Int>()
         var testsRun = 0
         fun generateAllSequences(left: Int, last: Int) {
-            testCoins(v.shuffled(rng).toIntArray(), "All sequences with sum up to 50")
+            v.shuffled(rng).toIntArray().also {
+                testCoins(it, "All sequences with sum up to 50: ${it.contentToString()}")
+            }
             testsRun++
             for (current in last..left) {
                 v.add(current)
