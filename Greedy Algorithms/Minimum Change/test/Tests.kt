@@ -5,24 +5,24 @@ class Test {
 
     @Test
     fun testSample1() {
-        checkSample(16, intArrayOf(1, 2, 3, 4, 5))
+        checkSample(16, intArrayOf(1, 2, 3, 4, 5), "First sample")
     }
 
     @Test
     fun testSample2() {
-        checkSample(3, intArrayOf(1, 1))
+        checkSample(3, intArrayOf(1, 1), "Second sample")
     }
 
     @Test
     fun testSample3() {
-        checkSample(4, intArrayOf(100, 1, 2))
+        checkSample(4, intArrayOf(100, 1, 2), "Third sample")
     }
 
-    private fun checkSample(expected: Long, v: IntArray) {
+    private fun checkSample(expected: Long, v: IntArray, message: String) {
         assertEquals(
             expected,
             findMinimumChange(v),
-            "Third sample ${v.contentToString()}",
+            "$message ${v.contentToString()}",
         )
     }
 }
