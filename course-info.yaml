@@ -5,3 +5,4 @@ summary: 100 Algorithmic Challenges in Kotlin
 programming_language: Kotlin
 content:
 - Divide and Conquer
+- Greedy Algorithms
