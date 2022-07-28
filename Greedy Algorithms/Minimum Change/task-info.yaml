@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 49
-    length: 161
+    length: 157
     placeholder_text: return v.sumOf { it.toLong() } + 1
 - name: test/Tests.kt
   visible: true
