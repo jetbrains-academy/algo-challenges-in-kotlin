@@ -14,7 +14,7 @@ class HiddenTests {
         private fun correctSolution(v: IntArray): Long {
             var ans = 1L
             for (value in v.sorted()) {
-                if (value > ans + 1) {
+                if (value > ans) {
                     return ans
                 }
                 ans += value
