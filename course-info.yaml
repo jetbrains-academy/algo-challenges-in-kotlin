@@ -4,6 +4,6 @@ language: English
 summary: 100 Algorithmic Challenges in Kotlin
 programming_language: Kotlin
 content:
+- Warmup
 - Divide and Conquer
 - Greedy Algorithms
-- Warmup
