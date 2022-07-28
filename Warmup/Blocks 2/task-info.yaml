@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+- name: test/Tests.kt
+  visible: true
+- name: src/Blocks.kt
+  visible: true
+- name: src/BlocksImpl.kt
+  visible: true
+  placeholders:
+  - offset: 212
+    length: 303
+    placeholder_text: TODO("Not yet implemented")

@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 59
+    length: 22
+    placeholder_text: // Create created class instance and return it
+- name: test/Tests.kt
+  visible: true
+- name: src/Blocks.kt
+  visible: true
+- name: src/BlocksImpl.kt
+  visible: true
+  placeholders:
+  - offset: 1
+    length: 225
+    placeholder_text: // You can implement your class here
