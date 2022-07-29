@@ -1,11 +1,13 @@
-/.gradle
+.gradle
 /.idea
 /gradle
 /gradlew
 /gradlew.bat
-/build
-/*/*/build
+/**/build
 /.coursecreator
 *.DS_Store
 images/tmp.tex
 images/main_dark.pdf
+/**/task-remote-info.yaml
+/**/lesson-remote-info.yaml
+/**/task.md

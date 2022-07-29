@@ -1,19 +1,9 @@
+<%css util/common.css %>
+
 # Minimum Unchangeable Amount
 
 Given $n$ coins of denominations $c_1, \dotsc, c_n$,
 find the minimum amount that cannot be changed using these coins.
-
-<style>
-.samples th, .samples td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 15px;
-  width: 300px;
-  /*max-width: 100%;*/
-  /*text-align: center;*/
-  /*alignment: center;*/
-};
-</style>
 
 <div class="samples">
 

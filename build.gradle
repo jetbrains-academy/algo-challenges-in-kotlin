@@ -91,4 +91,12 @@ configure(subprojects.findAll { it.name != 'util' }) {
         implementation project(':util').sourceSets.main.output
         testImplementation project(':util').sourceSets.test.output
     }
+
+    task buildTaskMD {
+        File templateFile = new File(projectDir, "task_template.md");
+        File targetFile = new File(projectDir, "task.md");
+        if (templateFile.exists()) {
+            ResolveTemplate.resolveTemplate(templateFile, targetFile, rootDir)
+        }
+    }
 }
