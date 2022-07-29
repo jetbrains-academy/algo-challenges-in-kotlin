@@ -12,3 +12,5 @@ files:
   - offset: 212
     length: 303
     placeholder_text: TODO("Not yet implemented")
+- name: task_template.md
+  visible: false

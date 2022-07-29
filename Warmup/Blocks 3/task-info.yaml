@@ -40,3 +40,5 @@ files:
               TODO("Not yet implemented")
           }
       }
+- name: task_template.md
+  visible: false

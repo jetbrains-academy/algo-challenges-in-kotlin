@@ -10,4 +10,8 @@ files:
   visible: false
 - name: test/Tests.kt
   visible: true
+- name: solution.md
+  visible: false
+- name: task_template.md
+  visible: false
 solution_hidden: false

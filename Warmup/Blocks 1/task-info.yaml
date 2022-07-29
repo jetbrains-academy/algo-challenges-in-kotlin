@@ -16,3 +16,5 @@ files:
   - offset: 1
     length: 225
     placeholder_text: // You can implement your class here
+- name: task_template.md
+  visible: false
