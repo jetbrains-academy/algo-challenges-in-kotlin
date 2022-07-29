@@ -1,4 +1,4 @@
-<%css util/common.css %>
+<%css "util/common.css" %>
 
 # 0-1 Blocks, 2
 

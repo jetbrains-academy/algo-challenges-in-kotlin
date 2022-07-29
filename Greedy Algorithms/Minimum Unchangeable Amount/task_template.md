@@ -1,4 +1,4 @@
-<%css util/common.css %>
+<%css "util/common.css" %>
 
 # Minimum Unchangeable Amount
 
