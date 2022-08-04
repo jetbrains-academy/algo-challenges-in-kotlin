@@ -12,9 +12,10 @@ integers $a_1, \dotsc, a_k$, then
 $$n=a_1+\dotsb+a_k \ge 1+\dotsb+k = \frac{k(k+1)}{2}.$$
 The converse is also true: if $n \ge  \frac{k(k+1)}{2}$, then
 one can represent $n$ as the sum of $k$ distinct integers.
-Indeed, let $\delta=n-\frac{k(k+1)}{2}>0$. Then, $n$ is equal
+Indeed, let $\delta=n-\frac{k(k+1)}{2} \ge 0$. Then, $n$ is equal
 to the sum of the following integers:
 $$1, 2, \dotsc, k-1,k+\delta.$$
+It is not difficult to see that they are all different from each other.
 
 The corresponding algorithm is straightforward:
 find the largest value of $k$ such that $\frac{k(k+1)}{2} \le n$.
