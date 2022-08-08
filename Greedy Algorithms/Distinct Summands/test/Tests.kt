@@ -9,6 +9,9 @@ class Test {
         assertTrue(actual.size >= expectedSize) {
             "[n = $n] expected list size = $expectedSize, found ${actual.size}"
         }
+        assertTrue(actual.toCollection(mutableSetOf()).size == actual.size) {
+            "[n = $n] numbers are not distinct"
+        }
         assertEquals(n.toLong(), actual.sumOf { it.toLong() }) {
             "[n = $n] sum of summands equals to ${actual.sumOf { it.toLong() }}, but expected $n"
         }
