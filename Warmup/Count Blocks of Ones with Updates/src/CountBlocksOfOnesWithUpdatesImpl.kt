@@ -28,6 +28,11 @@ class CountBlocksOfOnesWithUpdatesImpl(seq: CharSequence) : CountBlocksOfOnesWit
         if (isBlockStart(seq[index], next)) {
             blocks--
         }
+        if (seq[index] == '0') {
+            ones++
+        } else {
+            ones--
+        }
         seq[index] = if (seq[index] == '0') '1' else '0'
         if (isBlockStart(prev, seq[index])) {
             blocks++

@@ -19,7 +19,7 @@ files:
     length: 13
     placeholder_text: TODO("not implemented")
   - offset: 664
-    length: 484
+    length: 582
     placeholder_text: TODO("not implemented")
 - name: task_template.md
   visible: false
