@@ -57,7 +57,7 @@ class HiddenTests {
     @Test
     @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun randomMax() {
-        testRandom(MAX_N, MAX_Q);
+        testRandom(MAX_N, MAX_Q)
     }
 
     @Test
