@@ -3,22 +3,22 @@ files:
 - name: src/Task.kt
   visible: true
 - name: test/Tests.kt
-  visible: false
-- name: src/Blocks.kt
   visible: true
-- name: src/BlocksImpl.kt
+- name: src/CountBlocksOfOnesWithUpdates.kt
+  visible: true
+- name: src/CountBlocksOfOnesWithUpdatesImpl.kt
   visible: true
   placeholders:
-  - offset: 48
+  - offset: 92
     length: 391
-    placeholder_text: // create fields and required helper methods here
-  - offset: 484
+    placeholder_text: // write required fields and methods here
+  - offset: 528
     length: 11
     placeholder_text: TODO("not implemented")
-  - offset: 555
+  - offset: 599
     length: 13
     placeholder_text: TODO("not implemented")
-  - offset: 620
+  - offset: 664
     length: 484
     placeholder_text: TODO("not implemented")
 - name: task_template.md

@@ -5,7 +5,7 @@ class Test {
     @Test
     fun sample() {
         val sequence = "001001"
-        val blocks = createBlocksInstance(sequence)
+        val blocks = createInstance(sequence)
         assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
         assertEquals(2, blocks.countBlocksOfOnes(), "countBlocksOfOnes($sequence)")
         blocks.flip(3)

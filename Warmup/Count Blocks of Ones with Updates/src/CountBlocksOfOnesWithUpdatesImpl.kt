@@ -1,5 +1,5 @@
 
-class BlocksImpl(seq: CharSequence) : Blocks {
+class CountBlocksOfOnesWithUpdatesImpl(seq: CharSequence) : CountBlocksOfOnesWithUpdates {
     companion object {
         private fun isBlockStart(first: Char, second: Char): Boolean {
             return first == '0' && second == '1'

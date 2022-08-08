@@ -5,7 +5,7 @@
 Implement an interface
 
 ```Kotlin
-interface Blocks {
+interface CountBlocksOfOnesWithUpdates {
     fun countOnes(): Int
     fun countBlocksOfOnes(): Int
     fun flip(index: Int)
@@ -16,16 +16,16 @@ interface Blocks {
 
 <div class="sample">
 
-| Input                            | Returns                                 |
-|----------------------------------|-----------------------------------------|
-| `createBlocksInstance("001001")` | [Blocks](psi_element://Blocks) instance |
-| `countOnes()`                    | 2                                       |
-| `countBlocksOfOnes()`            | 2                                       |
-| `flip(3)`                        |                                         |
-| `countOnes()`                    | 3                                       |
-| `countBlocksOfOnes()`            | 2                                       |
-| `flip(4)`                        |                                         |
-| `countOnes()`                    | 4                                       |
-| `countBlocksOfOnes()`            | 1                                       |
+| Input                      | Returns                                                                             |
+|----------------------------|-------------------------------------------------------------------------------------|
+| `createInstance("001001")` | [CountBlocksOfOnesWithUpdates](psi_element://CountBlocksOfOnesWithUpdates) instance |
+| `countOnes()`              | 2                                                                                   |
+| `countBlocksOfOnes()`      | 2                                                                                   |
+| `flip(3)`                  |                                                                                     |
+| `countOnes()`              | 3                                                                                   |
+| `countBlocksOfOnes()`      | 2                                                                                   |
+| `flip(4)`                  |                                                                                     |
+| `countOnes()`              | 4                                                                                   |
+| `countBlocksOfOnes()`      | 1                                                                                   |
 
 </div>
