@@ -1,9 +1,18 @@
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+    @Test
+    fun sample() {
+        val sequence = "001001"
+        val blocks = createBlocksInstance(sequence)
+        assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
+        assertEquals(2, blocks.countBlocksOfOnes(), "countBlocksOfOnes($sequence)")
+        blocks.flip(3)
+        assertEquals(3, blocks.countOnes())
+        assertEquals(2, blocks.countBlocksOfOnes())
+        blocks.flip(4)
+        assertEquals(4, blocks.countOnes())
+        assertEquals(1, blocks.countBlocksOfOnes())
     }
 }

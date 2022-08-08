@@ -4,3 +4,22 @@ files:
   visible: true
 - name: test/Tests.kt
   visible: false
+- name: src/Blocks.kt
+  visible: true
+- name: src/BlocksImpl.kt
+  visible: true
+  placeholders:
+  - offset: 48
+    length: 391
+    placeholder_text: // create fields and required helper methods here
+  - offset: 484
+    length: 11
+    placeholder_text: TODO("not implemented")
+  - offset: 555
+    length: 13
+    placeholder_text: TODO("not implemented")
+  - offset: 620
+    length: 484
+    placeholder_text: TODO("not implemented")
+- name: task_template.md
+  visible: true
