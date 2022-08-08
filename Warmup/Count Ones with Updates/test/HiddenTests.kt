@@ -66,29 +66,35 @@ class HiddenTests {
         testSingle(genString(MAX_N), MAX_Q)
     }
 
-    private fun testRandom(maxLen: Int, flips: Int) {
-        testSingle(genString(rng.nextInt(maxLen / 2) + maxLen / 2), flips)
+    private fun testRandom(maxLen: Int, queries: Int) {
+        testSingle(genString(rng.nextInt(maxLen / 2) + maxLen / 2), queries)
     }
 
-    private fun testSingle(str: String, flips: Int) {
+    private fun testSingle(str: String, queries: Int) {
         if (!validateTest(str)) {
             throw AssertionError("test is incorrect")
         }
         val blocks = createInstance(str)
         val s = str.toCharArray()
         var ones = s.count { it == '1' }
-        repeat(flips) {
-            assertEquals(ones, blocks.countOnes()) {
-                prependTestInfo(str, "incorrect number of '1's")
-            }
-            val index = rng.nextInt(str.length)
-            blocks.flip(index)
-            if (s[index] == '1') {
-                ones--
-                s[index] = '0'
-            } else {
-                ones++
-                s[index] = '1'
+        repeat(queries) {
+            when (rng.nextInt(2)) {
+                0 -> {
+                    assertEquals(ones, blocks.countOnes()) {
+                        prependTestInfo(str, "incorrect number of '1's")
+                    }
+                }
+                1 -> {
+                    val index = rng.nextInt(str.length)
+                    blocks.flip(index)
+                    if (s[index] == '1') {
+                        ones--
+                        s[index] = '0'
+                    } else {
+                        ones++
+                        s[index] = '1'
+                    }
+                }
             }
         }
     }
