@@ -3,10 +3,16 @@ import org.junit.jupiter.api.Test
 
 class Test {
     @Test
-    fun testSample() {
+    fun sample1() {
         val sequence = "001001"
-        val blocks = createBlocksInstance(sequence)
+        val blocks = createInstance(sequence)
         assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
-        assertEquals(4, blocks.countZeros(), "countZeros($sequence)")
+    }
+
+    @Test
+    fun sample2() {
+        val sequence = "11100101"
+        val blocks = createInstance(sequence)
+        assertEquals(5, blocks.countOnes(), "countOnes($sequence)")
     }
 }

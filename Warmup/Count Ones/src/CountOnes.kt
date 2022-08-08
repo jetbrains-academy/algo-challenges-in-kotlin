@@ -1,4 +1,4 @@
 
-interface Blocks {
+interface CountOnes {
     fun countOnes(): Int
 }
