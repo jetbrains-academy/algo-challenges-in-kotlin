@@ -9,14 +9,16 @@ files:
 - name: src/CountOnesWithUpdatesImpl.kt
   visible: true
   placeholders:
+  - offset: 76
+    length: 103
+    placeholder_text: // create required fields and methods here
   - offset: 224
     length: 11
     placeholder_text: TODO("not implemented")
   - offset: 287
     length: 147
     placeholder_text: TODO("not implemented")
-  - offset: 76
-    length: 103
-    placeholder_text: // create required fields and methods here
 - name: task_template.md
+  visible: false
+- name: test/HiddenTests.kt
   visible: false
