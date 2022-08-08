@@ -1,4 +1,4 @@
 
-fun createBlocksInstance(seq: CharSequence): Blocks {
-    return BlocksImpl(seq)
+fun createInstance(seq: CharSequence): CountOnesWithUpdates {
+    return CountOnesWithUpdatesImpl(seq)
 }

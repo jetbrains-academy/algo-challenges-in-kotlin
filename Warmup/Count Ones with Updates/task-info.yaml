@@ -4,13 +4,19 @@ files:
   visible: true
 - name: test/Tests.kt
   visible: true
-- name: src/Blocks.kt
+- name: src/CountOnesWithUpdates.kt
   visible: true
-- name: src/BlocksImpl.kt
+- name: src/CountOnesWithUpdatesImpl.kt
   visible: true
   placeholders:
-  - offset: 48
-    length: 337
-    placeholder_text: // Implement here
+  - offset: 224
+    length: 11
+    placeholder_text: TODO("not implemented")
+  - offset: 287
+    length: 147
+    placeholder_text: TODO("not implemented")
+  - offset: 76
+    length: 103
+    placeholder_text: // create required fields and methods here
 - name: task_template.md
   visible: false
