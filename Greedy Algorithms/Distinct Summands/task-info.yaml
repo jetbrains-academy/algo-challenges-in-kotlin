@@ -3,12 +3,14 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 43
-    length: 226
-    placeholder_text: // write your solution here
+  - offset: 49
+    length: 223
+    placeholder_text: TODO("not implemented")
 - name: test/Tests.kt
   visible: true
 - name: task_template.md
   visible: true
 - name: solution.md
   visible: true
+- name: test/HiddenTests.kt
+  visible: false

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 
 class Test {
 
-    private fun check(n: Int, expectedSize: Int) {
+    private fun check(n: Long, expectedSize: Int) {
         val actual = distinctSummands(n)
         assertTrue(actual.size >= expectedSize) {
             "[n = $n] expected list size = $expectedSize, found ${actual.size}"
@@ -12,8 +12,8 @@ class Test {
         assertTrue(actual.toCollection(mutableSetOf()).size == actual.size) {
             "[n = $n] numbers are not distinct"
         }
-        assertEquals(n.toLong(), actual.sumOf { it.toLong() }) {
-            "[n = $n] sum of summands equals to ${actual.sumOf { it.toLong() }}, but expected $n"
+        assertEquals(n, actual.sum()) {
+            "[n = $n] sum of summands equals to ${actual.sum()}, but expected $n"
         }
         assertTrue(actual.size == expectedSize) {
             "you found a solution better than we expected, please file a bug"
