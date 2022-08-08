@@ -17,3 +17,5 @@ files:
     placeholder_text: TODO("not implemented")
 - name: task_template.md
   visible: false
+- name: test/HiddenTests.kt
+  visible: false

@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class Test {
+class Tests {
     @Test
     fun testSample1() {
         val sequence = "001001"

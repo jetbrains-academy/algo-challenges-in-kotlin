@@ -18,3 +18,5 @@ files:
     placeholder_text: // Implement your class here
 - name: task_template.md
   visible: false
+- name: test/HiddenTests.kt
+  visible: false
