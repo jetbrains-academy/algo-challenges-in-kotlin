@@ -1,5 +1,5 @@
 
-class BlocksImpl(private val seq: CharSequence) : Blocks {
+class CountBlocksOfOnesImpl(private val seq: CharSequence) : CountBlocksOfOnes {
     override fun countOnes(): Int {
         return seq.count { it == '1' }
     }

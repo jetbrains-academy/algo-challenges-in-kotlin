@@ -5,7 +5,7 @@
 Implement an interface
 
 ```Kotlin
-interface Blocks {
+interface CountBlocksOfOnes {
     fun countOnes(): Int
     fun countBlocksOfOnes(): Int
 }
@@ -15,11 +15,11 @@ interface Blocks {
 
 <div class="sample">
 
-| Input                            | Returns                                 |
-|----------------------------------|-----------------------------------------|
-| `createBlocksInstance("001001")` | [Blocks](psi_element://Blocks) instance |
-| `countOnes()`                    | 2                                       |
-| `countBlocksOfOnes()`            | 2                                       |
+| Input                      | Returns                                                       |
+|----------------------------|---------------------------------------------------------------|
+| `createInstance("001001")` | [CountBlocksOfOnes](psi_element://CountBlocksOfOnes) instance |
+| `countOnes()`              | 2                                                             |
+| `countBlocksOfOnes()`      | 2                                                             |
 
 </div>
 
@@ -27,10 +27,10 @@ interface Blocks {
 
 <div class="sample">
 
-| Input                              | Returns                                 |
-|------------------------------------|-----------------------------------------|
-| `createBlocksInstance("11100101")` | [Blocks](psi_element://Blocks) instance |
-| `countOnes()`                      | 5                                       |
-| `countBlocksOfOnes()`              | 3                                       |
+| Input                        | Returns                                                       |
+|------------------------------|---------------------------------------------------------------|
+| `createInstance("11100101")` | [CountBlocksOfOnes](psi_element://CountBlocksOfOnes) instance |
+| `countOnes()`                | 5                                                             |
+| `countBlocksOfOnes()`        | 3                                                             |
 
 </div>

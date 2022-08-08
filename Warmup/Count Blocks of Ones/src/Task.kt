@@ -1,5 +1,5 @@
 
-fun createBlocksInstance(seq: CharSequence): Blocks {
-    return BlocksImpl(seq)
+fun createInstance(seq: CharSequence): CountBlocksOfOnes {
+    return CountBlocksOfOnesImpl(seq)
 }
 

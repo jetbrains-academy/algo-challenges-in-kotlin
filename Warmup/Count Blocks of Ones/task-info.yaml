@@ -4,9 +4,16 @@ files:
   visible: true
 - name: test/Tests.kt
   visible: true
-- name: src/Blocks.kt
+- name: src/CountBlocksOfOnes.kt
   visible: true
-- name: src/BlocksImpl.kt
+- name: src/CountBlocksOfOnesImpl.kt
   visible: true
+  placeholders:
+  - offset: 126
+    length: 30
+    placeholder_text: TODO("not implemented")
+  - offset: 216
+    length: 320
+    placeholder_text: TODO("not implemented")
 - name: task_template.md
   visible: false
