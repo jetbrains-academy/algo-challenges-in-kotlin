@@ -7,3 +7,22 @@
     /*text-align: center;*/
     /*alignment: center;*/
 }
+
+.sample th, .sample td {
+    border: 1px solid black;
+    padding: 15px;
+    width: 300px;
+    /*max-width: 100%;*/
+    /*text-align: center;*/
+    /*alignment: center;*/
+}
+
+.sample td {
+    border-top: none;
+    border-bottom: none;
+}
+
+.sample table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}

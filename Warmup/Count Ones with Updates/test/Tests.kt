@@ -7,8 +7,11 @@ class Test {
         val sequence = "001001"
         val blocks = createBlocksInstance(sequence)
         assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
-        assertEquals(4, blocks.countZeros(), "countZeros($sequence)")
-        assertEquals(2, blocks.countBlocksOfOnes(), "countBlocksOfOnes($sequence)")
-        assertEquals(2, blocks.countBlocksOfZeros(), "countBlocksOfZeros($sequence)")
+        blocks.flip(0);
+        assertEquals(3, blocks.countOnes())
+        blocks.flip(1);
+        assertEquals(4, blocks.countOnes())
+        blocks.flip(2);
+        assertEquals(3, blocks.countOnes())
     }
 }
