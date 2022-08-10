@@ -1,7 +1,7 @@
 
 ### Solution
 
-It is not difficult to see one cannot represent 8 as the sum of four 
+It is not difficult to see that one cannot represent 8 as the sum of four 
 positive distinct integers.
 Indeed, assume that $8=a_1+a_2+a_3+a_4$ and $a_1<a_2<a_3<a_4$.
 Then, $a_1 \ge 1$, $a_2 \ge 2$, $a_3 \ge 3$, and $a_4 \ge 4$. But then
