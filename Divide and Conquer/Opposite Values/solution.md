@@ -48,7 +48,7 @@ both of them may be 0's. Instead, let’s focus on the right part of the array.
 ![](../../images/pair01_4.png)
 
 Do you see? It is the same problem again! Since the leftmost cell is 0,
-the rightmost one is 1, it must contain a white-black pair. And its length is twice smaller.
+the rightmost one is 1, it must contain a 0-1 pair. And its length is twice smaller.
 If the middle cell turns out to be 1, we can also find a subarray that
 starts in 0 and ends in 1 (though of length 11, but not 10).
 
