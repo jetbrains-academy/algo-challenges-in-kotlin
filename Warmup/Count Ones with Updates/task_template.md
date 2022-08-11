@@ -32,3 +32,13 @@ interface CountOnesWithUpdates {
 | `countOnes()`              | 3                                                                   |
 
 </div>
+
+<div class="hint">
+Avoid counting the number of ones from scratch 
+each time `countOnes` is called.
+Instead, update the number of ones with each call to `flip`.
+</div>
+
+<div class="hint">
+<%include "solution.md" %>
+</div>

@@ -36,3 +36,11 @@ interface CountOnes {
 | `countOnes()`                | 5                                             |
 
 </div>
+
+<div class="hint">
+Implement a linear scan.
+</div>
+
+<div class="hint">
+<%include "solution.md" %>
+</div>
