@@ -10,7 +10,17 @@ files:
   visible: true
 - name: src/CountOnesWithUpdatesImpl.kt
   visible: true
+  placeholders:
+  - offset: 76
+    length: 103
+    placeholder_text: // create required fields and methods here
+  - offset: 224
+    length: 11
+    placeholder_text: TODO("not implemented")
+  - offset: 287
+    length: 147
+    placeholder_text: TODO("not implemented")
 - name: test/HiddenTests.kt
   visible: false
 - name: solution.md
-  visible: true
+  visible: false
