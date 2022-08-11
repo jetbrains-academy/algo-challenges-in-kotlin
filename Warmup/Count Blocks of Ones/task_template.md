@@ -2,7 +2,13 @@
 
 # Count Blocks of Ones
 
-Implement an interface
+<div class="logo">
+    <img src="../../images/count_blocks_of_ones_logo.png">
+</div>
+
+Implement an interface that supports the following two operations
+for the given binary string: get the number of 1's in the string
+and get the number of blocks of 1's in the string.
 
 ```Kotlin
 interface CountBlocksOfOnes {

@@ -2,8 +2,12 @@
 
 # Find two adjacent elements with opposite values 
 
-You are given a sequence of bits ('0' and '1'). The sequence starts with '0' and ends with '1'.
-Find any occurrence of '1' coming right after '0'. Return an index of '0' that has '1' right after it.
+<div class="logo">
+    <img src="../../images/opposite_values_logo.png">
+</div>
+
+Given a binary sequence that starts with zero and ends with one,
+find any occurrence of zero that is followed by one.
 
 In [Task.kt](course://Divide and Conquer/Opposite Values/src/Task.kt) you already have slow solution implemented using standard library function.
 Make it work faster to pass the tests.

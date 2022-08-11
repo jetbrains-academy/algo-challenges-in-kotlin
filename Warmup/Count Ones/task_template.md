@@ -1,8 +1,12 @@
 <%css "/util/common.css" %>
 
 # Count Ones
+<div class="logo">
+    <img src="../../images/count_ones_logo.png">
+</div>
 
-Implement an interface
+Implement an interface that allows one to get the number of
+1's in the given binary string.
 
 ```Kotlin
 interface CountOnes {

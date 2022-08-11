@@ -1,0 +1,8 @@
+\logo{}
+
+\foreach \x/\y/\w in {-2/.5/8, -2/-1/1, -1.5/-1/2, -.5/-1/5} {
+	\draw (\x, \y) rectangle (\x+.5*\w, \y+.5);
+	\node at (\x+.25*\w, \y+.25) {\w};
+}
+
+\node[text=hc] at (0,-1.5) {3};

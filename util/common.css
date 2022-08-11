@@ -26,3 +26,13 @@
     border-collapse: collapse;
     border: 1px solid black;
 }
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 200px;
+    align: center;
+}

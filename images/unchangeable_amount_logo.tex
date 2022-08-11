@@ -1,0 +1,15 @@
+\logo{}
+
+\foreach \v [count=\n from 0] in {1, 2, 4, 10}
+	\node[circle, draw, inner sep=0mm, minimum size=7mm] (c\v) at (-1.5+\n,1) {\textcent\v};
+
+\tikzstyle{a} = [rectangle, draw=none, inner sep=.3mm]
+
+\foreach \a in {1, ..., 7, 9, 10}
+	\node[a] (\a) at (-2.75+.5*\a,-1) {\a};
+\node[a,text=hc] at (-2.75+4,-1) {8};
+
+\foreach \a/\l in {1/{1}, 2/{2}, 3/{1,2}, 4/{4}, 5/{1,4}, 6/{2,4}, 7/{1,2,4}, 10/{10}} {
+	\foreach \v in \l
+	\draw[line width=.2mm] (\a) -- (c\v);
+}

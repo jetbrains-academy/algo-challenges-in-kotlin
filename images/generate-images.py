@@ -2,7 +2,7 @@
 
 from os import system, listdir
 
-exclude_tex_files = ['main.tex', 'main_dark.tex', 'tmp.tex']
+exclude_tex_files = ['main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex']
 
 for file_name in listdir('.'):
     if file_name not in exclude_tex_files and file_name.endswith('.tex'):
@@ -18,4 +18,4 @@ for file_name in listdir('.'):
         # system('pdflatex main_dark > /dev/null 2>&1')
         # system(f'convert -density 1000 main_dark.pdf {file_name[:-4]}_dark.png')
 
-system('rm *.log *.aux main.pdf tmp.pdf tmp.png')
+system('rm *.log *.aux main.pdf')

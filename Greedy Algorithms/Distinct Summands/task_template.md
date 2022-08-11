@@ -2,6 +2,10 @@
 
 # Distinct Summands
 
+<div class="logo">
+    <img src="../../images/distinct_summands_logo.png">
+</div>
+
 Represent a positive integer as the sum of the
 maximum number of pairwise distinct positive integers.
 

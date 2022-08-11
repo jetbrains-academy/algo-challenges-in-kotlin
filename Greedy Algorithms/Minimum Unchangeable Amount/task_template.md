@@ -1,6 +1,9 @@
 <%css "/util/common.css" %>
 
 # Minimum Unchangeable Amount
+<div class="logo">
+    <img src="../../images/unchangeable_amount_logo.png">
+</div>
 
 Given $n$ coins of denominations $c_1, \dotsc, c_n$,
 find the minimum amount that cannot be changed using these coins.

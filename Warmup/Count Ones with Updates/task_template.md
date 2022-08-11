@@ -1,8 +1,13 @@
 <%css "/util/common.css" %>
 
 # Count Ones with Updates
+<div class="logo">
+    <img src="../../images/count_ones_with_updates_logo.png">
+</div>
 
-Implement an interface
+Implement an interface that supports the following two operations
+for the given binary string: get the number of 1's in the string
+and flip a given bit of the string.
 
 ```Kotlin
 interface CountOnesWithUpdates {

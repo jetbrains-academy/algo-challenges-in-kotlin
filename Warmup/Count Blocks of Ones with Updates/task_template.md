@@ -2,7 +2,16 @@
 
 # Count Blocks of Ones with Updates
 
-Implement an interface
+<div class="logo">
+    <img src="../../images/count_blocks_of_ones_with_updates_logo.png">
+</div>>
+
+Implement an interface that supports the following three operations
+for the given binary string: 
+   1. get the number of 1's in the string,
+   2. get the number of blocks of 1's in the string,
+   3. flip a given bit of the string.
+
 
 ```Kotlin
 interface CountBlocksOfOnesWithUpdates {

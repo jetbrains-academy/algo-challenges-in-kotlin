@@ -1,0 +1,42 @@
+\usepackage{textcomp}
+
+\usepackage{tikz}
+\usetikzlibrary{
+	positioning, 
+	matrix, 
+	calc,
+	arrows,
+	shapes,
+	fit,
+	decorations,
+	decorations.pathmorphing
+}
+
+\tikzset{
+	every picture/.style={
+		line width=.4mm,
+		text=mc,
+		draw=mc,
+	},
+}
+
+\tikzstyle{arraynodes} = [
+	minimum size=5mm, 
+	inner sep=0mm,
+	anchor=center,
+	draw
+]
+
+\tikzstyle{array} = [
+	draw=none,
+	matrix of nodes,
+	nodes={arraynodes},
+	ampersand replacement=\&,
+	line width=.3mm,
+	row sep=-\pgflinewidth,
+	column sep=-\pgflinewidth,
+]
+
+\newcommand{\logo}{
+	\draw[rounded corners] (-2.5, -2.5) rectangle (2.5, 2.5);
+}
