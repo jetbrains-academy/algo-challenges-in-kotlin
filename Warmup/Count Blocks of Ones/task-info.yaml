@@ -10,5 +10,12 @@ files:
   visible: true
 - name: src/CountBlocksOfOnesImpl.kt
   visible: true
+  placeholders:
+    - offset: 126
+      length: 30
+      placeholder_text: TODO("not implemented")
+    - offset: 216
+      length: 320
+      placeholder_text: TODO("not implemented")
 - name: test/HiddenTests.kt
   visible: false
