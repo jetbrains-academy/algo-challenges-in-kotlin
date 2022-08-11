@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{header}
+
+\colorlet{mc}{white!70!black} % main color
+\colorlet{hc}{yellow} % highlight color
+%\colorlet{mc}{black} % main color
+%\colorlet{hc}{red!90!black} % highlight color
+
+\begin{document}
+	\begin{tikzpicture}
+		\filldraw[fill=black] (0, 0) rectangle (2048/40, 1152/40);
+		\node[inner sep=0mm] at (2048/80, 1152/80) {
+			\tikz{\input{count_ones_logo}}%
+			\tikz{\input{count_ones_with_updates_logo}}%
+			\tikz{\input{count_blocks_of_ones_logo}}%
+			\tikz{\input{count_blocks_of_ones_with_updates_logo}}%
+			\tikz{\input{opposite_values_logo}}%
+			\tikz{\input{unchangeable_amount_logo}}%
+			\tikz{\input{distinct_summands_logo}}%
+		};
+	\end{tikzpicture}
+\end{document}
