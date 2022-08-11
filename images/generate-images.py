@@ -2,7 +2,7 @@
 
 from os import system, listdir
 
-exclude_tex_files = ['main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex']
+exclude_tex_files = ['cover.tex', 'main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex', 'profile.tex']
 
 for file_name in listdir('.'):
     if file_name not in exclude_tex_files and file_name.endswith('.tex'):
