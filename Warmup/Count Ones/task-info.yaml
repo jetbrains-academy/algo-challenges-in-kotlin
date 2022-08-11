@@ -3,18 +3,22 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 59
-    length: 22
-    placeholder_text: // Create created class instance and return it
+  - offset: 56
+    length: 25
+    placeholder_text: // create your class instance here
 - name: test/Tests.kt
   visible: true
-- name: task_template.md
-  visible: false
 - name: src/CountOnes.kt
   visible: true
 - name: src/CountOnesImpl.kt
   visible: true
+  placeholders:
+  - offset: 1
+    length: 148
+    placeholder_text: // Implement your class here
+- name: task_template.md
+  visible: false
 - name: test/HiddenTests.kt
   visible: false
 - name: solution.md
-  visible: true
+  visible: false
