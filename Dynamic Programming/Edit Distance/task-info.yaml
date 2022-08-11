@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 1128
+    placeholder_text: // write additional code here
+  - offset: 1204
+    length: 52
+    placeholder_text: TODO("not implemented")
+- name: test/Tests.kt
+  visible: true
+- name: task_template.md
+  visible: false
