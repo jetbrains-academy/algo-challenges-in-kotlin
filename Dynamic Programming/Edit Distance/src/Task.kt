@@ -2,7 +2,7 @@ import kotlin.math.min
 
 private class EditDistanceComputer(private val first: CharSequence, private val second: CharSequence) {
     companion object {
-        const val NOT_FOUND = -1
+        private const val NOT_FOUND = -1
     }
 
     private val distance = Array(first.length) {
