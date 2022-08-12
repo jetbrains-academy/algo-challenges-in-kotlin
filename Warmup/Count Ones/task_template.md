@@ -42,5 +42,9 @@ Implement a linear scan.
 </div>
 
 <div class="hint">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a2s9QaKF5lU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="hint">
 <%include "solution.md" %>
 </div>
