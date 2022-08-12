@@ -8,8 +8,8 @@
 
 \begin{document}
 	\begin{tikzpicture}
-		\filldraw[fill=black] (0, 0) rectangle (2048/40, 1152/40);
-		\node[inner sep=0mm] at (2048/80, 1152/80) {
+		\filldraw[fill=black] (0, 0) rectangle (2048/20, 1152/20);
+		\node[inner sep=0mm, text width=2600, draw=red, align=center] at (2048/40, 1152/40) {
 			\tikz{\input{count_ones_logo}}%
 			\tikz{\input{count_ones_with_updates_logo}}%
 			\tikz{\input{count_blocks_of_ones_logo}}%
@@ -17,6 +17,20 @@
 			\tikz{\input{opposite_values_logo}}%
 			\tikz{\input{unchangeable_amount_logo}}%
 			\tikz{\input{distinct_summands_logo}}%
+			\tikz{\input{count_ones_logo}}%
+			\tikz{\input{count_ones_with_updates_logo}}%
+			\tikz{\input{count_blocks_of_ones_logo}}%
+			\tikz{\input{count_ones_logo}}%
+\tikz{\input{count_ones_with_updates_logo}}%
+\tikz{\input{count_blocks_of_ones_logo}}%
+\newline
+\tikz{\input{count_blocks_of_ones_with_updates_logo}}%
+\tikz{\input{opposite_values_logo}}%
+\tikz{\input{unchangeable_amount_logo}}%
+\tikz{\input{distinct_summands_logo}}%
+\tikz{\input{count_ones_logo}}%
+\tikz{\input{count_ones_with_updates_logo}}%
+\tikz{\input{count_blocks_of_ones_logo}}%
 		};
 	\end{tikzpicture}
 \end{document}
