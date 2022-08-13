@@ -1,6 +1,12 @@
 
 class CountOnesImpl(private val seq: CharSequence) : CountOnes {
     override fun countOnes(): Int {
-        return seq.count { it == '1' }
+        var count = 0
+        for (digit in seq) {
+            if (digit == '1') {
+                count += 1
+            }
+        }
+        return count
     }
 }

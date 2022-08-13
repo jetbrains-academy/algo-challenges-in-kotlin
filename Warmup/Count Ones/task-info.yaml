@@ -14,7 +14,7 @@ files:
   visible: true
   placeholders:
   - offset: 1
-    length: 148
+    length: 264
     placeholder_text: // Implement your class here
 - name: task_template.md
   visible: false
