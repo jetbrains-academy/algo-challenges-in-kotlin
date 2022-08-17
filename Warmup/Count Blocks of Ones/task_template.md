@@ -40,3 +40,12 @@ interface CountBlocksOfOnes {
 | `countBlocksOfOnes()`        | 3                                                             |
 
 </div>
+
+<div class="Hint">
+Given an index $0 \le i < n$, how would you check whether it is a starting
+index of a block of ones in a binary string $s[0\dotsc n)$?
+</div>
+
+<div class="hint">
+<%include "solution.md" %>
+</div>
