@@ -1,0 +1,6 @@
+\logo{}
+
+\foreach \t [count=\i] in {short, hort, port, ports}
+\node[rectangle, draw=none, inner sep=.5mm] (\i) at (0, 2.5-\i) {\t};
+\foreach \f/\t in {1/2, 2/3, 3/4}
+\draw[->, hc] (\f) -- (\t); 
