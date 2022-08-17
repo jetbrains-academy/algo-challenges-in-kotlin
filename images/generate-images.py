@@ -1,21 +1,32 @@
 #!/usr/bin/env python3
 
 from os import system, listdir
+import sys
 
-exclude_tex_files = ['cover.tex', 'main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex', 'profile.tex']
 
-for file_name in listdir('.'):
-    if file_name not in exclude_tex_files and file_name.endswith('.tex'):
-        system(f'cp {file_name} tmp.tex')
-        print(f'Processing {file_name[:-4]}')
+if __name__ == '__main__':
+    if len(sys.argv) <= 1:
+        print('Required argument is missing!')
+        print('Usage:', sys.argv[0], 'tex-file-name|all')
+        sys.exit(0)
 
-        # light picture
-        system('pdflatex main > /dev/null 2>&1')
-        system(f'convert -density 1000 main.pdf {file_name[:-4]}.png')
+    argument = sys.argv[1]
+    file_names = listdir('.') if argument == 'all' else [argument, ]
 
-        # uncomment this later, when Idea is able to process two types of images
-        # # dark picture
-        # system('pdflatex main_dark > /dev/null 2>&1')
-        # system(f'convert -density 1000 main_dark.pdf {file_name[:-4]}_dark.png')
+    exclude_tex_files = ['cover.tex', 'main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex', 'profile.tex']
 
-system('rm *.log *.aux main.pdf')
+    for file_name in file_names:
+        if file_name not in exclude_tex_files and file_name.endswith('.tex'):
+            system(f'cp {file_name} tmp.tex')
+            print(f'Processing {file_name[:-4]}')
+
+            # light picture
+            system('pdflatex main > /dev/null 2>&1')
+            system(f'convert -density 1000 main.pdf {file_name[:-4]}.png')
+
+            # uncomment this later, when Idea is able to process two types of images
+            # # dark picture
+            # system('pdflatex main_dark > /dev/null 2>&1')
+            # system(f'convert -density 1000 main_dark.pdf {file_name[:-4]}_dark.png')
+
+    system('rm *.log *.aux main.pdf')
