@@ -1,0 +1,35 @@
+\begin{scope}[xshift=25mm,yshift=10mm]
+	\foreach \x/\y/\a/\b/\w/\s/\col/\p/\q in
+	{8/11/i/j-1/3/+1/two/-/B[j],
+		8/9.5/i-1/j/4/+1/one/A[i]/-,
+		8/8/i-1/j-1/5/+1/four/A[i]/B[j],
+		8/6.5/i-1/j-1/6/~/three/A[i]/B[j]}
+	%1/8.75/i/j/1/~}
+{
+	\draw[gray,line width=.3mm] (\x+4,\y) rectangle (\x,\y-1.2);
+	\draw[gray,line width=.3mm] (\x+4,\y-0.6) -- (\x,\y-0.6);
+	\draw[gray,line width=.3mm] (\x+3,\y) -- (\x+3,\y-1.2);
+	%\node<\w->[right] at (\x+4,\y-0.6) {$\s$};
+	\node at (\x+1.5,\y-0.3) {$A[1\ldots \a]$};
+	\node at (\x+1.5,\y-0.9) {$B[1\ldots \b]$};
+	\node at (\x+3.5,\y-0.3) {\textcolor{\col}{$\p$}};
+	\node at (\x+3.5,\y-0.9) {\textcolor{\col}{$\q$}};
+}
+
+\draw[gray,line width=.3mm] (1+3,8.75) rectangle (1,8.75-1.2);
+\draw[gray,line width=.3mm] (1+3,8.75-0.6) -- (1,8.75-0.6);
+\draw[gray,line width=.3mm] (1+3,8.75) -- (1+3,8.75-1.2);
+\node at (1+1.5,8.75-0.3) {$A[1\ldots i]$};
+\node at (1+1.5,8.75-0.9) {$B[1\ldots j]$};
+\end{scope}
+
+\begin{scope}[xshift=-15mm,yshift=10mm]
+\path (6.5,9) edge[two,out=90,in=180,->] node[above] {insertion} (11.9,10.4);
+\path (8,9) edge[one,out=15,in=180,->] node[above] {deletion} (11.9,8.9);
+\path (8,7.4) edge[four,out=-15,in=180,->] node[below] {mismatch} node[above] {\textcolor{mc}{$A[i]\ne B[j]$}}(11.9,7.4);
+\path (6.5,7.4) edge[three,out=-90,in=180,->] node[below] {match} node[above] {\textcolor{mc}{$A[i]= B[j]$}}(11.9,5.9);
+\end{scope}
+
+\node[right] at (14.5,11.4) {\textcolor{two}{$+1$}};
+\node[right] at (14.5,11.4-1.5) {\textcolor{one}{$+1$}};
+\node[right] at (14.5,11.4-3) {\textcolor{four}{$+1$}};

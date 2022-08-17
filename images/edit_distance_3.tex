@@ -1,0 +1,9 @@
+\node {
+	$\operatorname{EditDistance}(i,j)=\min
+	\begin{cases}
+		\textcolor{two}{\operatorname{EditDistance}(i,j-1)+1}\\
+		\textcolor{one}{\operatorname{EditDistance}(i-1,j)+1}\\
+		\textcolor{four}{\operatorname{EditDistance}(i-1,j-1)+1}  &\text{if }A[i]\neq B[j]\\
+		\textcolor{three}{\operatorname{EditDistance}(i-1,j-1)}  &\text{if }A[i]=B[j]\\
+	\end{cases}$
+};

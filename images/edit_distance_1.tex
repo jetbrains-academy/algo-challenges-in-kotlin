@@ -1,0 +1,44 @@
+    \begin{scope}[line width=.3mm,row sep=-\pgflinewidth,column sep=-\pgflinewidth]
+	\matrix (D) at (5,3)
+	[matrix of nodes,nodes={draw=gray,minimum size=6mm,inner sep=0mm,anchor=center},ampersand replacement=\&]
+	{\textcolor{one}{\strut e}\&
+		\textcolor{three}{\strut d}\&
+		\textcolor{three}{\strut i}\&
+		\textcolor{two}{\strut $-$}\&
+		\textcolor{three}{\strut t}\&
+		\textcolor{four}{\strut i}\&
+		\textcolor{three}{\strut n}\&
+		\textcolor{four}{\strut g}\&
+		\textcolor{two}{\strut $-$}\\
+		\textcolor{one}{\strut $-$}\&
+		\textcolor{three}{\strut d}\&
+		\textcolor{three}{\strut i}\&
+		\textcolor{two}{\strut s}\&
+		\textcolor{three}{\strut t}\&
+		\textcolor{four}{\strut a}\&
+		\textcolor{three}{\strut n}\&
+		\textcolor{four}{\strut c}\&
+		\textcolor{two}{\strut e}\\};
+	
+	
+	%\node at (5,0) {cost: $5$};
+	
+	\foreach \x/\y/\n/\t in {
+		7/5/s/\textcolor{four}{mismatches},
+		1/1/d/\textcolor{one}{deletion},
+		6/1/i/\textcolor{two}{insertions},
+		1/5/m/\textcolor{three}{matches}}
+	\node[rectangle,text centered] (\n) at (\x,\y) {\t};
+	
+	\begin{scope}%[draw=myemphcolor]
+		\path (d) edge[out=90, in=-90,->,one] (D-2-1);
+		\path (i) edge[out=100, in=-90,->,two] (D-2-4);
+		\path (i) edge[out=80, in=-90,->,two] (D-2-9);
+		\path (s) edge[out=225, in=90,->,four] (D-1-6);
+		\path (s) edge[out=-90, in=90,->,four] (D-1-8);
+		\path (m) edge[out=-80, in=90,->,three] (D-1-2);
+		\path (m) edge[out=-50, in=90,->,three] (D-1-3);
+		\path (m) edge[out=-30, in=90,->,three] (D-1-5);
+		\path (m) edge[out=-15, in=90,->,three] (D-1-7);
+	\end{scope}
+\end{scope}

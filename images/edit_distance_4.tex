@@ -1,0 +1,17 @@
+\node[text width=100mm]{
+	$\myvar{table} \gets \text{associative array}$\\[2mm]
+	$\myproc{EditDistance}(A, B, i, j)$:\\
+	if $\operatorname{table}[i, j]$ is not yet computed:\\
+	\quad if $i=0$ or $j=0$:\\
+	\quad\quad $\myvar{table}[i, j] \gets \max(i, j)$\\
+	\quad else:\\
+	\quad\quad \textcolor{two}{$\myvar{insertion} \gets \myproc{EditDistance}(A, B, i, j-1)+1$}\\
+	\quad\quad \textcolor{one}{$\myvar{deletion} \gets \myproc{EditDistance}(A, B, i-1, j)+1$}\\
+	\quad\quad \textcolor{three}{$\myvar{match} \gets \myproc{EditDistance}(A, B, i-1, j-1)$}\\
+	\quad\quad \textcolor{four}{$\myvar{mismatch} \gets \myproc{EditDistance}(A, B, i-1, j-1)+1$}\\
+	\quad\quad if $A[i]=B[j]$:\\
+	\quad\quad\quad $\myvar{table}(i,j) \gets \min(\textcolor{two}{\myvar{insertion}}, \textcolor{one}{\myvar{deletion}}, \textcolor{three}{\myvar{match}})$\\
+	\quad\quad else:\\
+	\quad\quad\quad $\myvar{table}(i,j) \gets \min(\textcolor{two}{\myvar{insertion}}, \textcolor{one}{\myvar{deletion}}, \textcolor{four}{\myvar{mismatch}})$\\
+	return $\myvar{table}(i,j)$
+};
