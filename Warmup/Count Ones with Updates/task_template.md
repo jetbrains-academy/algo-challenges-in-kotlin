@@ -34,9 +34,9 @@ interface CountOnesWithUpdates {
 </div>
 
 <div class="hint">
-Avoid counting the number of ones from scratch 
-each time `countOnes` is called.
-Instead, update the number of ones with each call to `flip`.
+How could you avoid 
+counting the number of ones from scratch 
+each time `countOnes` is called?
 </div>
 
 <div class="hint">

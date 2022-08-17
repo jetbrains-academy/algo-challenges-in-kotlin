@@ -4,7 +4,7 @@
 
 <div class="logo">
     <img src="../../images/count_blocks_of_ones_with_updates_logo.png">
-</div>>
+</div>
 
 Implement an interface that supports the following three operations
 for the given binary string: 
@@ -37,4 +37,13 @@ interface CountBlocksOfOnesWithUpdates {
 | `countOnes()`              | 4                                                                                   |
 | `countBlocksOfOnes()`      | 1                                                                                   |
 
+</div>
+
+<div class="Hint">
+When the $i$-bit is flipped, what indices can be become or stop being
+a starting index of a block?
+</div>
+
+<div class="hint">
+<%include "solution.md" %>
 </div>
