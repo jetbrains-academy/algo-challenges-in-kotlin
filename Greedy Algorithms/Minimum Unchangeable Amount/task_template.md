@@ -5,7 +5,7 @@
     <img src="../../images/unchangeable_amount_logo.png">
 </div>
 
-Given $n$ coins of denominations $c_1, \dotsc, c_n$,
+Given $n$ coins of denominations $c_1 \le c_2 \le \dotsb \le c_n$,
 find the minimum amount that cannot be changed using these coins.
 
 <div class="samples">
