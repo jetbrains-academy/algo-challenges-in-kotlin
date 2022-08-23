@@ -20,8 +20,8 @@ interface RangeSumQueries {
 }
 ```
 
-As a range may be as long as $n$, answering a single range query may 
-require time $O(n)$. Hence, the total running time for answering $q$ range 
+As a range may be as long as $n$, answering a single range sum query takes 
+time $O(n)$. Hence, the total running time for answering $q$ range 
 sum queries
 is $O(qn)$.
 Your goal is to design a faster algorithm.
