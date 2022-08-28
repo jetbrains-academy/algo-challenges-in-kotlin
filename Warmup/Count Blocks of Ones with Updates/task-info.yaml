@@ -1,27 +1,29 @@
 type: edu
 files:
-- name: src/Task.kt
-  visible: true
-- name: test/Tests.kt
-  visible: false
-- name: task_template.md
-  visible: true
-- name: src/CountBlocksOfOnesWithUpdates.kt
-  visible: true
-- name: src/CountBlocksOfOnesWithUpdatesImpl.kt
-  visible: true
-  placeholders:
-    - offset: 92
-      length: 391
-      placeholder_text: // write required fields and methods here
-    - offset: 528
-      length: 11
-      placeholder_text: TODO("not implemented")
-    - offset: 599
-      length: 13
-      placeholder_text: TODO("not implemented")
-    - offset: 664
-      length: 582
-      placeholder_text: TODO("not implemented")
-- name: test/HiddenTests.kt
-  visible: false
+  - name: src/Task.kt
+    visible: true
+  - name: test/Tests.kt
+    visible: false
+  - name: task_template.md
+    visible: true
+  - name: src/CountBlocksOfOnesWithUpdates.kt
+    visible: true
+  - name: src/CountBlocksOfOnesWithUpdatesImpl.kt
+    visible: true
+    placeholders:
+      - offset: 92
+        length: 391
+        placeholder_text: // write required fields and methods here
+      - offset: 528
+        length: 11
+        placeholder_text: TODO("not implemented")
+      - offset: 599
+        length: 13
+        placeholder_text: TODO("not implemented")
+      - offset: 664
+        length: 582
+        placeholder_text: TODO("not implemented")
+  - name: test/HiddenTests.kt
+    visible: false
+  - name: solution.md
+    visible: false
