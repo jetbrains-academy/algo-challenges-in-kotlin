@@ -1,8 +1,25 @@
 type: edu
 files:
-- name: src/Task.kt
-  visible: true
-- name: test/Tests.kt
-  visible: false
-- name: src/Partition.kt
-  visible: true
+  - name: src/Task.kt
+    visible: true
+    placeholders:
+      - offset: 846
+        length: 39
+        placeholder_text: |-
+          return if (n == 4) {
+                  listOf(
+                      Partition(listOf(1, 1, 1, 1)),
+                      Partition(listOf(1, 1, 2)),
+                      Partition(listOf(2, 2)),
+                      Partition(listOf(4)),
+                  )
+              } else {
+                  TODO("unimplemented")
+              }
+      - offset: 2
+        length: 788
+        placeholder_text: // Implement additional functions and classes if required
+  - name: test/Tests.kt
+    visible: false
+  - name: src/Partition.kt
+    visible: true
