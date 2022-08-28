@@ -5,6 +5,7 @@ summary: 100 Algorithmic Challenges in Kotlin
 programming_language: Kotlin
 content:
 - Warmup
+- Brute Force
 - Divide and Conquer
 - Greedy Algorithms
 - Dynamic Programming
