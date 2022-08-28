@@ -20,6 +20,8 @@ files:
         length: 788
         placeholder_text: // Implement additional functions and classes if required
   - name: test/Tests.kt
-    visible: false
+    visible: true
   - name: src/Partition.kt
     visible: true
+  - name: test/HiddenTests.kt
+    visible: false
