@@ -1,0 +1,19 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 1726
+    length: 47
+    placeholder_text: TODO("write your solution here")
+  - offset: 0
+    length: 1648
+    placeholder_text: // Use additional functions and classes if required
+- name: test/Tests.kt
+  visible: true
+- name: task_template.md
+  visible: false
+- name: solution.md
+  visible: false
+- name: test/HiddenTests.kt
+  visible: false
