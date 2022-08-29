@@ -25,3 +25,5 @@ files:
     visible: true
   - name: test/HiddenTests.kt
     visible: false
+  - name: task_template.md
+    visible: false
