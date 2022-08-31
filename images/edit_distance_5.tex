@@ -1,4 +1,6 @@
 \node[text width=100mm]{
+	\hrule
+	\medskip
 	$\myproc{EditDistance}(A[1 \dotsc n], B[1 \dotsc m]):$\\
 	$\myvar{table} \gets \text{2d array of size $(n + 1) \times (m + 1)$}$\\
 	$\myvar{table}[i][0] \gets i$ and $\myvar{table}[0][j] \gets j$ for all $i,j$\\
@@ -13,4 +15,6 @@
 	\quad\quad else:\\
 	\quad\quad\quad $\myvar{table}[i][j]\gets \min(\textcolor{two}{\myvar{insertion}}, \textcolor{one}{\myvar{deletion}}, \textcolor{four}{\myvar{mismatch}})$\\
 	return $\myvar{table}[n][m]$
+	\medskip
+	\hrule
 };
