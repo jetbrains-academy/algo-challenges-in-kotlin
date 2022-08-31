@@ -1,0 +1,17 @@
+\node[text width=100mm]{
+	\hrule
+	\medskip
+	$\myproc{Generate}(n, L)$\\
+	$s \gets \text{sum of elements of~$L$}$\\
+	if $s>n$:\\
+	\quad return empty list\\
+	if $s=n$:\\
+	\quad return a list containing a single element $L$\\
+	$m \gets \text{largest element of~$L$ (or $1$ if $L$ is empty)}$\\
+	$\myvar{result} \gets \text{empty list}$\\
+	for $k$ from $m$ to $n-s$:\\
+	\quad add to $\myvar{result}$ all lists from $\myproc{Generate}(n-k, L+[k])$\\
+	return \myvar{result}
+	\medskip
+	\hrule
+};
