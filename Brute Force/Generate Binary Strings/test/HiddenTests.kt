@@ -7,7 +7,7 @@ class HiddenTests {
     @Test
     @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun testAllUpTo20() {
-        for (n in 1..20) {
+        for (n in 0..20) {
             testSingle(n)
         }
     }
