@@ -1,0 +1,18 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		$\myvar{table} \gets \text{associative array}$\\[1mm]
+		
+		$\myproc{LPS}(i, j)$:\\
+		if $(i,j)$ is not in $\myvar{table}$:\\
+		\quad if $i=j$:\\
+		\quad\quad $\myvar{table}[i,j] \gets 0$\\
+		\quad else if $i=j-1$:\\
+		\quad\quad $\myvar{table}[i,j] \gets 1$\\
+		\quad else:\\
+		\quad\quad if $s[i]=s[j-1]$:\\
+		\quad\quad\quad $\myvar{table}[i,j] \gets \myproc{LPS}(i+1, j-1)+2$\\
+		\quad\quad else:\\
+		\quad\quad\quad $\myvar{table}[i,j] \gets \max(\myproc{LPS}(i+1, j), \myproc{LPS}(i, j-1))$\\
+		return $\myvar{table}[i,j]$
+	\end{pseudocode}
+};

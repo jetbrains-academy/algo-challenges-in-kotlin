@@ -1,0 +1,6 @@
+\logo{}
+
+\matrix[array] (a) {A\&B\&C\&A\&B\&C\&A\&B\\};
+\foreach \i in {2, 3, 4, 6, 8}
+\draw[hc] (a-1-\i.-90) -- ([shift={(0,-.2)}]a-1-\i.-90);
+\draw[hc] ([shift={(0,-.2)}]a-1-2.-90) -- ([shift={(0,-.2)}]a-1-8.-90);
