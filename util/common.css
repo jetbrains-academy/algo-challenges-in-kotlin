@@ -36,3 +36,7 @@
     width: 200px;
     align: center;
 }
+
+.code span {
+    line-height: 22px;
+}
