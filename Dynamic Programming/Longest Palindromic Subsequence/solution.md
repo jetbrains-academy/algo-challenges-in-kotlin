@@ -1,7 +1,7 @@
 
 ### Solution
 
-Let us focus on $s[0]$ and $s[n-1]$ — the first and the last 
+Let us focus on $s[0]$ and $s[n-1]$ —— the first and the last 
 symbol of the string $s[0..n)$. If at least one of them does
 not appear in the longest palindromic subsequence, then it
 suffices to search for the longest palindromic subsequence in
@@ -27,8 +27,8 @@ $0 \le i \le j \le n$ (using memoization) and then return the value of $\operato
 The running time of this algorithm is proportional to the total number 
 of subproblems, that is, $O(n^2)$.
 
-One can also solve the problem iteratively (rather than recursively) as follows.
-In this case, one needs to go through subproblems in order of the increasing length
+One can also solve the problem iteratively (rather than recursively as follows).
+In this case, one needs to go through subproblems in order of the incresing length
 (to ensure that by the time one computes the value of $\operatorname{LPS}(i,j)$,
 the values of $\operatorname{LPS}(i+1,j)$, $\operatorname{LPS}(i,j-1)$, and
 $\operatorname{LPS}(i+1,j-1)$ have already been computed).
