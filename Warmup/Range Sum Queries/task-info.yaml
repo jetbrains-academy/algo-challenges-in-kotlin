@@ -3,10 +3,10 @@ files:
 - name: src/Task.kt
   visible: true
 - name: test/Tests.kt
-  visible: true
+  visible: false
 - name: task_template.md
-  visible: false
+  visible: true
 - name: solution.md
-  visible: false
+  visible: true
 - name: src/RangeSumQueries.kt
   visible: true
