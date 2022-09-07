@@ -1,0 +1,9 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		$\myproc{GenerateBinaryStrings}(n)$:\\
+		if $n=0$:\\
+		\quad return empty list\\
+		$\myvar{list} \gets \myproc{GenerateBinaryStrings}(n-1)$\\
+		return $[{\tt 0} + s \text{ for $s$ in \myvar{list}}] + [{\tt 1} + s \text{ for $s$ in \myvar{list}}]$
+	\end{pseudocode}
+};

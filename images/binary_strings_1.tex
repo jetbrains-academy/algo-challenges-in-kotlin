@@ -1,0 +1,10 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		$\myproc{GenerateBinaryStrings}(s, n)$:\\
+		if $\operatorname{length}(s)=n$:\\
+		\quad add $s$ to the list\\
+		else:\\
+		\quad $\myproc{GenerateBinaryStrings}(s + {\tt 0}, n)$\\
+		\quad $\myproc{GenerateBinaryStrings}(s + {\tt 1}, n)$\\
+	\end{pseudocode}
+};

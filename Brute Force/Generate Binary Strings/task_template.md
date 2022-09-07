@@ -2,6 +2,10 @@
 
 # Generate Binary Strings
 
+<div class="logo">
+    <img src="../../images/binary_strings_logo.png">
+</div>
+
 Given a positive integers $n$, generate all binary (consisting of `'0'` and `'1'`)
 strings of length $n$.
 The strings should be lexicographically ordered.
