@@ -9,8 +9,8 @@
 		\quad if $i < n-1$:\\
 		\quad\quad $\myvar{table}[i,i+1] \gets 1$\\
 		
-		for $i$ from $0$ to $n$:\\
-		\quad for $\myvar{size}$ from $2$ to $n-i$:\\
+		for $\myvar{size}$ from $2$ to $n$:\\
+		\quad for $i$ from $0$ to $n-\myvar{size}$:\\
 		\quad\quad $j \gets i + \myvar{size}$\\
 		\quad\quad if $s[i]=s[j-1]$:\\
 		\quad\quad\quad $\myvar{table}[i,j] \gets \myvar{table}[i+1, j-1]+2$\\
