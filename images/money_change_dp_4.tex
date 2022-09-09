@@ -1,0 +1,13 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+    \myproc{Change}(\myvar{money}):\\
+	$\myvar{table}[0..\myvar{money}] \gets [+\infty, \dotsc, +\infty]$\\
+	$\myvar{table}[0] \gets 0$\\
+	
+	for $m$~from~$1$ to~$\myvar{money}$:\\
+	\quad for $c=1,3,4$:\\
+	\quad\quad if $c \le \myvar{money}$:\\
+	\quad\quad\quad $\myvar{table}[m] \gets \min(\myvar{table}[m],  1+\myvar{table}[m-c])$\\
+	return $\myvar{table}[\myvar{money}]$
+	\end{pseudocode}
+};

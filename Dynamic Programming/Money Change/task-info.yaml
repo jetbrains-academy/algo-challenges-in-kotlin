@@ -1,0 +1,10 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.kt
+  visible: true
+- name: task_template.md
+  visible: true
+- name: solution.md
+  visible: true
