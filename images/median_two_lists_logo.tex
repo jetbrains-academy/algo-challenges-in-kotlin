@@ -1,0 +1,9 @@
+\logo{}
+
+\tikzstyle{a}=[draw=mc]
+\tikzstyle{b}=[draw=hc]
+\begin{scope}[xshift=4, yshift=3]
+	\foreach \h/\s [count=\i from 0] in {1/a, 2/b, 4/b, 5/b, 7/a, 8/b, 9/b, 11/b, 12/a, 13/a, 14/a, 15/b, 15.5/a, 16/a}
+	\draw[\s] (-2+\i*0.25,-2) rectangle (-1.75+\i*0.25-.04,-2+\h*0.25);
+	\draw[hc, ->] (-1.875+6*0.25, -2.4) -- (-1.875+6*0.25, -2.1);
+\end{scope}
