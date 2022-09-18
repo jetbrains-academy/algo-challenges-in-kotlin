@@ -17,6 +17,6 @@ fun <T : Comparable<T>> getMedian(first: List<T>, second: List<T>): T {
     } else if (right == first.size) { // first[k - 1] < second[0] => all second > first
         first[k - 1]
     } else {
-        minOf(first[left], second[k - right - 1])
+        maxOf(first[left], second[k - right - 1])
     }
 }
