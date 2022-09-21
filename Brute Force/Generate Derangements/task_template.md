@@ -2,7 +2,7 @@
 
 # Generate Derangements
 
-Given a positive integer $n$, generate all permutations that have no fixed point.
+Given an integer $n$, generate all permutations that have no fixed point.
 A fixed point in permutation $p$ is such $i$ that $p_i = i$.
 
 TODO think about defining what permutation is
