@@ -1,10 +1,10 @@
-type: output
+type: edu
 files:
-- name: test/output.txt
-  visible: false
-- name: src/Main.kt
-  visible: true
 - name: task_template.md
   visible: false
 - name: solution.md
+  visible: false
+- name: src/Task.kt
+  visible: true
+- name: test/Tests.kt
   visible: true
