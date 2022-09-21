@@ -1,0 +1,19 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 903
+    length: 42
+    placeholder_text: TODO("not implemented yet")
+  - offset: 1
+    length: 842
+    placeholder_text: // Write additional classes and functions here
+- name: test/Tests.kt
+  visible: true
+- name: task_template.md
+  visible: false
+- name: solution.md
+  visible: false
+- name: src/Derangement.kt
+  visible: true
