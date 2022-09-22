@@ -1,10 +1,10 @@
 type: edu
 files:
-- name: task_template.md
-  visible: false
-- name: solution.md
-  visible: false
 - name: src/Task.kt
   visible: true
 - name: test/Tests.kt
   visible: true
+- name: solution.md
+  visible: false
+- name: task_template.md
+  visible: false
