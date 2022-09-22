@@ -1,0 +1,17 @@
+\node[text width=110mm] {
+	\begin{pseudocode}
+		$\myproc{Merge}(\myvar{LeftHalf}, \myvar{RightHalf})$:\\
+		$\myvar{SortedList} \gets \text{empty list}$\\
+		$\myvar{inversions} \gets 0$\\
+		while both $\myvar{LeftHalf}$ and $\myvar{RightHalf}$ are non-empty:\\
+		\quad $l \gets \text{the first element of \myvar{LeftHalf}}$\\
+		\quad $r \gets \text{the first element of \myvar{RightHalf}}$\\
+		\quad if $l \le r$:\\
+		\quad\quad move~$l$ from $\myvar{LeftHalf}$ to \myvar{SortedList}\\
+		\quad else:\\
+		\quad\quad move~$r$ from $\myvar{RightHalf}$ to \myvar{SortedList}\\
+		\quad\quad $\myvar{inversions} \gets \myvar{inversions} + |\myvar{LeftHalf}|$\\
+		append \myvar{LeftHalf} and \myvar{RightHalf} to \myvar{SortedList}\\
+		return \myvar{SortedList}, \myvar{inversions}
+	\end{pseudocode}
+};

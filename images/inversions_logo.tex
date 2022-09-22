@@ -1,0 +1,9 @@
+\logo{}
+
+\matrix (A) [array, row 2/.style={nodes={text=hc, draw=none}}] {
+	4\&3\&2\&4\&5\&4\&7\&3\\
+	0\&1\&2\&0\&0\&1\&0\&5\\
+};
+
+\foreach \i/\j in {1/2, 1/3, 2/3, 5/6, 5/8, 7/8, 6/8, 4/8, 1/8}
+	\path (A-1-\i) edge[draw,out=90,in=90,hc] (A-1-\j);

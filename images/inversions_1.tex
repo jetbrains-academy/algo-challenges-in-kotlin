@@ -1,0 +1,14 @@
+\node[text width=120mm] {
+	\begin{pseudocode}
+		\myproc{CountInversions}(\myvar{List}):\\
+		if $|\myvar{List}| = 1$:\\
+		\quad return [0]\\
+		$\myvar{LeftHalf} \gets \text{left half of~\myvar{List}}$\\
+		$\myvar{RightHalf} \gets \text{right half of~\myvar{List}}$\\
+		$\myvar{inversions} \gets \myproc{CountInversions}(\myvar{LeftHalf})+\myproc{CountInversions}(\myvar{RightHalf})$\\
+		sort \myvar{LeftHalf}\\
+		for $x$ in $\myvar{LeftHalf}$:\\
+		\quad increase inversions of~$x$ by~$\myproc{CountLarger}(\myvar{LeftHalf}, x)$\\
+		return \myvar{inversions}
+	\end{pseudocode}
+};
