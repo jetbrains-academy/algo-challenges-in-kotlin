@@ -1,6 +1,5 @@
 \node[text width=100mm]{
-	\hrule
-	\medskip
+	\begin{pseudocode}
 	$\myproc{Generate}(n, L)$\\
 	$s \gets \text{sum of elements of~$L$}$\\
 	if $s>n$:\\
@@ -12,6 +11,5 @@
 	for $k$ from $m$ to $n-s$:\\
 	\quad add to $\myvar{result}$ all lists from $\myproc{Generate}(n, L+[k])$\\
 	return \myvar{result}
-	\medskip
-	\hrule
+	\end{pseudocode}
 };
