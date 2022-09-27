@@ -1,0 +1,13 @@
+\node[text width=100mm]{
+	\begin{pseudocode}
+		$\myproc{GenerateSubsets}(n, k, m)$\\
+		if $n-m<k$:\\
+		\quad return empty list\\
+		$\myvar{result} \gets \text{empty list}$\\
+		for $\myvar{subset}$ in $\myproc{GenerateSubsets}(n, k - 1, m + 1)$:\\
+		\quad add $[m] + \myvar{subset}$ to $\myvar{result}$\\
+		for $\myvar{subset}$ in $\myproc{GenerateSubsets}(n, k, m + 1)$:\\
+		\quad add $\myvar{subset}$ to $\myvar{result}$\\
+		return $\myvar{result}$
+	\end{pseudocode}
+};

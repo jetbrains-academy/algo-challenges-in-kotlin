@@ -2,14 +2,22 @@
 
 # Generate Subsets
 
-Given integers $n$ and $k$, generate all subsets of set $\{0, 1, 2, \ldots, n - 1\}$ 
-with cardinality $k$.
+<div class="logo">
+    <img src="../../images/subsets_logo.png">
+</div>
+
+Given integers $n$ and $k$, generate all subsets of 
+the set $\lbrace 0, 1, 2, \dotsc, n - 1 \rbrace$ 
+of size $k$.
 
 ### Input
 
-Given `Int`'s $n$ and $k$ — the sizes of the set and the subsets, respectively ($0 \le k \le n \le 200$).
+Given `Int`'s $n$ and $k$ — the sizes of the set and 
+the subsets, respectively ($0 \le k \le n \le 200$).
 
-The number of required subsets doesn't exceed $10^6$.
+It is guaranteed that the size of the output (the number
+of subsets)
+does not exceed $10^6$.
 
 ### Output
 
