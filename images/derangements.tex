@@ -1,0 +1,12 @@
+\node[text width=100mm]{
+	\begin{pseudocode}
+		$\myproc{GenerateDerangements}(\myvar{prefix}, n)$\\
+		if $\operatorname{length}(\myvar{prefix}) = n$:\\
+		\quad return a~list consisting of $\myvar{prefix}$ only\\
+		$\myvar{result} \gets \text{empty list}$\\
+		for $k$ from $0$ to~$n-1$:\\
+		\quad if $k \not \in \myvar{prefix}$ and $k \neq \operatorname{length}(\myvar{prefix})$:\\
+		\quad\quad add $\myproc{GenerateDerangements}(\myvar{prefix} + [k], n)$ to $\myvar{result}$\\
+		return $\myvar{result}$
+	\end{pseudocode}
+};
