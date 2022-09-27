@@ -2,7 +2,7 @@
 ### Solution
 
 All partitions of $n=5$ can be split into two sets: those containing 1 as 
-a summand and those that does not contain it. In turn, the latter set is split
+a summand and those that do not contain it. In turn, the latter set is split
 into partitions containing 2 as a summand and partitions consisting of 
 integers greater than two. Continuing in the same fashion, we break all
 partitions of $n=5$ into the following five categories:
