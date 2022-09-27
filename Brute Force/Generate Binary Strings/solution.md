@@ -24,7 +24,7 @@ for an empty string $s$ populates the list with all binary strings of length $n$
 Another (though similar) way to generate all binary strings is based on the 
 following observation: by cutting the first symbol out of the first four strings
 of length three, one gets all binary strings of length two, in the lexicographic
-order (and the same holds for the last three strings). This leads to the 
+order (and the same holds for the last four strings). This leads to the 
 following recursive algorithm: generate all binary strings of length $n-1$;
 then prepend ${\tt 0}$ to all of them, then prepend ${\tt 1}$ to all of them.
 
