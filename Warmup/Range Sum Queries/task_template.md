@@ -32,7 +32,24 @@ An `IntArray` of size not exceeding $10^7$.
 an instance of class implementing [RangeSumQueries](psi_element://RangeSumQueries) interface.
 - `getSum(l, r)` should return the value of $\operatorname{query}(l, r)$
 
-TODO: Niyaz, add sample tests
+### Example
+
+<div class="sample">
+
+| Input                                 | Returns                                                   |
+|---------------------------------------|-----------------------------------------------------------|
+| `createRSQInstance([1, 3, -2, 4, 2])` | [RangeSumQueries](psi_element://RangeSumQueries) instance |
+| `getSum(0, 1)`                        | `1`                                                       |
+| `getSum(0, 5)`                        | `8`                                                       |
+| `getSum(2, 2)`                        | `0`                                                       |
+| `getSum(2, 3)`                        | `-2`                                                      |
+| `getSum(2, 5)`                        | `4`                                                       |
+| `getSum(1, 4)`                        | `5`                                                       |
+| `getSum(0, 0)`                        | `0`                                                       |
+| `getSum(4, 5)`                        | `2`                                                       |
+
+</div>
+
 
 <div class="hint">
 Assume that you know the value of $\operatorname{range}(0,k)$ 

@@ -8,11 +8,15 @@ private class RangeSum(a: IntArray) : RangeSumQueries {
         }
     }
 
-    override fun getSum(left: Int, right: Int): Long {
-        return prefix[right - 1] - when (left) {
-            0 -> 0
-            else -> prefix[left - 1]
+    private fun get(index: Int): Long {
+        return when (index) {
+            -1 -> 0
+            else -> prefix[index]
         }
+    }
+
+    override fun getSum(left: Int, right: Int): Long {
+        return get(right - 1) - get(left - 1)
     }
 
 }
