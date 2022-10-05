@@ -5,7 +5,7 @@ files:
   - name: test/Tests.kt
     visible: false
   - name: task_template.md
-    visible: true
+    visible: false
   - name: src/CountBlocksOfOnesWithUpdates.kt
     visible: true
   - name: src/CountBlocksOfOnesWithUpdatesImpl.kt

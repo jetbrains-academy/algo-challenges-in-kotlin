@@ -11,6 +11,8 @@ files:
     placeholder_text: // Write additional classes and functions here
 - name: test/Tests.kt
   visible: true
+- name: test/HiddenTests.kt
+  visible: false
 - name: task_template.md
   visible: false
 - name: solution.md
