@@ -17,3 +17,5 @@ files:
   visible: false
 - name: src/RangeSumQueries.kt
   visible: true
+- name: test/HiddenTests.kt
+  visible: false
