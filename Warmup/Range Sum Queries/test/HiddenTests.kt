@@ -62,7 +62,7 @@ class HiddenTests {
         }
     }
 
-    private fun testRandomQueries(a: IntArray, rng: Random) {
+    private fun performRandomQueries(a: IntArray, rng: Random) {
         val realRSQ = TestRangeSum(a.clone())
         val rsq = createRSQInstance(a)
         repeat(MAX_QUERIES) {
@@ -76,7 +76,7 @@ class HiddenTests {
         }
     }
 
-    private fun testValuesEqual(length: Int, value: Int) {
+    private fun equalValues(length: Int, value: Int) {
         val rsq = createRSQInstance(IntArray(length) { value })
         val expectedFull = value.toLong() * length
         val actualFull = rsq.getSum(0, length)
@@ -88,13 +88,13 @@ class HiddenTests {
     @Test
     @Timeout(value = 1, unit = TimeUnit.SECONDS)
     fun maxValue() {
-        testValuesEqual(MAX_LENGTH, Int.MAX_VALUE)
+        equalValues(MAX_LENGTH, Int.MAX_VALUE)
     }
 
     @Test
     @Timeout(value = 1, unit = TimeUnit.SECONDS)
     fun minValue() {
-        testValuesEqual(MAX_LENGTH, Int.MIN_VALUE)
+        equalValues(MAX_LENGTH, Int.MIN_VALUE)
     }
 
     @Test
@@ -102,6 +102,6 @@ class HiddenTests {
     fun maxLength() {
         val rng = Random(123L)
         val a = rng.getArray(MAX_LENGTH, Int.MIN_VALUE, Int.MAX_VALUE)
-        testRandomQueries(a, rng)
+        performRandomQueries(a, rng)
     }
 }
