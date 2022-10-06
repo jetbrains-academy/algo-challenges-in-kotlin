@@ -28,7 +28,7 @@ private class InversionsCounter<T : Comparable<T>>(a: List<T>) {
         b.clear()
     }
 
-    public fun count(): IntArray {
+    fun count(): IntArray {
         mergeSort(0, a.size)
         return result
     }
