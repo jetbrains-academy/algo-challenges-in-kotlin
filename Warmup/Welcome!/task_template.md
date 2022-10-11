@@ -27,3 +27,25 @@ carefully designed testcases that contain both large datasets and various corner
 language by JetBrains.
 
 
+For each programming challenge, follow the steps below.
+ * Read the problem statement. Make sure to check all constraints — this 
+gives you an estimate of the running time of an algorithm you need to design.
+ * Design an algorithm. If you need a hint, check the hints we provide after the problem statement.
+We encourage you to first try to come up with an algorithm on your own and only then to uncover the hints.
+ * Prove that your algorithm is correct. Ensure that even on large 
+datasets it makes no more than $10^9$ basic operations.
+ * Implement your algorithm in the file `src/Task.kt`. When doing this, use 
+[code completion](https://www.jetbrains.com/help/idea/auto-completing-code.html),
+[code inspections](https://www.jetbrains.com/help/idea/code-inspection.html), and
+various other features of IDEA. 
+ * Implement [unit tests](https://www.jetbrains.com/help/idea/tdd-with-kotlin.html) 
+in the file `test/Tests.kt`.
+ * If your implementation does not pass the unit tests, 
+[debug](https://www.jetbrains.com/help/idea/debug-your-first-kotlin-application.html) it.
+ * When your implementation passes all your unit tests, submit it to our grading system by
+pressing the Run button. This checks your code against dozens of carefully designed test cases.
+For each test case, we check that your code works fast and produces the right result. If your code
+fails on some tests, debug it.
+ * When you pass all the tests, enjoy the feeling! =)
+
+
