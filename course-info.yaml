@@ -1,7 +1,8 @@
 type: marketplace
-title: 100 Algorithmic Challenges in Kotlin
+title: Algorithmic Challenges in Kotlin
 language: English
-summary: 100 Algorithmic Challenges in Kotlin
+summary: Prepare for your next technical interview by practicing solving 
+  algorithmic challenges in IDEA using Kotlin.
 programming_language: Kotlin
 content:
 - Warmup
