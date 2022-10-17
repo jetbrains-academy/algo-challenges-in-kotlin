@@ -16,10 +16,10 @@ denote the sum $\sum_{l \le i <r}a_i=a_l+a_{l+1}+\dotsb+a_{r-1}$.
 <%include "src/RangeSumQueries.kt" %>
 ```
 
-As a range may be as long as $n$, answering a single range sum query takes 
-time $O(n)$. Hence, the total running time for answering $q$ range 
-sum queries
-is $O(qn)$.
+As a range may be as long as $n$, answering a single range sum query 
+may require about $n$ additions. Hence, answering $q$ range sum queries
+naively may result in $nq$ arithmetic operations. If, say, $n=q=10^6$, 
+this would not fit into one second for sure.
 Your goal is to design a faster algorithm.
 
 ### Input
@@ -52,15 +52,19 @@ an instance of class implementing [RangeSumQueries](psi_element://RangeSumQuerie
 
 
 <div class="hint">
-Assume that you know the value of $\operatorname{range}(0,k)$ 
+Assume that you know the value of all prefix sums, that is,
+$\operatorname{range}(0,k)$ 
 for all $0 \le k \le n$.
 Using these values, can you compute the value of 
-$\operatorname{range}(l,r)$ in time $O(1)$, for any $0 \le l \le r \le n$?
+$\operatorname{range}(l,r)$ in constant time, 
+for any $0 \le l \le r \le n$?
 </div>
 
 <div class="hint">
 Computing $\operatorname{range}(0,k)$ for all $0 \le k \le n$ naively 
-takes time $0+1+2+\dotsb+n=O(n^2)$. Can you do it faster?
+takes time $0+1+2+\dotsb+n=\frac{n(n+1)}{2}$. 
+Already for for $n=10^6$, this would be too slow.
+Can you compute all prefix sums faster?
 </div>
 
 <div class="hint">

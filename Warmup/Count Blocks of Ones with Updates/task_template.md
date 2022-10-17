@@ -7,7 +7,7 @@
 </div>
 
 Implement an interface that supports the following three operations
-for the given binary string: 
+for a given binary string: 
    1. get the number of 1's in the string,
    2. get the number of blocks of 1's in the string,
    3. flip a given bit of the string.

@@ -6,7 +6,7 @@
 </div>
 
 Implement an interface that allows one to get the number of
-1's in the given binary string.
+1's in a given binary string.
 
 ```Kotlin
 interface CountOnes {
@@ -38,11 +38,7 @@ interface CountOnes {
 </div>
 
 <div class="hint">
-Implement a linear scan.
-</div>
-
-<div class="hint">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/a2s9QaKF5lU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+A linear scan of the string is sufficient.
 </div>
 
 <div class="hint">

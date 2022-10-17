@@ -6,7 +6,7 @@
 </div>
 
 Implement an interface that supports the following two operations
-for the given binary string: get the number of 1's in the string
+for a given binary string: get the number of 1's in the string
 and flip a given bit of the string.
 
 ```Kotlin
