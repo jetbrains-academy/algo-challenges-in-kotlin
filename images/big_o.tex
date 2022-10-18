@@ -1,0 +1,17 @@
+\node[text width=100mm]{
+	\begin{center}
+		\begin{tabular}{rcccc}
+			\toprule
+			&   $n$ & $n \log n$ & $n^2$ & $2^n$\\
+			\midrule
+			$n=20$   &    $<1$ sec &  $<1$ sec &  $<1$ sec & $<1$ sec\\
+			$n=50$   &     $<1$ sec &  $<1$ sec & $<1$ sec & 13 days\\
+			$n=10^2$   &    $<1$ sec &  $<1$ sec & $<1$ sec & $4\cdot 10^{13}$ year\\
+			$n=10^6$   &    $<1$ sec &  $<1$ sec &  17 min & \\
+			$n=10^9$   &    1 sec &  30 sec &  $30$ years & \\
+			\midrule
+			max $n$ &    $10^9$ & $10^{7.5}$ &  $10^{4.5}$ &  30 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+};
