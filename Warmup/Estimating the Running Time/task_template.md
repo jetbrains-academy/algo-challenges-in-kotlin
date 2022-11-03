@@ -12,9 +12,20 @@ algorithm fits into one second.
 
 ## Estimating the Running Time: Practice
 
-The code on the left 
-measures the running time of three methods looping 
-for $n$, $n^2$, and $2^n$ iterations.
+The source code on the left 
+implements the following three functions, each taking
+an integer array `a` of size $n$ as an input.
+ * The function `linear` computes the number of positive elements in `a` by
+a single scan. It performs about $n$ basic operations.
+ * The function `quadratic` computes the number of pairs $0 \le i < j < n$
+such that $a[i]+a[j]>0$ using two nested `for` loops. It performs
+about $n^2$ basic operations.
+ * The function `exponential` computes the number of subsets of the
+elements of `a` whose sum is equal to zero. It performs about $2^n$
+basic operation.
+
+The function `main` shows how to measure the running time
+of a particular call.
 Play around with various values of $n$ to see how the running time
 of all three methods changes.
 
