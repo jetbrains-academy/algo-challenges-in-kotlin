@@ -4,9 +4,9 @@ files:
   visible: true
   placeholders:
   - offset: 1
-    length: 481
+    length: 409
     placeholder_text: // Implement additional classes or functions here
-  - offset: 541
+  - offset: 469
     length: 18
     placeholder_text: TODO("not yet implemented")
 - name: test/Tests.kt

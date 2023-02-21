@@ -12,7 +12,7 @@ files:
   visible: true
   placeholders:
   - offset: 76
-    length: 103
+    length: 102
     placeholder_text: // create required fields and methods here
   - offset: 224
     length: 11
