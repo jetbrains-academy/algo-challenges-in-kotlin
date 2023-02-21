@@ -23,6 +23,9 @@ class HiddenTests {
     }
 
     private fun convertToBinary(n: Int, x: Int): String {
-        return x.toString(2).padStart(n, '0')
+        return when (n) {
+            0 -> ""
+            else -> x.toString(2).padStart(n, '0')
+        }
     }
 }
