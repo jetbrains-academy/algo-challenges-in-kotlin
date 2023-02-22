@@ -30,6 +30,6 @@ class Tests {
     @Test
     fun sample() {
         val actual = generatePartitions(4)
-        checkPartitions(4, 4, actual)
+        checkPartitions(5, 4, actual)
     }
 }
