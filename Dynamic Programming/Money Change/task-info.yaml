@@ -7,8 +7,8 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 63
-    length: 272
+  - offset: 59
+    length: 276
     placeholder_text: |-
       return when (money) {
               0 -> 0

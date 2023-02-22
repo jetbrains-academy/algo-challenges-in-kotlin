@@ -1,8 +1,10 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Timeout
+import org.junit.jupiter.api.assertTimeoutPreemptively
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
+import java.time.Duration
 import java.util.Random
 import java.util.concurrent.TimeUnit
 import kotlin.math.min
@@ -34,7 +36,12 @@ class HiddenTests {
     }
 
     private fun testSingle(n: Int) {
-        val actual = changeMoney(n)
+        val actual = assertTimeoutPreemptively(
+                Duration.ofMillis(2000L),
+                { "'changeMoney($n)' couldn't finish in time" }
+        ) {
+            changeMoney(n)
+        }
         assertEquals(actual, table[n]) {
             "money = $n"
         }
@@ -48,7 +55,6 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
     fun testRandom() {
         val rng = Random(239)
         repeat(5) {
