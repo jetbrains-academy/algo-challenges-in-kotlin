@@ -3,11 +3,11 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-    - offset: 49
-      length: 223
-      placeholder_text: TODO("not implemented")
+  - offset: 49
+    length: 223
+    placeholder_text: TODO("not implemented")
 - name: test/Tests.kt
-  visible: false
+  visible: true
 - name: task_template.md
   visible: false
 - name: solution.md
