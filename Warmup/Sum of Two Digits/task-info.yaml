@@ -6,3 +6,5 @@ files:
   visible: false
 - name: task_template.md
   visible: true
+- name: solution.md
+  visible: true

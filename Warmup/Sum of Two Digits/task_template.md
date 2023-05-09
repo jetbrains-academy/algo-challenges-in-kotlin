@@ -18,6 +18,11 @@ compute their sum.
 
 </div>
 
-We start from this ridiculously simple problem to show you
-the pipeline of submitting your solution to the grading system.
+We start from this ridiculously simple problem to show you the 
+pipeline of reading the problem statement, designing an algorithm, 
+implementing it, testing and debugging your program, and submitting 
+it to the grading system.
 
+<div class="hint">
+<%include "solution.md" %>
+</div>
