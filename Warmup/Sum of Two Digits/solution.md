@@ -13,7 +13,7 @@ TODO: Niyaz, please add a solution in Kotlin
 Copy-n-paste this solution into the file `task.kt`
 and press the "Check" button in the right pane. 
 The automated grading system will check your solution
-against many carefully selected tests to verify that it 
+against several tests to verify that it 
 always produces a correct answer and fits into the time 
 and memory constrains.
 

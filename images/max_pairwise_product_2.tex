@@ -1,0 +1,10 @@
+\node[text width=100mm]{
+	\begin{pseudocode}
+        \myproc{MaxPairwiseProductNaive}($A[1\dotsc n]$):\\
+		$\myvar{product} \gets 0$\\
+		for $i$ from $1$ to~$n$:\\
+		\quad for $j$ from $i+1$ to~$n$:\\
+		\quad\quad $\myvar{product} \gets \max(\myvar{product}, A[i] \cdot A[j])$\\
+		return \myvar{product}
+	\end{pseudocode}
+};

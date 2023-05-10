@@ -1,0 +1,16 @@
+\node[text width=100mm]{
+	\begin{pseudocode}
+		\myproc{MaxPairwiseProductFast}($A[1 \dotsc n]$):\\
+		$\myvar{index} \gets 1$\\
+		for $i$ from $2$ to $n$:\\
+		\quad if $A[i] > A[\myvar{index}]$:\\
+		\quad\quad $\myvar{index} \gets i$\\
+		swap $A[\myvar{index}]$ and $A[n]$\\[1mm]
+		$\myvar{index} \gets 1$\\
+		for $i$ from $2$ to $n-1$:\\
+		\quad if $A[i] > A[\myvar{index}]$:\\
+		\quad\quad $\myvar{index} \gets i$\\
+		swap $A[\myvar{index}]$ and $A[n-1]$\\
+		return $A[n-1] \cdot A[n]$
+	\end{pseudocode}
+};

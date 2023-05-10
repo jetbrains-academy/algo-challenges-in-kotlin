@@ -33,7 +33,7 @@
 	minimum size=5mm, 
 	inner sep=0mm,
 	anchor=center,
-	draw
+	draw=mc,
 ]
 
 \tikzstyle{array} = [
@@ -45,6 +45,8 @@
 	row sep=-\pgflinewidth,
 	column sep=-\pgflinewidth,
 ]
+
+\tikzstyle{h}=[arraynodes, fill=hcfill]
 
 \newcommand{\logo}{
 	\path[use as bounding box] (-2.6, -2.6) rectangle (2.6, 2.6);

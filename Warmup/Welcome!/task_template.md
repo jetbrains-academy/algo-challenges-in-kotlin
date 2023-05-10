@@ -48,6 +48,8 @@ For each test case, we check that your code works fast and produces the right re
 fails on some tests, debug it.
  * When you pass all the tests, enjoy the feeling! =)
 
+In the next two problems, we will guide you through this pipeline step by step.
+
 Happy learning!
 
 

@@ -1,0 +1,19 @@
+\node[text width=100mm]{
+	\begin{pseudocode}
+		$\myproc{StressTest}(N, M)$:\\
+		while true:\\
+		\quad $n \gets \text{random integer between 2 and $N$}$\\
+		%\null\quad print($n$)\\
+		\quad allocate array $A[1 \dotsc n]$\\
+		\quad for $i$ from $1$ to~$n$:\\
+		\quad\quad $A[i] \gets \text{random integer between 0 and $M$}$\\
+		\quad print($A[1 \dotsc n]$)\\
+		\quad $\myvar{result}_1 \gets \myproc{MaxPairwiseProductNaive}(A)$\\
+		\quad $\myvar{result}_2 \gets \myproc{MaxPairwiseProductFast}(A)$\\
+		\quad if $\myvar{result}_1 = \myvar{result}_2$:\\
+		\quad\quad print(``OK'')\\
+		\quad else:\\
+		\quad\quad print(``Wrong answer:'', \myvar{result}$_1$, \myvar{result}$_2$)\\
+		\quad\quad return
+	\end{pseudocode}
+};
