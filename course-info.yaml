@@ -1,11 +1,12 @@
 type: marketplace
 title: Algorithmic Challenges in Kotlin
 language: English
-summary: Prepare for your next technical interview by practicing solving 
-  algorithmic challenges in IDEA using Kotlin.
+summary: Prepare for your next technical interview by practicing solving algorithmic
+  challenges in IDEA using Kotlin.
 programming_language: Kotlin
 content:
 - Warmup
+- Queries and Incremental Updates
 - Brute Force
 - Divide and Conquer
 - Greedy Algorithms
