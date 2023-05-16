@@ -124,16 +124,16 @@ Let us review the common rules of comparing the order
 of growth of functions arising in algorithm analysis.
 
 * Multiplicative constants can be omitted:
-  $$c \cdot f \preceq f \, .$$
+  $$c \cdot f \preceq f  .$$
   Examples: $5n^2 \preceq n^2$, $\frac{n^2}{3} \preceq n^2$, $7n \preceq n$.
 * Out of two polynomials, the one with larger degree grows faster:
-  $$n^a \prec n^b \text{ for } 0 \le a < b\, . $$
+  $$n^a \prec n^b \text{ for } 0 \le a < b . $$
   Examples: $n \prec n^2$, $\sqrt{n} \prec n^{2/3}$, $n^2 \prec n^3$, $n^0 \prec \sqrt{n}$.
 * Any polynomial grows slower than any exponential:
-  $$n^a \prec b^n \text{ for } a \ge 0, b>1 \,. $$
+  $$n^a \prec b^n \text{ for } a \ge 0, b>1 . $$
   Examples: $n^3 \prec 2^n$, $n^{10} \prec 1.1^n$.
 * Any polylogarithm (that is, a function of the form $(\log n)^a$) grows slower than any polynomial:
-  $$(\log n)^a \prec n^b \text{ for } a, b>0 \, .$$
+  $$(\log n)^a \prec n^b \text{ for } a, b>0  .$$
   Examples: $(\log n)^3 \prec \sqrt{n}$, $n\log n \prec n^2$.
 * Smaller terms can be omitted:
   $$\text{if $f \preceq g$, then $f+g\preceq g$.}$$
