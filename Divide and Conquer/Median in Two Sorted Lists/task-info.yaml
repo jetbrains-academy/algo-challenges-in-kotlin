@@ -17,3 +17,5 @@ files:
   visible: false
 - name: solution.md
   visible: false
+- name: test/HiddenTests.kt
+  visible: false

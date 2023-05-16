@@ -13,11 +13,8 @@ $a_0 \le a_1 \le \dotsb a_{n-1}$
 and
 $b_0 \le b_1 \le \dotsb b_{n-1}$, where `T`
 implements `Comparable<T>`
-and $0 \le n \le 10^7$.
+and $1 \le n \le 10^7$.
 The lists' `get` random-access method works in constant time.
-
-TODO: Niyaz, perhaps n should be positive (rather than non-negative)?
-(It is not clear what to return in case $n=0$.)
 
 ### Output
 
