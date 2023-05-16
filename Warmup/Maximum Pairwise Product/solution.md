@@ -232,7 +232,7 @@ debug than non-deterministic ones.
 
 Now let's examine ${index}_1=2$ and ${index}_2=3$. If we look at the code for determining the 
 second maximum, we will notice a subtle bug. When we implemented a condition on $i$ (such that it is not the same as 
-the previous maximum) instead of comparing $i$ and ${index}_1$, we compared $A[i]$ with $A[\myvar{index}_1]$. 
+the previous maximum) instead of comparing $i$ and ${index}_1$, we compared $A[i]$ with $A[index_1]$. 
 This ensures that the second maximum differs from the first maximum by the value rather than by the index of the 
 element that we select for solving the Maximum Pairwise Product Problem. So, our solution fails on any test case 
 where the largest number is equal to the second largest number. We now change the condition from
