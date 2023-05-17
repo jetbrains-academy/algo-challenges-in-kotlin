@@ -1,16 +1,16 @@
 
 ### Solution
 
-An optimal way to change $26$ requires seven coins. Let's consider
-an arbitrary subset of an optimal solution, e.g., four coins within
+The optimal way to change $26$ cents requires seven coins. Let's consider
+an arbitrary subset of the optimal solution: e.g., the four coins within
 a rectangle shown below sum up to $15$.
 
 <img src="../../images/money_change_dp_1.png">
 
 
-**Stop and Think!** Can you change $15$ cents with three coins?
+**Stop and think!** Can you change $15$ cents with three coins?
 
-The answer to this Stop and Think is "no" — 
+The answer to this question is "no" — 
 if there was a way to change $15$ with three coins, 
 one would replace the highlighted four coins and get a change of 
 $26$ with six coins (rather than seven).
@@ -34,10 +34,10 @@ Thus, to solve the problem for ${money}$, it is
 enough to solve it for ${money}-c_k$ and add one.
 
 
-**Stop and Think!** Are we done?
+**Stop and think!** Are we done?
 
 The issue here is that we don't know the value of $c_k$. Still,
-we know that $c_k$ is equal to either $1$, or $3$, or $4$. Hence, ${change}({money})$ is equal to one of
+we know that $c_k$ is equal to either $1$, or $3$, or $4$. Hence, ${change}({money})$ is equal to one of the following:
 
  * ${change}({money}-1)+1$,
  * ${change}({money}-3)+1$, and
@@ -69,10 +69,10 @@ so that we never need to compute it again.
 
 <img src="../../images/money_change_dp_3.png">
 
-Such an algorithm is already good enough in practice, though still has some inefficiencies: recursive calls and lookups in an associative array
-have an overhead. By noting that all the values that we need to compute are consecutive integers, we can implement a better approach that uses an array for storing solutions to all problems.
+Such an algorithm is already good enough in practice, though it still has some inefficiencies: recursive calls and lookups in an associative array
+have an overhead. Noting that all the values that we need to compute are consecutive integers, we can implement a better approach, which uses an array for storing solutions to all problems.
 
 <img src="../../images/money_change_dp_4.png">
 
-The running time of this algorithm is $O(money)$ as every 
-iteration of the outer for loop takes constant time.
+The running time of this algorithm is $O(money)$, as every 
+iteration of the outer for-loop takes constant time.
