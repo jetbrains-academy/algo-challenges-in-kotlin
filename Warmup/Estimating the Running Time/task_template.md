@@ -1,6 +1,6 @@
 ## Frequently Arising Running Times
 
-The table below shows an approximate running time of four
+The table below shows the approximate running time of four
 algorithms with running time $n$, $n\log n$, $n^2$, and $2^n$ 
 on various input sizes
 for a hypothetical computer that performs $10^9$ operations per second.
@@ -22,7 +22,7 @@ such that $a[i]+a[j]>0$ using two nested `for` loops. It performs
 about $n^2$ basic operations.
  * The function `exponential` computes the number of subsets of the
 elements of `a` whose sum is equal to zero. It performs about $2^n$
-basic operation.
+basic operations.
 
 The function `main` shows how to measure the running time
 of a particular call.
@@ -32,7 +32,7 @@ of all three methods changes.
 ## Estimating the Running Time: Theory
 
 To figure out how long a program would take to run on a real computer, 
-we would need to know things like: speed of the computer, the system architecture, 
+we would need to know things like: the speed of the computer, the system architecture, 
 the compiler being used, details of the memory hierarchy, etc.
 Hence, carefully estimating the running time is a rather difficult task.
 Moreover, in practice, you might not even know some of these details.
@@ -41,10 +41,10 @@ of an algorithm without knowing anything about all these details!
 
 If we say that the running time of an algorithm is quadratic, or $O(n^2)$, 
 it means that the running time of the algorithm on an input of size $n$ is limited by a quadratic function of $n$. 
-That limit may be $99.7n^2$ or $0.001n^2$  or $5n^2+3.2n+99993$; the main factor that describes the growth 
+That limit may be $99.7n^2$, or $0.001n^2$, or $5n^2+3.2n+99993$; the main factor that describes the growth 
 rate of the running time is the term that grows the fastest with respect to $n$, for example $n^2$  when compared 
-to terms like $3.2n$, or $99993$. All functions with a leading term of $n^2$  have more or less the same rate of 
-growth, so we lump them into one class which we call $O(n^2)$. The difference in behavior between two quadratic 
+to terms like $3.2n$ or $99993$. All functions with a leading term of $n^2$  have more or less the same rate of 
+growth, so we lump them into one class, which we call $O(n^2)$. The difference in behavior between two quadratic 
 functions in that class, say $99.7n^2$  and $5n^2 + 3.2n + 99993$, is negligible when compared to the difference in 
 behavior between two functions in different classes, say $5n^2 + 3.2n$  and $1.2n^3$. Of course, $99.7n^2$ 
 and $5n^2$  are different functions and we would prefer an algorithm that takes $5n^2$ operations to an algorithm 
@@ -61,13 +61,13 @@ worst case estimate, so we are never surprised or disappointed. Thus, when we de
 it is a bound on the worst case efficiency.
 
 Consider two algorithms and denote by $f(n)$ and $g(n)$ their running times on an input of size $n$.
-We say that *$f$ grows no faster than $g$*,
+We say that *$f$ grows no faster than $g$*
 if there exists a constant $c$ such that for every positive integer $n$,
 $f(n) \le c \cdot g(n)$ (equivalently, $\frac{f(n)}{g(n)} \le c$ for all $n$).
 In this case, we write $f=O(g)$ or $f \preceq g$. The notation $f=O(g)$
 is the standard one, whereas some learners find the notation $f \preceq g$ to be more intuitive.
 
-To give an example, let's visualize functions
+To give an example, let's visualize the functions
 $f(n)=4n\log_2n$ and $g(n)=n^2$
 by plotting them for $1 \le n \le 30$.
 
@@ -92,7 +92,7 @@ Now, let us compare $f(n)=11n$ and $g(n)=2n^2+5n+3$. First, let us look at their
 This plot reveals that both functions grow (as $n$ grows) but $11n$ grows "slower". This can be formally stated
 as follows.
 
-For two functions $f, g$ we say that \emph{$f$ grows slower than $g$} and write $f=o(g)$ or $f \prec g$, if the fraction $\frac{f(n)}{g(n)}$ goes to zero as $n$ grows.
+For two functions $f$ and $g$, we say that \emph{$f$ grows slower than $g$} and write $f=o(g)$ or $f \prec g$ if the fraction $\frac{f(n)}{g(n)}$ goes to zero as $n$ grows.
 
 Of course, if $f \prec g$ (equivalently, $f=o(g)$), then also $f \preceq g$ (equivalently, $f=O(g)$). In plain English: if $f$ grows slower than $g$, then certainly $f$ grows no faster than $g$.
 
@@ -110,8 +110,8 @@ Using the big-$O$ notation to evaluate running times has several advantages:
   multiple.
 
 These advantages come with some disadvantages.
-Indeed, the big-$O$ notation "loses" some information since it ignores constant multipliers.
-If you have two algorithms, and one of them is a hundred times faster, they still have the same
+Indeed, the big-$O$ notation "loses" some information, since it ignores constant multipliers.
+If you have two algorithms and one of them is a hundred times faster, they still have the same
 estimate of the running time in the
 big-$O$ notation.
 But, in practice, if you want to make things fast, a factor of 100 is a big deal.
