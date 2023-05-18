@@ -5,7 +5,7 @@
 You are playing a video game.
 Abstractly, there is a line with $n - 1$ points denoted as $0, 1, \ldots, n - 1$.
 Your character start at point $0$.
-Each turn if he is at point $i$ you can make him move either to point
+Each turn, if he is at point $i$, you can make him move either to point
 $i + 1$ or to point $i + 2$. The character has low stamina, so he cannot make
 moves from $i$ to $i + 2$ twice in a row.
 
