@@ -40,7 +40,7 @@ interface CountBlocksOfOnesWithUpdates {
 </div>
 
 <div class="Hint">
-When the $i$-bit is flipped, what indices can be become or stop being
+When the $i$-bit is flipped, what indices can become or stop being
 a starting index of a block?
 </div>
 
