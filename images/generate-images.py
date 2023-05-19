@@ -13,20 +13,21 @@ if __name__ == '__main__':
     argument = sys.argv[1]
     file_names = listdir('.') if argument == 'all' else [argument, ]
 
-    exclude_tex_files = ['cover.tex', 'main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex', 'profile.tex']
+    exclude_tex_files = ['cover.tex', 'main.tex', 'main_dark.tex', 'tmp.tex', 'header.tex', 'profile.tex', 'sandbox.tex']
 
-    for file_name in file_names:
-        if file_name not in exclude_tex_files and file_name.endswith('.tex'):
-            system(f'cp {file_name} tmp.tex')
-            print(f'Processing {file_name[:-4]}')
+    file_names = list(filter(lambda f: f not in exclude_tex_files and f.endswith('.tex'), file_names))
 
-            # light picture
-            system('pdflatex main > /dev/null 2>&1')
-            system(f'convert -density 1000 main.pdf {file_name[:-4]}.png')
+    for i, file_name in enumerate(sorted(file_names)):
+        system(f'cp {file_name} tmp.tex')
+        print(f'Processing {file_name[:-4]} ({i + 1}/{len(file_names)})...', end='')
 
-            # uncomment this later, when Idea is able to process two types of images
-            # # dark picture
-            # system('pdflatex main_dark > /dev/null 2>&1')
-            # system(f'convert -density 1000 main_dark.pdf {file_name[:-4]}_dark.png')
+        # light picture
+        system('pdflatex main > /dev/null 2>&1')
+        system(f'convert -density 400 -colorspace RGB main.pdf {file_name[:-4]}.png')
+
+        # dark picture
+        system('pdflatex main_dark > /dev/null 2>&1')
+        system(f'convert -density 400 -colorspace RGB main_dark.pdf {file_name[:-4]}_dark.png')
+        print('OK')
 
     system('rm *.log *.aux main.pdf')
