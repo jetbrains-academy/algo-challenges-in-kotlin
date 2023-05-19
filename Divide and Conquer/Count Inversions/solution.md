@@ -79,5 +79,5 @@ of $\mathit{LeftHalf}$ and hence forms a split inversion
 with every such element. We then increase the number of inversions of $x$
 by the length of $\mathit{LeftHalf}$.
 
-The running time $T(n)$ of the result algorithm satisfies
+The running time $T(n)$ of the resulting algorithm satisfies
 a recurrence $T(n)=2T(n/2)+O(n)$ and hence $T(n)=O(n\log n)$.
