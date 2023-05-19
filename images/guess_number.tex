@@ -1,0 +1,37 @@
+\tikzstyle{q}=[rectangle, draw=none, inner sep=1mm]
+\tikzstyle{l}=[rectangle, draw=none, inner sep=1mm, left]
+
+\begin{scope}[yscale=.9]
+	%\draw[help lines] (0,0) grid (8,6);
+	\tikzstyle{q}=[rectangle,draw]
+	\node (3) at (4,6) {$1 \le x \le 7$};
+	\node[q] (2) at (4,5) {$x=4$?};
+	\node (d1) at (4,3.5) {Yes!};
+	\node (l2) at (2,3.5) {$1 \le x \le 3$};
+	\node (l3) at (6,3.5) {$5 \le x \le 7$};
+	\draw (2) -- (2,5); \draw[->] (2,5) -- node[l] {$x<4$} (l2);
+	\draw (2) -- (6,5); \draw[->] (6,5) -- node[l] {$x>4$} (l3);
+	\draw[->] (3) -- (2);
+	\draw[->] (2) -- (d1);
+	\node[q] (a) at (2,2.5) {$x=2$?};
+	\node[q] (b) at (6,2.5) {$x=6$?};
+	\node (d) at (2,1) {Yes!};
+	\node (g) at (6,1) {Yes!};
+	\draw[->] (a) --  (d);
+	\draw[->] (b) --  (g);
+	\draw[->] (l2) -- (a);
+	\draw[->] (l3) -- (b);
+	
+	\foreach \x/\n in {.75/1, 3.25/3, 4.75/5, 7.25/7} {
+		\node (\n) at (\x, 1) {$x=\n$};
+		\node[q] (q) at (\x,0) {$x=\n$?};
+		\draw[->] (\n) -- (q);
+		\node (y) at (\x,-1) {Yes!};
+		\draw[->] (q) -- (y);
+	}
+	
+	\draw (a) -- (.75, 2.5); \draw[->] (.75, 2.5) -- node[l] {$x<2$} (1);
+	\draw (a) -- (3.25, 2.5); \draw[->] (3.25, 2.5) -- node[l] {$x>2$} (3);
+	\draw (b) -- (4.75, 2.5); \draw[->] (4.75, 2.5) -- node[l] {$x<6$} (5);
+	\draw (b) -- (7.25, 2.5); \draw[->] (7.25, 2.5) -- node[l] {$x>6$} (7);
+\end{scope}
