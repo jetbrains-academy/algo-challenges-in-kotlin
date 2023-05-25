@@ -15,7 +15,7 @@ partitions of $n=5$ into the following five categories:
 
 To ensure that all of them are different, it is convenient to assume 
 that in every partition, the summands appear in the non-decreasing
-order: this way, all partitions in, say, $3+\dotsb$ category do not contain 1's
+order: this way, all partitions in, say, the $3+\dotsb$ category do not contain 1's
 and 2's.
 
 Now, let us focus on, say, the $2+\dotsb$ category. Clearly, 
@@ -32,9 +32,9 @@ $1$ as a sum, but all summands should be at least 2.
 
 This reasoning leads to the following recursive procedure 
 $\operatorname{Generate}(n, L)$, where 
-$n$ is a target sum and $L$ is a list of integers sorted in non-decreasing 
-integers. It returns all sorted partitions of $n$ that "extend" the 
-list $L$. For example, for $n=5$ and $L=(1, 1)$ it returns the following
+$n$ is the target sum and $L$ is a list of integers sorted in non-decreasing 
+order. It returns all sorted partitions of $n$ that "extend" the 
+list $L$. For example, for $n=5$ and $L=(1, 1)$, it returns the following
 three partitions: $(1,1,1,1,1)$, $(1,1,1,2)$, $(1,1,3)$.
 
 <img src="../../images/partitions.png">
