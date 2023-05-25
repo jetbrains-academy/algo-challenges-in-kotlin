@@ -1,6 +1,6 @@
 \begin{scope}[scale=.4]
 	\foreach \h [count=\n] in {1, 2, 4, 5, 7, 9, 12, 13, 16, 18, 19, 20, 21}
-		\draw[mc, fill=mcfill] (\n, 0) rectangle (\n + 1, \h / 5);
+		\draw[mc, fill=mcfill] (\n, 0) rectangle (\n + .8, \h / 5);
 	\foreach \x/\t in {0/0, 1/1, 2/2, 12/{n-1}}
-		\node[below] at (\x + 1.5, 0) {$a_{\t}$};
+		\node[below] at (\x + 1.4, 0) {$a_{\t}$};
 \end{scope}

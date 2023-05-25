@@ -1,10 +1,13 @@
 \begin{scope}[scale=.4]
-	\foreach \h [count=\n] in {1, 2, 4, 5, 7, 9, 12, 13, 16, 18, 19, 20, 21}
-	\draw[mc, fill=mcfill] (\n, 0) rectangle (\n + 1, \h / 5);
-	\foreach \x/\t in {0/0, 1/1, 2/2, 6/{n/2}, 12/{n-1}}
-	\node[below] at (\x + 1.5, 0) {$a_{\t}$};
-	\draw[fill=white,opacity=0.8,draw=white] (7,0) rectangle (14.1,22/5);
+	\foreach \h [count=\n] in {1, 2, 4, 5, 7, 9}
+		\draw[mc, fill=mcfill] (\n, 0) rectangle (\n + .8, \h / 5);
 	
-	\draw[two, fill=twofill] (17, 0) rectangle (18, 7 / 5);
-	\node[below] at (17.5,0) {$x$};
+	\foreach \h [count=\n from 7] in {12, 13, 16, 18, 19, 20, 21}
+		\draw[mc, fill=mcfill, opacity=.2] (\n, 0) rectangle (\n + .8, \h / 5);
+	
+	\foreach \x/\t in {0/0, 1/1, 2/2, 6/{n/2}, 12/{n-1}}
+		\node[below] at (\x + 1.4, 0) {$a_{\t}$};
+	
+	\draw[two, fill=twofill] (17, 0) rectangle (17.8, 7 / 5);
+	\node[below] at (17.4,0) {$x$};
 \end{scope}
