@@ -131,7 +131,6 @@ A stress test consists of four parts:
 3. A random test generator.
 4. An infinite loop in which a new test is generated and fed into both implementations to compare the results. 
 5. If their results differ, the test and both answers are output, and the program stops, otherwise the loop repeats.
-\end{enumerate}
 
 The idea behind stress testing is that two correct implementations
 should give the same answer for each test (provided the answer to the problem is unique). 

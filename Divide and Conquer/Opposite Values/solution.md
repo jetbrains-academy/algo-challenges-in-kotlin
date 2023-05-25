@@ -5,7 +5,6 @@ Consider a 0/1-array where the first element is 0
 and the last element is 1.
 An element 0 followed by an element 1 in this array is called
 a *0-1 pair*. Here is an example of an array with six 0-1 pairs.
-Here is an example of an array with six white-black pairs.
 
 ![](../../images/pair01.png)
 
