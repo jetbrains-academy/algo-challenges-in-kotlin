@@ -36,6 +36,10 @@ has two issues: a time limit and an an integer overflow)
 
 </div>
 
-<div class="hint">
-<%include "solution.md" %>
-</div>
+In the file `task.kt` you see a straightforward solution to
+this problem. It goes through all pairs of elements and the selects
+one with the maximum product. It turns out that this simple solution
+has a number of issues. Press the "Check" button to ensure that this
+code does not pass the tests indeed. But not to worry —  in the 
+next two lessons we will fix all the issues in this solution and will
+come up with a working solution together!
