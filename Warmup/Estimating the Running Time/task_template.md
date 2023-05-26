@@ -92,7 +92,7 @@ Now, let us compare $f(n)=11n$ and $g(n)=2n^2+5n+3$. First, let us look at their
 This plot reveals that both functions grow (as $n$ grows) but $11n$ grows "slower". This can be formally stated
 as follows.
 
-For two functions $f, g$ we say that \emph{$f$ grows slower than $g$} and write $f=o(g)$ or $f \prec g$, if the fraction $\frac{f(n)}{g(n)}$ goes to zero as $n$ grows.
+For two functions $f, g$ we say that *$f$ grows slower than $g$* and write $f=o(g)$ or $f \prec g$, if the fraction $\frac{f(n)}{g(n)}$ goes to zero as $n$ grows.
 
 Of course, if $f \prec g$ (equivalently, $f=o(g)$), then also $f \preceq g$ (equivalently, $f=O(g)$). In plain English: if $f$ grows slower than $g$, then certainly $f$ grows no faster than $g$.
 
