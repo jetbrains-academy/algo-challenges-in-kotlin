@@ -1,10 +1,9 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.api.Timeout
 import org.junit.jupiter.params.provider.ValueSource
-import java.util.concurrent.TimeUnit
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     companion object {
@@ -39,22 +38,28 @@ class HiddenTests {
         }
     }
 
-    private fun testCoins(v: IntArray, message: String) {
+    private fun testCoins(v: IntArray, message: String, withTimeout: Boolean = true) {
         if (!validateTest(v)) {
             throw AssertionError("Test is invalid")
         }
         val expected = correctSolution(v)
-        val found = findMinimumChange(v)
-        assertEquals(expected, found, message)
+        val actual = when (withTimeout) {
+            true -> runTimeout(1.seconds, message) {
+                findMinimumChange(v)
+            }
+
+            else -> findMinimumChange(v)
+        }
+        assertEquals(expected, actual, message)
     }
 
     @Test
-    fun testAllUpTo50() {
+    fun testAllUpTo50() = runTimeout(5.seconds, "All sequences with sum up to 50") {
         val v = mutableListOf<Int>()
         var testsRun = 0
         fun generateAllSequences(left: Int, last: Int) {
             v.shuffled(rng).toIntArray().also {
-                testCoins(it, "All sequences with sum up to 50: ${it.contentToString()}")
+                testCoins(it, it.contentToString(), withTimeout = false)
             }
             testsRun++
             for (current in last..left) {
@@ -95,7 +100,6 @@ class HiddenTests {
     }
 
     @ParameterizedTest
-    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ValueSource(ints = [MAX_N, MAX_N - 1])
     fun testTimeLimitRandom(n: Int) {
         val v = generateRandomSequence(n, Int.MAX_VALUE)
@@ -103,7 +107,6 @@ class HiddenTests {
     }
 
     @ParameterizedTest
-    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     @ValueSource(ints = [MAX_N, MAX_N - 1])
     fun testTimeLimitNonTrivial(n: Int) {
         val k = 10 + rng.nextInt(10)
@@ -116,7 +119,6 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     fun testMaxAnswer() {
         val v = collectIntoArray(
             powersOfTwo(31),
