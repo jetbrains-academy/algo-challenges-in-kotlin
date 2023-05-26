@@ -85,7 +85,7 @@ public class ResolveTemplate {
         return content;
     }
 
-    static void resolveTemplate(File template, File target, File rootDirectory) throws IOException {
+    public static void resolveTemplate(File template, File target, File rootDirectory) throws IOException {
         ResolveTemplate resolver = new ResolveTemplate(template, rootDirectory);
         Files.writeString(target.toPath(), resolver.resolve(), StandardCharsets.UTF_8);
     }
