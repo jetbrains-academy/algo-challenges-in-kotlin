@@ -31,8 +31,6 @@ Return an `IntArray` whose $i$-th element is the number of inversions of $a_i$.
 
 <div class="samples">
 
-TODO add more samples
-
 | Input             | Return value      |
 |-------------------|-------------------|
 | `[3, 1, 3, 4, 2]` | `[0, 1, 0, 0, 3]` |
