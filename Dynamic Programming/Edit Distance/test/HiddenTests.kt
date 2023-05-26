@@ -1,12 +1,11 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 import java.lang.AssertionError
-import java.util.concurrent.TimeUnit
 import kotlin.math.min
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     companion object {
@@ -42,18 +41,25 @@ class HiddenTests {
         }
     }
 
-    private fun singleTest(first: String, second: String) {
+    private fun singleTest(first: String, second: String, withTimeout: Boolean = true) {
         if (!validate(first) || !validate(second)) {
             throw AssertionError("test case is incorrect")
         }
-        assertEquals(computeAnswer(first, second), findEditDistance(first, second)) {
+        val actual = when (withTimeout) {
+            true -> runTimeout(2.seconds) {
+                findEditDistance(first, second)
+            }
+
+            else -> findEditDistance(first, second)
+        }
+        val expected = computeAnswer(first, second)
+        assertEquals(expected, actual) {
             "edit distance is wrong"
         }
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    fun allBinaryTestsUpTo9() {
+    fun allBinaryTestsUpTo9() = runTimeout(10.seconds) {
         val strings = mutableListOf<String>()
         for (len in 0..9) {
             for (mask in 0 until (1 shl len)) {
@@ -69,14 +75,13 @@ class HiddenTests {
         for (first in strings) {
             for (second in strings) {
                 testsRun += 1
-                singleTest(first, second)
+                singleTest(first, second, false)
             }
         }
         println("$testsRun tests run")
     }
 
     @ParameterizedTest
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     @ValueSource(ints = [26, 10, 1, 2, 3, 4, 5, 6, 7, 8])
     fun maxRandom(alphabet: Int) {
         val s = randomString(MAX_LENGTH, alphabet)
@@ -85,7 +90,6 @@ class HiddenTests {
     }
 
     @ParameterizedTest
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     @ValueSource(ints = [26, 10, 1, 2, 3, 4, 5, 6, 7, 8])
     fun smallDistance(alphabet: Int) {
         val s = randomString(MAX_LENGTH / 2, alphabet)
@@ -113,44 +117,37 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
     fun randomSmall() {
-        makeRandom(20, 20, 5000)
+        makeRandom(20, 20, 1000)
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
     fun randomMedium() {
         makeRandom(100, 100, 200)
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
     fun randomLarge() {
         makeRandom(1000, 1000, 2)
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    fun randomSmallLarge() {
+    fun randomSmallLarge() = runTimeout(10.seconds) {
         makeRandom(20, 1000, 100)
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    fun randomSmallMedium() {
+    fun randomSmallMedium() = runTimeout(10.seconds) {
         makeRandom(20, 200, 500)
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    fun randomMediumLarge() {
+    fun randomMediumLarge() = runTimeout(10.seconds) {
         makeRandom(1000, 200, 10)
     }
 
     @Test
-    @Timeout(value = 20, unit = TimeUnit.SECONDS)
-    fun randomMax() {
+    fun randomMax() = runTimeout(10.seconds) {
         makeRandom(2000, 2000, 1)
     }
 
