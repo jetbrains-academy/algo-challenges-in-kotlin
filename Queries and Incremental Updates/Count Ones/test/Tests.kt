@@ -5,14 +5,14 @@ class Tests {
     @Test
     fun sample1() {
         val sequence = "001001"
-        val blocks = createInstance(sequence)
-        assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
+        val ones = countOnes(sequence)
+        assertEquals(2, ones, "countOnes($sequence)")
     }
 
     @Test
     fun sample2() {
         val sequence = "11100101"
-        val blocks = createInstance(sequence)
-        assertEquals(5, blocks.countOnes(), "countOnes($sequence)")
+        val ones = countOnes(sequence)
+        assertEquals(5, ones, "countOnes($sequence)")
     }
 }
