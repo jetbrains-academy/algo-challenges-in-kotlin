@@ -83,11 +83,8 @@ class HiddenTests {
         if (!validateTest(s)) {
             throw AssertionError("test is incorrect")
         }
-        val blocks = createInstance(s)
-        assertEquals(s.count { it == '1' }, blocks.countOnes()) {
-            prependTestInfo(s, "incorrect number of '1's")
-        }
-        assertEquals(countBlocks(s), blocks.countBlocksOfOnes()) {
+        val blocks = countBlocksOfOnes(s)
+        assertEquals(countBlocks(s), blocks) {
             prependTestInfo(s, "incorrect number of blocks")
         }
     }
