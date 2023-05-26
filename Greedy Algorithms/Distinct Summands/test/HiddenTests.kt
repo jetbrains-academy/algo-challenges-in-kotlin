@@ -1,17 +1,17 @@
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
-import java.util.concurrent.TimeUnit
 import kotlin.math.sqrt
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     companion object {
         private const val MAX_N: Long = 1_000_000_000_000L
         private val rng = Random(239L)
+
         /***
          * k * (k + 1) / 2 <= n
          * k * (k + 1) <= n
@@ -27,8 +27,10 @@ class HiddenTests {
         }
     }
 
-    private fun check(n: Long, expectedSize: Int) {
-        val actual = distinctSummands(n)
+    private fun check(n: Long, expectedSize: Int, withTimeout: Boolean = true) {
+        val actual = runIfTimeout(withTimeout, 1.seconds, "[n = $n]") {
+            distinctSummands(n)
+        }
         assertTrue(actual.size >= expectedSize) {
             "[n = $n] expected list size = $expectedSize, found ${actual.size}"
         }
@@ -48,8 +50,7 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
-    fun testAllUpTo100000() {
+    fun testAllUpTo100000() = runTimeout(5.seconds, "All n in [1..100,000]") {
         var triangles = 1
         var size = 0
         for (n in 1..100000) {
@@ -57,19 +58,17 @@ class HiddenTests {
                 size += 1
                 triangles += size + 1
             }
-            check(n.toLong(), size)
+            check(n.toLong(), size, withTimeout = false)
         }
     }
 
     @ParameterizedTest
     @ValueSource(longs = [MAX_N, MAX_N - 1, MAX_N - 2, MAX_N - 1000, MAX_N / 3])
-    @Timeout(value = 1, unit = TimeUnit.SECONDS)
     fun big(n: Long) {
         check(n, calculateSize(n))
     }
 
     @Test
-    @Timeout(value = 20, unit = TimeUnit.SECONDS)
     fun bigCloseToTriangle() {
         val k = calculateSize(MAX_N).toLong()
         for (triangle in longArrayOf(k * (k + 1) / 2, k * (k - 1) / 2)) {
@@ -81,11 +80,10 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 20, unit = TimeUnit.SECONDS)
-    fun randomMedium() {
+    fun randomMedium() = runTimeout(20.seconds, "1000 tests, n is a 32-bit integer") {
         repeat(1000) {
             val n = rng.nextInt(100000, Int.MAX_VALUE).toLong()
-            check(n, calculateSize(n))
+            check(n, calculateSize(n), withTimeout = false)
         }
     }
 }

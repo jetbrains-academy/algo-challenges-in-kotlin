@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class Test {
+class Tests {
 
     private fun check(n: Long, expectedSize: Int) {
         val actual = distinctSummands(n)
