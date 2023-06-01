@@ -39,7 +39,7 @@ in the same column.
 
 We classify the columns of an alignment as follows:
 * a column with a symbol and a space is a *deletion*;
-* a column with a gap and a symbol is an *insertion*;
+* a column with a space and a symbol is an *insertion*;
 * a column with two equal symbols is a *match*;
 * a column with two different symbols is a *mismatch*.
 
@@ -47,7 +47,7 @@ An alignment is *optimal* if it minimizes the total number
 of mismatches, deletions, and insertions among all possible alignments.
 
 Consider an optimal alignment of two strings and assume that its last column
-is insertion. What can you say about an alignment resulting from the current
+is an insertion. What can you say about the alignment resulting from the current
 one by dropping its last column?
 </div>
 
