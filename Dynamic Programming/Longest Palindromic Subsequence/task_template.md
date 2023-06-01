@@ -6,7 +6,7 @@
     <img src="../../images/palindromic_logo.png">
 </div>
 
-Given a string, find a longest palindromic subsequence of this string, 
+Given a string, find the longest palindromic subsequence of this string, 
 i.e., a subsequence that reads the same backward and forward.
 
 This subsequence does not have to be contiguous.
@@ -19,7 +19,7 @@ The length of the string doesn't exceed $5\ 000$.
 ### Output
 
 A string of maximum length that is a subsequence of the given string
-and that is a palindrome at the same time.
+and a palindrome at the same time.
 
 If multiple answers exist, return any.
 
