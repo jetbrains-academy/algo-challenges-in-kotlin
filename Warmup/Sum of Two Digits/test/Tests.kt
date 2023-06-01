@@ -1,9 +1,14 @@
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
-class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+class Tests {
+    @Test
+    fun sample1() {
+        val a = 9
+        val b = 7
+        val correct = 16
+        val result = sumOfTwoDigits(a, b)
+        assertEquals(result, correct, "countOnes($a, $b)")
     }
+
 }

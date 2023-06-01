@@ -2,6 +2,10 @@ type: edu
 files:
 - name: src/Task.kt
   visible: true
+  placeholders:
+  - offset: 42
+    length: 17
+    placeholder_text: // Write your code here
 - name: test/Tests.kt
   visible: false
 - name: task_template.md
