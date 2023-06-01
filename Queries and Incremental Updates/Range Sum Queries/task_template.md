@@ -28,8 +28,8 @@ An `IntArray` of size not exceeding $10^7$.
 
 ### Output
 
-- `createRSQInstance` function should return
-an instance of class implementing [RangeSumQueries](psi_element://RangeSumQueries) interface.
+- the `createRSQInstance` function should return
+an instance of class implementing the [RangeSumQueries](psi_element://RangeSumQueries) interface.
 - `getSum(l, r)` should return the value of $\operatorname{query}(l, r)$
 
 ### Example
@@ -63,7 +63,7 @@ for any $0 \le l \le r \le n$?
 <div class="hint">
 Computing $\operatorname{range}(0,k)$ for all $0 \le k \le n$ naively 
 takes time $0+1+2+\dotsb+n=\frac{n(n+1)}{2}$. 
-Already for for $n=10^6$, this would be too slow.
+Already for $n=10^6$, that would be too slow.
 Can you compute all prefix sums faster?
 </div>
 

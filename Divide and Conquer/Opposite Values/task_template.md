@@ -9,7 +9,7 @@
 Given a binary sequence that starts with zero and ends with one,
 find any occurrence of zero that is followed by one.
 
-In [Task.kt](course://Divide and Conquer/Opposite Values/src/Task.kt) you already have slow solution implemented using standard library function.
+In [Task.kt](course://Divide and Conquer/Opposite Values/src/Task.kt), you already have a slow solution implemented using a standard library function.
 Make it work faster to pass the tests.
 
 <div class="samples">
@@ -24,7 +24,7 @@ Make it work faster to pass the tests.
 
 
 <div class="hint">
-Use binary search
+Use binary search.
 </div>
 
 

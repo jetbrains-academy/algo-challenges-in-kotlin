@@ -1,7 +1,7 @@
 
 ### Solution
 
-Consider a 0/1-array where the first element is 0
+Consider a 0/1 array where the first element is 0
 and the last element is 1.
 An element 0 followed by an element 1 in this array is called
 a *0-1 pair*. Here is an example of an array with six 0-1 pairs.
@@ -9,11 +9,11 @@ a *0-1 pair*. Here is an example of an array with six 0-1 pairs.
 ![](../../images/pair01.png)
 
 However, you don’t see the elements
-(except for the first and the last one), for you, this array looks like this:
+(except for the first and the last one); for you, this array looks like this:
 
 ![](../../images/pair01_2.png)
 
-You may point to any cell and ask a question
+You may point at any cell and ask a question
 “What is this element?” Your goal is to find a 0-1 pair by asking
 the minimum number of questions.
 [Try the puzzle!](https://discrete-math-puzzles.github.io/puzzles/opposite-colors/index.html)
@@ -25,11 +25,11 @@ This is true because when moving from the first 0 to the last 1,
 the value of a cell should eventually switch from 0 to 1 at least once.
 
 Even though this proof works for any array that starts from 0 and ends in 1,
-it is *non-constructive*: it proves that there exists a 0-1 pair, but doesn't
+it is *non-constructive*: it proves that there exists a 0-1 pair but doesn't
 give an *efficient method* for finding this pair
 (by revealing the value of a few cells).
-In particular, if we start checking the value of the cells one by one from the left,
-then we will eventually find a 0-1 pair, but in the worst case it will
+In particular, if we start checking the values of the cells one by one from the left,
+then we will eventually find a 0-1 pair, but in the worst case, it will
 require us to reveal the values of all cells.
 
 Thus, we know that a 0-1 pair exists, but we still need to figure out an
@@ -38,7 +38,7 @@ the value of the middle cell. Assume, for example, that it is 0.
 
 ![](../../images/pair01_3.png)
 
-**Stop and Think.** If the middle cell turned out to be 0, how would you proceed?
+**Stop and think.** If the middle cell turned out to be 0, how would you proceed?
 
 At first sight, it does not help us much.
 If we start revealing the values of its neighbor cells,
@@ -46,8 +46,8 @@ both of them may be 0's. Instead, let’s focus on the right part of the array.
 
 ![](../../images/pair01_4.png)
 
-Do you see? It is the same problem again! Since the leftmost cell is 0,
-the rightmost one is 1, it must contain a 0-1 pair. And its length is twice smaller.
+Do you see? It is the same problem again! Since the leftmost cell is 0 and
+the rightmost one is 1, it must contain a 0-1 pair. And its length is twice as small.
 If the middle cell turns out to be 1, we can also find a subarray that
 starts in 0 and ends in 1 (though of length 11, but not 10).
 

@@ -1,8 +1,8 @@
 
 ### Solution
 
-For a collection of coins $S$, by $\operatorname{changeable}(S)$ denote the set of all amounts
-that can be changed using coins from $S$. Our goal then is to find the smallest positive integer
+For a collection of coins $S$, $\operatorname{changeable}(S)$ denotes the set of all amounts
+that can be changed using the coins from $S$. Our goal then is to find the smallest positive integer
 that does not belong to $\operatorname{changeable}(c_1, \dotsc, c_n)$.
 
 As usual, it is instructive to play around with toy examples to see how
@@ -20,19 +20,19 @@ $$
 $$
 
 The example reveals the following property: at least in the beginning, the set $\operatorname{changeable}$
-is equal to a continuous range of integers. At some point, a hole appears in this range and our
+is equal to a continuous range of integers. At some point, a hole appears in this range, and our
 goal is to find this first hole.
 
-Assume that, for some $1 \le k \le n$, 
+Assume that for some $1 \le k \le n$, 
 $\operatorname{changeable}(c_1, \dotsc, c_k)=[m]$
 (here, $[m]=\lbrace 1, \dotsc, m \rbrace$ is the set of the first $m$ positive integers).
 Now, how does adding $c_{k+1}$ change this set? Clearly, if $c_{k+1}>m+1$, then $m+1$ is the smallest
-unchangeable amount: using the first $k$ coins one cannot get any amount larger than $m$, all other coins
+unchangeable amount: using the first $k$ coins, one cannot get any amount larger than $m$, all other coins
 are larger than $m+1$. If, on the other hand, $c_{k+1} \le m+1$, then
 $\operatorname{changeable}(c_1, \dotsc, c_{k+1})=[m+c_{k+1}]$: to change any amount
 $m + 1 \le t \le m + c_{k+1}$, take a coin $c_{k+1}$, then it remains to change $1 \le t-c_{k+1} \le m$
 using coins $c_1, \dotsc, c_k$
-(and this is doable since $\operatorname{changeable}(c_1, \dotsc, c_k)=[m]$).
+(and this is doable, since $\operatorname{changeable}(c_1, \dotsc, c_k)=[m]$).
 
 This suggests the following algorithm.
 Start with $k=0$ and $m=0$ and add coins

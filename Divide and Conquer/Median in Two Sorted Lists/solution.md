@@ -6,7 +6,7 @@ allows one to find the largest element among the union of these prefixes
 (that can be put into the right half of their sorted union).
 
 Since $a_2 \le b_5$, we conclude that
-\[a_0 \le a_1 \le a_2 \le b_5 \le b_6 \le b_7 \, .\]
+\[a_0 \le a_1 \le a_2 \le b_5 \le b_6 \le b_7 \, .\].
 There are only six elements that can be smaller than $a_1$: $a_0, b_0, b_1, b_2, b_3, b_4$.
 Hence, $a_1$ can be among the first seven elements of $c$. Thus, we can discard
 $a_0$ and $a_1$. Similarly, there are only six elements that can be larger than $b_6$:
@@ -26,7 +26,7 @@ one can discard the first $m$ elements of $a$ ($a_0, \dotsc, a_{m-1}$)
 and the last $m$ element of $b$ ($b_{n-m}, \dotsc, b_{n-1}$). Indeed,
 the only elements that can be smaller than $a_{m-1}$
 are $a_0, \dotsc, a_{m-2}$ and $b_0, \dotsc, b_{n-m}$ ($n-2$ elements),
-wheres the only elements that can be larger than $b_{n-m}$
+whereas the only elements that can be larger than $b_{n-m}$
 are $b_{n-m+1}, \dotsc, b_{n-1}$ and $a_{m+1}, \dotsc, a_{n-1}$ ($n-2$ elements).
 This allows one to reduce the problem to finding the median of two sorted lists of length $n-m$.
 The case $a_m > b_{n-m-1}$ is treated similarly: one reduces the problem to two sorted
