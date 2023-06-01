@@ -9,7 +9,7 @@ $\operatorname{range}(0,k+1)$
 can be easily found from $\operatorname{range}(0,k)$: 
 $$\operatorname{range}(0,k+1)=\operatorname{range}(0,k)+a_k.$$
 
-Using these values, one compute the value of 
+Using these values, one can compute the value of 
 $\operatorname{range}(l,r)$ in constant time, for any $0 \le l \le r \le n$.
 Indeed, combining the prefix range $(0,l)$ with the range $(l,r)$
 gives the prefix range $(0,r)$. Thus,
