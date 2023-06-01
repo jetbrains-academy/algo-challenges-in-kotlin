@@ -5,7 +5,7 @@
     <img src="../../images/partitions_logo.png">
 </div>
 
-Given a positive integers $n$, generate all its representations as 
+Given a positive integer $n$, generate all its representations as 
 the sum of positive integers (two representations that differ by the 
 order of summands are considered the same: 
 $1+3+1$ is the same as $1+1+3$ and $3+1+1$).
