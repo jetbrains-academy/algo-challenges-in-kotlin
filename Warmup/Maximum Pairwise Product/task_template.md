@@ -35,10 +35,13 @@ Constraints: $2 \le n \le 100$; $0 \le a_1, \dots, a_{n} \le 100$.
 </div>
 
 In the file
-[Task.kt](src/Task.kt), you see a straightforward solution to
+[Task.kt](course://Warmup/Maximum%20Pairwise%20Product/src/Task.kt), 
+you see a straightforward solution to
 this problem. To compute the maximum pairwise product,
 it just goes through all possible pairs. 
-In the file [Task.kt](test/Tests.kt), you will find unit-tests for this problem.
+In the file
+[Tests.kt](course://Warmup/Maximum%20Pairwise%20Product/test/Tests.kt),
+you will find unit tests for this problem.
 Add a few more tests to this file and run them to ensure that 
 everything works as expected. Then, press the "Check" button
 from the right pane to submit this solution to the autograding system.
