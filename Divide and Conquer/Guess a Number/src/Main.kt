@@ -9,7 +9,7 @@ fun guess(lower: Int, upper: Int) {
     val result = query(middle)
     if (result == '=') {
         return
-    } else if (result == '>') {
+    } else if (result == '<') {
         guess(lower, middle - 1)
     } else {
         guess(middle + 1, upper)
@@ -18,13 +18,13 @@ fun guess(lower: Int, upper: Int) {
 
 val x = 4 // Change this value for testing
 fun query(y: Int): Char {
-    val res = if (y == x) {
+    val res = if (x == y) {
         '='
-    } else if (y < x) {
+    } else if (x < y) {
         '<'
     } else {
         '>'
     }
-    println("Request: $y, response: $y $res $x")
+    println("Query: X = $y?, response: X $res $y")
     return res
 }
