@@ -7,14 +7,12 @@
 
 Given a sequence of non-negative integers
 $a_1, \dots, a_{n}$,
-compute $$\max\limits_{1 \le i \neq j \le n}a_i \cdot a_j.$$
+compute the maximum pairwise product, i.e., 
+$$\max\limits_{1 \le i \neq j \le n}a_i \cdot a_j.$$
 Note that $i$ and $j$ should be different, though it may be the case
 that $a_i=a_j$.
 
-Constraints: $2 \le n \le 2\cdot10^5$; $0 \le a_1, \dots, a_{n} \le 2\cdot 10^5$.
-
-TODO: Niyaz, please adjust the maximum value (so that a naive solution 
-has two issues: a time limit and an an integer overflow)
+Constraints: $2 \le n \le 100$; $0 \le a_1, \dots, a_{n} \le 100$.
 
 ### Example 1
 
@@ -36,10 +34,11 @@ has two issues: a time limit and an an integer overflow)
 
 </div>
 
-In the file `task.kt` you see a straightforward solution to
-this problem. It goes through all pairs of elements and the selects
-one with the maximum product. It turns out that this simple solution
-has a number of issues. Press the "Check" button to ensure that this
-code does not pass the tests indeed. But not to worry —  in the 
-next two lessons we will fix all the issues in this solution and will
-come up with a working solution together!
+In the file
+[Task.kt](src/Task.kt), you see a straightforward solution to
+this problem. To compute the maximum pairwise product,
+it just goes through all possible pairs. 
+In the file [Task.kt](test/Tests.kt), you will find unit-tests for this problem.
+Add a few more tests to this file and run them to ensure that 
+everything works as expected. Then, press the "Check" button
+from the right pane to submit this solution to the autograding system.
