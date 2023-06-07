@@ -1,13 +1,10 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
-import org.junit.jupiter.api.assertTimeoutPreemptively
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
-import java.time.Duration
 import java.util.Random
-import java.util.concurrent.TimeUnit
 import kotlin.math.min
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
 
@@ -28,18 +25,14 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 10, unit = TimeUnit.SECONDS)
-    fun testAllUpTo10000() {
+    fun testAllUpTo10000() = runTimeout(10.seconds, "All up to 10000") {
         for (n in 0..10000) {
             testSingle(n)
         }
     }
 
     private fun testSingle(n: Int) {
-        val actual = assertTimeoutPreemptively(
-                Duration.ofMillis(2000L),
-                { "'changeMoney($n)' couldn't finish in time" }
-        ) {
+        val actual = runTimeout(2.seconds, { "'changeMoney($n)' couldn't finish in time" }) {
             changeMoney(n)
         }
         assertEquals(actual, table[n]) {
@@ -48,7 +41,6 @@ class HiddenTests {
     }
 
     @ParameterizedTest
-    @Timeout(value = 2, unit = TimeUnit.SECONDS)
     @ValueSource(ints = [MAX, MAX - 1, MAX - 2, MAX - 3, MAX - 4, MAX - 5, MAX - 6, MAX - 7, MAX - 8, MAX - 9, MAX - 10, MAX - 11, MAX - 12])
     fun testBig(money: Int) {
         testSingle(money)
