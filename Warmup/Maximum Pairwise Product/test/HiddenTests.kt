@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import kotlin.math.max
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
 
@@ -27,7 +28,7 @@ class HiddenTests {
     }
 
     @Test
-    fun random_tests() {
+    fun random_tests() = runTimeout(2.seconds, "random_tests") {
         val TESTS_NUMBER = 100
         val rand = Random(239)
         for (i in 1..TESTS_NUMBER) {
@@ -40,7 +41,7 @@ class HiddenTests {
     }
 
     @Test
-    fun maximal_tests() {
+    fun maximal_tests() = runTimeout(1.seconds, "maximal_test") {
         val n = MAX_N
         val a = IntArray(n) { MAX_VAL }
         val result = maximumPairwiseProduct(a)
