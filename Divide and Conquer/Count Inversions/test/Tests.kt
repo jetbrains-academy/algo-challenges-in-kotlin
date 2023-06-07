@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
-class Test {
+class Tests {
     @Test
     fun sample1() {
         val list = listOf(3, 1, 3, 4, 2)
