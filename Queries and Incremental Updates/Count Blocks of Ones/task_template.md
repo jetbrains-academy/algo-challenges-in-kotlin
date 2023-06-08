@@ -6,38 +6,28 @@
     <img src="../../images/count_blocks_of_ones_logo.png">
 </div>
 
-Implement an interface that supports the following two operations
-for a given binary string: get the number of 1's in the string
-and get the number of blocks of 1's in the string.
+Implement a function that computes the number of blocks of 1's in the binary string.
 
 ```Kotlin
-interface CountBlocksOfOnes {
-    fun countOnes(): Int
-    fun countBlocksOfOnes(): Int
-}
+fun countBlocksOfOnes(s: CharSequence): Int
 ```
 
-### Example 1
+### Input
 
-<div class="sample">
+Given a `CharSequence` $s$ — the binary string consisting of `0`s and `1`s. The length doesn't exceed $10^6$.
 
-| Input                      | Returns                                                       |
-|----------------------------|---------------------------------------------------------------|
-| `createInstance("001001")` | [CountBlocksOfOnes](psi_element://CountBlocksOfOnes) instance |
-| `countOnes()`              | 2                                                             |
-| `countBlocksOfOnes()`      | 2                                                             |
+### Output
 
-</div>
+Return an `Int` representing the number of blocks in the binary string.
 
-### Example 2
+### Examples
 
-<div class="sample">
+<div class="samples">
 
-| Input                        | Returns                                                       |
-|------------------------------|---------------------------------------------------------------|
-| `createInstance("11100101")` | [CountBlocksOfOnes](psi_element://CountBlocksOfOnes) instance |
-| `countOnes()`                | 5                                                             |
-| `countBlocksOfOnes()`        | 3                                                             |
+| Input         | Returns |
+|---------------|---------|
+| `"001001"`    | 2       |
+| `"11100101"`  | 3       |
 
 </div>
 
