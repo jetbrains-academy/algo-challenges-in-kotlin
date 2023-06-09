@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
         # dark picture
         system('pdflatex main_dark > /dev/null 2>&1')
-        system(f'convert -density 400 -colorspace RGB main_dark.pdf {file_name[:-4]}_dark.png')
+        system(f'convert -density 700 -colorspace RGB main_dark.pdf {file_name[:-4]}_dark.png')
         print('OK')
 
     system('rm *.log *.aux main.pdf')
