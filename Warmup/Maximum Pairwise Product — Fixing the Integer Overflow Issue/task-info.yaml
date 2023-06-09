@@ -6,3 +6,5 @@ files:
   visible: true
 - name: task_template.md
   visible: true
+- name: test/HiddenTests.kt
+  visible: false
