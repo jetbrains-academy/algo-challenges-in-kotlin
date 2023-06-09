@@ -8,9 +8,11 @@ For this trivial problem, we will skip the
 
 This is how one can turn this pseudocode into Kotlin implementation.
 
-TODO: Niyaz, please add a solution in Kotlin
+    fun sumOfTwoDigits(a: Int, b: Int): Int {
+        return a + b
+    }
 
-Copy-n-paste this solution into the file `task.kt`
+Copy-n-paste this solution into the file `Task.kt`
 and press the "Check" button in the right pane. 
 The automated grading system will check your solution
 against several tests to verify that it 
