@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import java.time.Duration
 import java.util.*
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
 
@@ -49,7 +50,7 @@ class HiddenTests {
     }
 
     private fun testSingle(n: Int, k: Int) {
-        val actual = assertTimeout(Duration.ofSeconds(5)) {
+        val actual = runTimeout(2.seconds, "n = $n, k = $k") {
             generateSubsets(n, k)
         }
         val expected = generateExpectedSubsets(n, k)

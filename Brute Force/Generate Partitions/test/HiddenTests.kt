@@ -1,8 +1,9 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
-import java.util.concurrent.TimeUnit
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 import kotlin.math.max
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
 
@@ -54,12 +55,20 @@ class HiddenTests {
     }
 
     @Test
-    @Timeout(value = 30, unit = TimeUnit.SECONDS)
-    fun testAllUpTo60() {
-        val upTo = 60
+    fun testAllUpTo50() = runTimeout(5.seconds, "All n up to 50") {
+        val upTo = 50
         for (sum in 1..upTo) {
             val actual = generatePartitions(sum)
             checkPartitions(partitionsCount[sum], sum, actual)
         }
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = [51, 52, 53, 54, 55, 56, 57, 58, 59, 60])
+    fun testBig(n: Int) {
+        val actual = runTimeout(2.seconds, "n = $n") {
+            generatePartitions(n)
+        }
+        checkPartitions(partitionsCount[n], n, actual)
     }
 }

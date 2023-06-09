@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
 
@@ -38,7 +39,9 @@ class HiddenTests {
     fun testAll() {
         for (n in 0..10) {
             val expected = DerangementsGenerator(n).generate()
-            val actual = generateDerangements(n)
+            val actual = runTimeout(1.seconds, "n = $n") {
+                generateDerangements(n)
+            }
             assertEquals(expected, actual) {
                 "n = $n"
             }

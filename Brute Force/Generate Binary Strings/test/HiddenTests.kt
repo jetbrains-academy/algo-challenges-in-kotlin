@@ -1,11 +1,9 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
-import java.util.concurrent.TimeUnit
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun testAllUpTo20() {
         for (n in 0..20) {
             testSingle(n)
@@ -13,7 +11,9 @@ class HiddenTests {
     }
 
     private fun testSingle(n: Int) {
-        val actual = generateBinaryStrings(n)
+        val actual = runTimeout(1.seconds, "n = $n") {
+            generateBinaryStrings(n)
+        }
         val expected = (0 until (1 shl n)).map {
             convertToBinary(n, it)
         }
