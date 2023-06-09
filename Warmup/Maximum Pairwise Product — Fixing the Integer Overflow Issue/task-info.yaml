@@ -2,6 +2,20 @@ type: edu
 files:
 - name: src/Task.kt
   visible: true
+  placeholders:
+  - offset: 24
+    length: 246
+    placeholder_text: |-
+      fun maximumPairwiseProduct(a: IntArray): Int {
+          val len = a.size
+          var res = Int.MIN_VALUE
+          for (i in 0 until len) {
+              for (j in i + 1 until len) {
+                  res = max(res, a[i] * a[j])
+              }
+          }
+          return res
+      }
 - name: test/Tests.kt
   visible: true
 - name: task_template.md
