@@ -1,0 +1,15 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		\myproc{Change}(\myvar{money}):\\
+		$\myvar{numCoins} \gets 0$\\
+		while $\myvar{money} > 0$:\\
+		\quad if $\myvar{money} \ge 10$:\\
+		\quad\quad $\myvar{money} \gets \myvar{money}-10$\\
+		\quad else if $\myvar{money} \ge 5$:\\
+		\quad\quad $\myvar{money} \gets \myvar{money}-5$\\
+		\quad else:\\
+		\quad\quad $\myvar{money} \gets \myvar{money}-1$\\
+		\quad $\myvar{numCoins} \gets \myvar{numCoins} + 1$\\
+		return \myvar{numCoins}
+	\end{pseudocode}
+};
