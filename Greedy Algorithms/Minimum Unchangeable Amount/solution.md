@@ -38,5 +38,5 @@ This suggests the following algorithm.
 Start with $k=0$ and $m=0$ and add coins
 $c_1, \dotsc, c_n$ one by one.
 Then, you either find a hole or conclude that
-$\operatorname{changeable}(c_1, \dotsc, c_n)=[p]$, in~which case the answer
-is~$p+1$.
+$\operatorname{changeable}(c_1, \dotsc, c_n)=[p]$, inwhich case the answer
+is $p+1$.
