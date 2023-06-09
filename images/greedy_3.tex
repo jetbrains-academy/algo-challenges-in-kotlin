@@ -1,0 +1,13 @@
+\begin{scope}[scale=.75]
+	\foreach \y in {0, 1, 2, 3}
+	\draw (0,\y) -- (11,\y);
+	\foreach \x in {0, 1, 4, 5, 11} {
+		\draw (\x,0) -- (\x,1);
+		\draw (\x,2) -- (\x,3);
+	}
+	
+	\node[rotate=-90] at (5.5,1.5) {$>$};
+	
+	\foreach \x/\y/\n in {0/2/d_m, 0/0/d_i, 2/0/\alpha, 2/2/\alpha, 4/0/d_m, 4/2/d_i, 7.5/0/\beta, 7.5/2/\beta}
+	\node at (\x+0.5,\y+0.5) {$\n$};
+\end{scope}

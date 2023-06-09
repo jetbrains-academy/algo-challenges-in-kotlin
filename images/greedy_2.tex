@@ -1,0 +1,13 @@
+\node[text width=115mm] {
+	\begin{pseudocode}
+		\myproc{Change}(\myvar{money}, \myvar{Denominations}):\\
+		$\myvar{numCoins} \gets 0$\\
+		while $\myvar{money} > 0$:\\
+		\quad $\myvar{maxCoin} \gets \text{largest}$ among
+		\myvar{Denominations}  that does not
+		exceed \myvar{money}\\
+		\quad $\myvar{money} \gets \myvar{money} - \myvar{maxCoin}$\\
+		\quad $\myvar{numCoins} \gets \myvar{numCoins} + 1$\\
+		return \myvar{numCoins}
+	\end{pseudocode}
+};

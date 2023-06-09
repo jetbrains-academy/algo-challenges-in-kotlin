@@ -1,0 +1,11 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		\myproc{LargestConcatenate}(\myvar{Numbers}):\\
+		if $\myvar{Numbers}$ is empty:\\
+		\quad return empty string\\
+		$\myvar{maxNumber} \gets \text{largest among \myvar{Numbers}}$\\
+		remove \myvar{maxNumber} from \myvar{Numbers}\\
+		return concatenate of \myvar{maxNumber}
+		and \myproc{LargestConcatenate}(\myvar{Numbers})
+	\end{pseudocode}
+};
