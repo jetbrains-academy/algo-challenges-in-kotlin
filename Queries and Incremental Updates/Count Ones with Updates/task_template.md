@@ -36,7 +36,7 @@ interface CountOnesWithUpdates {
 <div class="hint">
 How could you avoid 
 counting the number of ones from scratch 
-each time `countOnes` is called?
+each time <code>countOnes</code> is called?
 </div>
 
 <div class="hint">
