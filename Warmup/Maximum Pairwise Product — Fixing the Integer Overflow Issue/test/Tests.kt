@@ -6,7 +6,7 @@ class Tests {
     fun sample1() {
         val a = intArrayOf(1, 2, 3)
         val correct = 6L
-        val result = maximumPairwiseProduct(a)
+        val result = maximumPairwiseProduct(a).toLong()
         assertEquals(result, correct, "maximumPairwiseProduct(${a.contentToString()})")
     }
 
@@ -14,7 +14,7 @@ class Tests {
     fun sample2() {
         val a = intArrayOf(7, 5, 14, 2, 8, 8, 10, 1, 2, 3)
         val correct = 140L
-        val result = maximumPairwiseProduct(a)
+        val result = maximumPairwiseProduct(a).toLong()
         assertEquals(result, correct, "maximumPairwiseProduct(${a.contentToString()})")
     }
 
@@ -22,7 +22,7 @@ class Tests {
     fun sample3() {
         val a = intArrayOf(1_000_000, 1_000_000)
         val correct = 1_000_000_000_000L
-        val result = maximumPairwiseProduct(a)
+        val result = maximumPairwiseProduct(a).toLong()
         assertEquals(correct, result, "maximumPairwiseProduct(${a.contentToString()}")
     }
 
