@@ -3,7 +3,7 @@
 # Minimum Sum Path
 
 You are playing a video game.
-Abstractly, there is a line with $n - 1$ points denoted as $0, 1, \ldots, n - 1$.
+Abstractly, there is a line with $n$ points denoted as $0, 1, \ldots, n - 1$.
 Your character start at point $0$.
 Each turn, if he is at point $i$, you can make him move either to point
 $i + 1$ or to point $i + 2$. The character has low stamina, so he cannot make
@@ -16,7 +16,7 @@ The goal is to minimize the total sum of the numbers in the visited points.
 
 ### Input
 
-You are given an `IntArray` $a$ of length $n$ ($1 \le n \le 10^6$).
+You are given an `IntArray` $a$ of length $n$ ($2 \le n \le 10^6$).
 
 Each $|a_i| \le 10^9$.
 
