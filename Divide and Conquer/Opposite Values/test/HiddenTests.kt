@@ -1,11 +1,10 @@
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.assertTimeoutPreemptively
 import org.junit.jupiter.api.fail
-import java.time.Duration
 import java.util.stream.Collectors
 import java.util.stream.Stream
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     companion object {
@@ -13,7 +12,7 @@ class HiddenTests {
     }
 
     @Test
-    fun testUpTo100() {
+    fun testUpTo100() = runTimeout(1.seconds, "Random tests") {
         for (n in listOf(2, 10, 100, 15, 42, 30)) {
             testRandom(n)
         }
@@ -32,7 +31,7 @@ class HiddenTests {
             repeat(n - zeros) { sb.append('1') }
             sb
         }
-        assertTimeoutPreemptively(Duration.ofMillis(1000)) {
+        runTimeout(1.seconds, "[500k queries on 10 modifiable sequences]") {
             for (test in 0 until 500000) {
                 val testId = rng.nextInt(tests.size)
                 val str = tests[testId]
