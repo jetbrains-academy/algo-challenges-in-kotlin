@@ -3,9 +3,9 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 68
-    length: 348
-    placeholder_text: TODO("not implemented yet")
+  - offset: 64
+    length: 352
+    placeholder_text: '    TODO("not implemented yet")'
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

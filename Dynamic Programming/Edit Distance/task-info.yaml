@@ -5,10 +5,14 @@ files:
   placeholders:
   - offset: 0
     length: 1136
-    placeholder_text: // write additional code here
-  - offset: 1212
-    length: 52
-    placeholder_text: TODO("not implemented")
+    placeholder_text: '
+
+// write additional code here
+
+'
+  - offset: 1208
+    length: 56
+    placeholder_text: '    TODO("not implemented")'
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

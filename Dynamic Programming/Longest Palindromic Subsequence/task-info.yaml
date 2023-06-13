@@ -5,10 +5,14 @@ files:
   placeholders:
   - offset: 0
     length: 1709
-    placeholder_text: // Use additional functions and classes if required
-  - offset: 1787
-    length: 47
-    placeholder_text: TODO("write your solution here")
+    placeholder_text: '
+
+// Use additional functions and classes if required
+
+'
+  - offset: 1783
+    length: 51
+    placeholder_text: '    TODO("write your solution here")'
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

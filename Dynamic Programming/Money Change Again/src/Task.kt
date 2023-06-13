@@ -1,4 +1,3 @@
-import kotlin.math.min
 
 fun changeMoney(money: Int): Int {
     val table = IntArray(money + 1) { Int.MAX_VALUE }
@@ -6,7 +5,7 @@ fun changeMoney(money: Int): Int {
     for (m in 1..money) {
         for (c in sequenceOf(1, 3, 4)) {
             if (c <= m) {
-                table[m] = min(table[m], 1 + table[m - c])
+                table[m] = minOf(table[m], 1 + table[m - c])
             }
         }
     }
