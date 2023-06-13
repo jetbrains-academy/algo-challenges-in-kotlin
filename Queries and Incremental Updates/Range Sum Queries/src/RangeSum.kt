@@ -1,5 +1,4 @@
-
-private class RangeSum(a: IntArray) : RangeSumQueries {
+class RangeSum(a: IntArray) {
     private val prefix = LongArray(a.size) { a[it].toLong() }
 
     init {
@@ -15,12 +14,9 @@ private class RangeSum(a: IntArray) : RangeSumQueries {
         }
     }
 
-    override fun getSum(left: Int, right: Int): Long {
+    fun getSum(left: Int, right: Int): Long {
         return get(right - 1) - get(left - 1)
     }
 
 }
 
-fun createRSQInstance(a: IntArray): RangeSumQueries {
-    return RangeSum(a)
-}

@@ -1,21 +1,19 @@
 type: edu
 files:
-- name: src/Task.kt
+- name: src/RangeSum.kt
   visible: true
   placeholders:
-  - offset: 1
-    length: 409
-    placeholder_text: // Implement additional classes or functions here
-  - offset: 469
-    length: 18
-    placeholder_text: TODO("not yet implemented")
+  - offset: 30
+    length: 314
+    placeholder_text: // Implement additional fields and method here
+  - offset: 391
+    length: 45
+    placeholder_text: '        TODO("not implemented")'
 - name: test/Tests.kt
   visible: true
 - name: task_template.md
   visible: false
 - name: solution.md
   visible: false
-- name: src/RangeSumQueries.kt
-  visible: true
 - name: test/HiddenTests.kt
   visible: false

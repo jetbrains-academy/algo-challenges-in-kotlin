@@ -5,7 +5,7 @@
     <img src="../../images/range_sum_queries.png">
 </div>
 
-Implement an interface that allows one to compute
+Implement a class that allows one to compute
 the sum of any subrange of a given integer sequence.
 
 For an integer sequence $a_0, \dotsc, a_{n-1}$ and indices 
@@ -13,7 +13,9 @@ $0 \le l \le r \le n$, by $\operatorname{query}(l,r)$
 denote the sum $\sum_{l \le i <r}a_i=a_l+a_{l+1}+\dotsb+a_{r-1}$.
 
 ```Kotlin
-<%include "src/RangeSumQueries.kt" %>
+class RangeSum {
+    fun getSum(left: Int, right: Int): Long
+}
 ```
 
 As a range may be as long as $n$, answering a single range sum query 
@@ -36,17 +38,17 @@ an instance of class implementing the [RangeSumQueries](psi_element://RangeSumQu
 
 <div class="sample">
 
-| Input                                 | Returns                                                   |
-|---------------------------------------|-----------------------------------------------------------|
-| `createRSQInstance([1, 3, -2, 4, 2])` | [RangeSumQueries](psi_element://RangeSumQueries) instance |
-| `getSum(0, 1)`                        | `1`                                                       |
-| `getSum(0, 5)`                        | `8`                                                       |
-| `getSum(2, 2)`                        | `0`                                                       |
-| `getSum(2, 3)`                        | `-2`                                                      |
-| `getSum(2, 5)`                        | `4`                                                       |
-| `getSum(1, 4)`                        | `5`                                                       |
-| `getSum(0, 0)`                        | `0`                                                       |
-| `getSum(4, 5)`                        | `2`                                                       |
+| Input                        | Returns                                     |
+|------------------------------|---------------------------------------------|
+| `RangeSum([1, 3, -2, 4, 2])` | [RangeSum](psi_element://RangeSum) instance |
+| `getSum(0, 1)`               | `1`                                         |
+| `getSum(0, 5)`               | `8`                                         |
+| `getSum(2, 2)`               | `0`                                         |
+| `getSum(2, 3)`               | `-2`                                        |
+| `getSum(2, 5)`               | `4`                                         |
+| `getSum(1, 4)`               | `5`                                         |
+| `getSum(0, 0)`               | `0`                                         |
+| `getSum(4, 5)`               | `2`                                         |
 
 </div>
 
