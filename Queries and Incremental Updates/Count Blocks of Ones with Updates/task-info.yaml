@@ -9,16 +9,18 @@ files:
     placeholders:
       - offset: 57
         length: 391
-        placeholder_text: // write required fields and methods here
+        placeholder_text: '// write required fields and methods here
+
+'
       - offset: 476
         length: 19
-        placeholder_text: TODO("not implemented")
+        placeholder_text: '        TODO("not implemented")'
       - offset: 538
         length: 21
-        placeholder_text: TODO("not implemented")
+        placeholder_text: '        TODO("not implemented")'
       - offset: 594
         length: 590
-        placeholder_text: TODO("not implemented")
+        placeholder_text: '        TODO("not implemented")'
   - name: test/HiddenTests.kt
     visible: false
   - name: solution.md

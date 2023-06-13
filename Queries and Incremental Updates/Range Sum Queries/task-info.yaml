@@ -5,7 +5,9 @@ files:
   placeholders:
   - offset: 30
     length: 314
-    placeholder_text: // Implement additional fields and method here
+    placeholder_text: '// Implement additional fields and method here
+
+'
   - offset: 391
     length: 45
     placeholder_text: '        TODO("not implemented")'
