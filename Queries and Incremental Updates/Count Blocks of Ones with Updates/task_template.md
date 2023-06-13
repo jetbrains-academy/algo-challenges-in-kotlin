@@ -6,7 +6,7 @@
     <img src="../../images/count_blocks_of_ones_with_updates_logo.png">
 </div>
 
-Implement an interface that supports the following three operations
+Implement a class that supports the following three operations
 for a given binary string: 
    1. get the number of 1's in the string,
    2. get the number of blocks of 1's in the string,
@@ -14,7 +14,7 @@ for a given binary string:
 
 
 ```Kotlin
-interface CountBlocksOfOnesWithUpdates {
+class CountBlocksOfOnesWithUpdates {
     fun countOnes(): Int
     fun countBlocksOfOnes(): Int
     fun flip(index: Int)
@@ -25,17 +25,17 @@ interface CountBlocksOfOnesWithUpdates {
 
 <div class="sample">
 
-| Input                      | Returns                                                                             |
-|----------------------------|-------------------------------------------------------------------------------------|
-| `createInstance("001001")` | [CountBlocksOfOnesWithUpdates](psi_element://CountBlocksOfOnesWithUpdates) instance |
-| `countOnes()`              | 2                                                                                   |
-| `countBlocksOfOnes()`      | 2                                                                                   |
-| `flip(3)`                  |                                                                                     |
-| `countOnes()`              | 3                                                                                   |
-| `countBlocksOfOnes()`      | 2                                                                                   |
-| `flip(4)`                  |                                                                                     |
-| `countOnes()`              | 4                                                                                   |
-| `countBlocksOfOnes()`      | 1                                                                                   |
+| Input                                    | Returns                                                                             |
+|------------------------------------------|-------------------------------------------------------------------------------------|
+| `CountBlocksOfOnesWithUpdates("001001")` | [CountBlocksOfOnesWithUpdates](psi_element://CountBlocksOfOnesWithUpdates) instance |
+| `countOnes()`                            | 2                                                                                   |
+| `countBlocksOfOnes()`                    | 2                                                                                   |
+| `flip(3)`                                |                                                                                     |
+| `countOnes()`                            | 3                                                                                   |
+| `countBlocksOfOnes()`                    | 2                                                                                   |
+| `flip(4)`                                |                                                                                     |
+| `countOnes()`                            | 4                                                                                   |
+| `countBlocksOfOnes()`                    | 1                                                                                   |
 
 </div>
 
