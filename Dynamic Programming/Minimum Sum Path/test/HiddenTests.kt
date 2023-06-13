@@ -2,7 +2,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
-import java.util.Random
+import kotlin.random.Random
 import kotlin.math.min
 import kotlin.time.Duration.Companion.seconds
 
@@ -94,5 +94,5 @@ class HiddenTests {
         }
     }
 
-    private fun intArray(n: Int, limit: Int) = rng.ints(n.toLong(), 0, limit + 1).toArray()!!
+    private fun intArray(n: Int, limit: Int) = IntArray(n) { rng.nextInt(limit) }
 }
