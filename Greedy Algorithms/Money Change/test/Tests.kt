@@ -1,9 +1,21 @@
-import org.junit.Assert
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
-class Test {
-    @Test fun testSolution() {
-        //TODO: implement your test here
-        Assert.assertTrue("Tests not implemented for the task", false)
+class Tests {
+    @Test
+    fun sample1() {
+        val actual = change(2)
+        assertEquals(2, actual) {
+            "money = 2"
+        }
+    }
+
+    @Test
+    fun sample2() {
+        val money = 28
+        val actual = change(money)
+        assertEquals(6, actual) {
+            "money = $money"
+        }
     }
 }
