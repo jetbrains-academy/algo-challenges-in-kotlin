@@ -5,35 +5,22 @@
     <img src="../../images/count_ones_logo.png">
 </div>
 
-Implement an interface that allows one to get the number of
+Implement a function that allows one to get the number of
 1's in a given binary string.
 
 ```Kotlin
-interface CountOnes {
-    fun countOnes(): Int
-}
+fun countOnes(seq: CharSequence): Int
 ```
 
 
-### Example 1
+### Examples
 
-<div class="sample">
+<div class="samples">
 
-| Input                      | Returns                                       |
-|----------------------------|-----------------------------------------------|
-| `createInstance("001001")` | [CountOnes](psi_element://CountOnes) instance |
-| `countOnes()`              | 2                                             |
-
-</div>
-
-### Example 2
-
-<div class="sample">
-
-| Input                        | Returns                                       |
-|------------------------------|-----------------------------------------------|
-| `createInstance("11100101")` | [CountOnes](psi_element://CountOnes) instance |
-| `countOnes()`                | 5                                             |
+| Input        | Returns |
+|--------------|---------|
+| `"001001"`   | 2       |
+| `"11100101"` | 5       |
 
 </div>
 

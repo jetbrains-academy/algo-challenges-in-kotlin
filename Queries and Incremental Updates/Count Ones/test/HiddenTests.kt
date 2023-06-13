@@ -1,79 +1,92 @@
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.Timeout
 import java.lang.AssertionError
-import java.util.concurrent.TimeUnit
 import kotlin.random.Random
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
 
 class HiddenTests {
     companion object {
         const val MAX_N = 1_000_000
         private val rng = Random(239L)
 
-        private fun genString(n: Int) = (1..n).map {
-            if (rng.nextBoolean()) '1' else '0'
-        }.joinToString("")
+        private fun genString(n: Int) = CharArray(n) { '0' + rng.nextInt(2) }.concatToString()
 
-        private fun prependTestInfo(s: CharSequence, msg: String): String {
+        private fun shorten(s: String): String {
             return if (s.length < 15) {
-                "[s = $s] $msg"
+                "s = $s"
             } else {
-                "[length(s) = ${s.length}] $msg"
+                "length(s) = ${s.length}"
             }
         }
 
         private fun validateTest(s: CharSequence): Boolean {
-            return s.all { it == '0' || it == '1' } && s.isNotEmpty()
+            return s.all { it == '0' || it == '1' }
         }
     }
+
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
+    fun testEmpty() {
+        testSingle("", "Empty string")
+    }
+
+    @Test
     fun randomSmall() {
-        testRandom(100000, 20)
+        testRandom(100000, 20, 5.seconds)
     }
 
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun randomMedium() {
-        testRandom(1000, 200)
-        testRandom(1000, 2000)
+        testRandom(1000, 200, 2.seconds)
+        testRandom(1000, 2000, 3.seconds)
     }
 
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun randomLarge() {
-        testRandom(100, 20000)
-        testRandom(20, 200000)
+        testRandom(100, 20000, 2.seconds)
+        testRandom(20, 200000, 3.seconds)
     }
 
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
     fun randomMax() {
-        testRandom(10, MAX_N)
+        testRandom(10, MAX_N, 5.seconds)
     }
 
     @Test
-    @Timeout(value = 5, unit = TimeUnit.SECONDS)
-    fun testMax() {
+    fun testMax() = runTimeout(5.seconds, "Maximum tests") {
         for (test in 0 until 10) {
-            testSingle(genString(MAX_N))
+            val input = genString(MAX_N)
+            testSingle(input, shorten(input), withTimeout = false)
         }
     }
 
-    private fun testRandom(testsCount: Int, maxLen: Int) {
-        for (test in 0..testsCount) {
-            val s = genString(rng.nextInt(maxLen / 2) + maxLen / 2)
-            testSingle(s)
-        }
+    @Test
+    fun testAllZeros() {
+        testSingle("0".repeat(MAX_N), "$MAX_N zeros")
     }
 
-    private fun testSingle(s: String) {
+    @Test
+    fun testAllOnes() {
+        testSingle("1".repeat(MAX_N), "$MAX_N ones")
+    }
+
+    private fun testRandom(testsCount: Int, maxLen: Int, timeLimit: Duration) =
+        runTimeout(timeLimit, "$testsCount random tests of maximum length $maxLen") {
+            for (test in 0..testsCount) {
+                val s = genString(rng.nextInt(maxLen / 2) + maxLen / 2)
+                testSingle(s, shorten(s), withTimeout = false)
+            }
+        }
+
+    private fun testSingle(s: String, message: String, withTimeout: Boolean = true) {
         if (!validateTest(s)) {
             throw AssertionError("test is incorrect")
         }
-        val ones = countOnes(s)
+        val ones = runIfTimeout(withTimeout, 1.seconds, message) {
+            countOnes(s)
+        }
         assertEquals(s.count { it == '1' }, ones) {
-            prependTestInfo(s, "incorrect number of '1's")
+            "[$message] incorrect number of '1's"
         }
     }
 }
