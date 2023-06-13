@@ -7,7 +7,7 @@ files:
     length: 221
     placeholder_text: TODO("implement your solution here")
 - name: test/Tests.kt
-  visible: false
+  visible: true
 - name: task_template.md
   visible: false
 - name: solution.md
