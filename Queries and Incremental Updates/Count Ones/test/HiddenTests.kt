@@ -14,7 +14,7 @@ class HiddenTests {
 
         private fun shorten(s: String): String {
             return if (s.length < 15) {
-                "s = $s"
+                "s = \"$s\""
             } else {
                 "length(s) = ${s.length}"
             }
