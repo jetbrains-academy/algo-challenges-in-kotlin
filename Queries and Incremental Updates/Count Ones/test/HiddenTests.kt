@@ -31,6 +31,16 @@ class HiddenTests {
     }
 
     @Test
+    fun testManySmall() = runTimeout(5.seconds, "[Many tests length <= 10]") {
+        for (len in 1..10) {
+            repeat(20000) {
+                val input = genString(len)
+                testSingle(input, input, withTimeout = false)
+            }
+        }
+    }
+
+    @Test
     fun randomSmall() {
         testRandom(100000, 20, 5.seconds)
     }
