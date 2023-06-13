@@ -2,6 +2,13 @@ type: edu
 files:
 - name: src/Task.kt
   visible: true
+  placeholders:
+  - offset: 0
+    length: 786
+    placeholder_text: // Implement additional functions and classes here
+  - offset: 839
+    length: 43
+    placeholder_text: TODO("not implemented")
 - name: test/Tests.kt
   visible: true
 - name: solution.md
