@@ -45,12 +45,8 @@ class HiddenTests {
         if (!validate(first) || !validate(second)) {
             throw AssertionError("test case is incorrect")
         }
-        val actual = when (withTimeout) {
-            true -> runTimeout(2.seconds) {
-                findEditDistance(first, second)
-            }
-
-            else -> findEditDistance(first, second)
+        val actual = runIfTimeout(withTimeout, 2.seconds) {
+            findEditDistance(first, second)
         }
         val expected = computeAnswer(first, second)
         assertEquals(expected, actual) {
@@ -75,7 +71,7 @@ class HiddenTests {
         for (first in strings) {
             for (second in strings) {
                 testsRun += 1
-                singleTest(first, second, false)
+                singleTest(first, second, withTimeout = false)
             }
         }
         println("$testsRun tests run")
@@ -117,17 +113,17 @@ class HiddenTests {
     }
 
     @Test
-    fun randomSmall() {
+    fun randomSmall() = runTimeout(10.seconds) {
         makeRandom(20, 20, 1000)
     }
 
     @Test
-    fun randomMedium() {
+    fun randomMedium() = runTimeout(10.seconds) {
         makeRandom(100, 100, 200)
     }
 
     @Test
-    fun randomLarge() {
+    fun randomLarge() = runTimeout(10.seconds) {
         makeRandom(1000, 1000, 2)
     }
 
@@ -159,9 +155,9 @@ class HiddenTests {
                 val first = randomString(len1, alphabet)
                 val second = randomString(len2, alphabet)
                 if (rng.nextBoolean()) {
-                    singleTest(first, second)
+                    singleTest(first, second, withTimeout = false)
                 } else {
-                    singleTest(second, first)
+                    singleTest(second, first, withTimeout = false)
                 }
             }
         }
