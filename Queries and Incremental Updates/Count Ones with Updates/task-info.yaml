@@ -1,24 +1,20 @@
 type: edu
 files:
-- name: src/Task.kt
-  visible: true
 - name: test/Tests.kt
   visible: true
 - name: task_template.md
   visible: false
 - name: src/CountOnesWithUpdates.kt
   visible: true
-- name: src/CountOnesWithUpdatesImpl.kt
-  visible: true
   placeholders:
-  - offset: 76
+  - offset: 50
     length: 102
     placeholder_text: // create required fields and methods here
-  - offset: 224
-    length: 11
+  - offset: 181
+    length: 19
     placeholder_text: TODO("not implemented")
-  - offset: 287
-    length: 147
+  - offset: 235
+    length: 155
     placeholder_text: TODO("not implemented")
 - name: test/HiddenTests.kt
   visible: false

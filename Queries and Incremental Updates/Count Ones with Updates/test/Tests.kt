@@ -5,7 +5,7 @@ class Tests {
     @Test
     fun testSample() {
         val sequence = "001001"
-        val blocks = createInstance(sequence)
+        val blocks = CountOnesWithUpdates(sequence)
         assertEquals(2, blocks.countOnes(), "countOnes($sequence)")
         blocks.flip(0);
         assertEquals(3, blocks.countOnes())

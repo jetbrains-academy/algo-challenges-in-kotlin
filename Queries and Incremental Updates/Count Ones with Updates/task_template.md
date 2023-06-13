@@ -5,12 +5,12 @@
     <img src="../../images/count_ones_with_updates_logo.png">
 </div>
 
-Implement an interface that supports the following two operations
+Implement a class that supports the following two operations
 for a given binary string: get the number of 1's in the string
 and flip a given bit of the string.
 
 ```Kotlin
-interface CountOnesWithUpdates {
+class CountOnesWithUpdates {
     fun countOnes(): Int
     fun flip(index: Int)
 }
@@ -20,16 +20,16 @@ interface CountOnesWithUpdates {
 
 <div class="sample">
 
-| Input                      | Returns                                                             |
-|----------------------------|---------------------------------------------------------------------|
-| `createInstance("001001")` | [CountOnesWithUpdates](psi_element://CountOnesWithUpdates) instance |
-| `countOnes()`              | 2                                                                   |
-| `flip(0)`                  |                                                                     |
-| `countOnes()`              | 3                                                                   |
-| `flip(1)`                  |                                                                     |
-| `countOnes()`              | 4                                                                   |
-| `flip(2)`                  |                                                                     |
-| `countOnes()`              | 3                                                                   |
+| Input                            | Returns                                                             |
+|----------------------------------|---------------------------------------------------------------------|
+| `CountOnesWithUpdates("001001")` | [CountOnesWithUpdates](psi_element://CountOnesWithUpdates) instance |
+| `countOnes()`                    | 2                                                                   |
+| `flip(0)`                        |                                                                     |
+| `countOnes()`                    | 3                                                                   |
+| `flip(1)`                        |                                                                     |
+| `countOnes()`                    | 4                                                                   |
+| `flip(2)`                        |                                                                     |
+| `countOnes()`                    | 3                                                                   |
 
 </div>
 
