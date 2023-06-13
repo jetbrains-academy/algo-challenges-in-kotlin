@@ -25,6 +25,9 @@ class HiddenTests {
         }
 
         private fun getLengthOfLongest(s: String): Int {
+            if (s.isEmpty()) {
+                return 0
+            }
             val longest = Array(s.length) { IntArray(s.length) }
             for (i in s.indices) {
                 longest[i][i] = 1

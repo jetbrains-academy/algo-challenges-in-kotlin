@@ -3,12 +3,12 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 1726
+  - offset: 0
+    length: 1709
+    placeholder_text: // Use additional functions and classes if required
+  - offset: 1787
     length: 47
     placeholder_text: TODO("write your solution here")
-  - offset: 0
-    length: 1648
-    placeholder_text: // Use additional functions and classes if required
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

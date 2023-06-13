@@ -43,6 +43,9 @@ private class PalindromicSubsequenceFinder(private val seq: CharSequence) {
     }
 
     fun find(): CharSequence {
+        if (seq.isEmpty()) {
+            return ""
+        }
         val result = StringBuilder()
         getLongest(0, seq.length, result)
         return result
