@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 90
+    length: 919
+    placeholder_text:  |2
+          return IntArray(points.size) { index ->
+              val x = points[index]
+              segments.count { x in it.first..it.second }
+          }
+- name: test/Tests.kt
+  visible: true
