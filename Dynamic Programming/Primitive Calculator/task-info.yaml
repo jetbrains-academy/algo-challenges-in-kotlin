@@ -1,0 +1,15 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 861
+    placeholder_text: |-
+      fun findMinimumOperations(n: Int): List<Int> {
+          TODO("not implemented")
+      }
+- name: test/Tests.kt
+  visible: true
+- name: test/HiddenTests.kt
+  visible: false
