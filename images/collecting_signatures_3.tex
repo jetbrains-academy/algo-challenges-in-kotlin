@@ -1,0 +1,86 @@
+\begin{scope}[scale=0.15]
+	\tikzstyle{dot} = [draw=mc,fill=mc,circle,minimum size=1mm,inner sep=0mm]
+	
+	\begin{scope}
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		\foreach \f/\t/\h in {2/18/13, 5/10/12, 2/7/11, 21/23/10, 5/8/9, 13/15/8, 9/13/7, 9/21/6, 4/10/5, 8/11/4, 17/20/3, 8/17/2}
+		\draw[mc] (\f,\h) -- (\t,\h);
+	\end{scope}
+	
+	\begin{scope}[xshift=300mm]
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		\foreach \f/\t/\h in {21/23/10, 13/15/8, 9/13/7, 9/21/6, 8/11/4, 17/20/3, 8/17/2}
+		\draw[mc] (\f,\h) -- (\t,\h);
+		
+		\foreach \f/\t/\h in {5/10/12, 2/18/13, 2/7/11, 4/10/5, 5/8/9}
+		\draw[mc,opacity=.3] (\f,\h) -- (\t,\h);
+		
+		\foreach \x in {7} {
+			\draw[dashed,mc] (\x,0) -- (\x,15);
+			\node[dot] at (\x,0) {};
+		}
+	\end{scope}
+	
+	\begin{scope}[xshift=600mm]
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		\foreach \f/\t/\h in {21/23/10, 13/15/8, 17/20/3}
+		\draw[mc] (\f,\h) -- (\t,\h);
+		
+		\foreach \f/\t/\h in {5/10/12, 2/18/13, 2/7/11, 4/10/5, 5/8/9, 9/13/7, 9/21/6, 8/11/4, 8/17/2}
+		\draw[mc,opacity=.3] (\f,\h) -- (\t,\h);
+		
+		\foreach \x in {7, 11} {
+			\draw[dashed,mc] (\x,0) -- (\x,15);
+			\node[dot] at (\x,0) {};
+		}
+	\end{scope}
+	
+	\begin{scope}[xshift=0mm,yshift=-180mm]
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		\foreach \f/\t/\h in {21/23/10, 17/20/3}
+		\draw[mc] (\f,\h) -- (\t,\h);
+		
+		\foreach \f/\t/\h in {5/10/12, 2/18/13, 2/7/11, 4/10/5, 5/8/9, 9/13/7, 9/21/6, 8/11/4, 8/17/2, 13/15/8}
+		\draw[mc,opacity=.3] (\f,\h) -- (\t,\h);
+		
+		\foreach \x in {7, 11, 15} {
+			\draw[dashed,mc] (\x,0) -- (\x,15);
+			\node[dot] at (\x,0) {};
+		}
+	\end{scope}
+	
+	\begin{scope}[xshift=300mm,yshift=-180mm]
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		\foreach \f/\t/\h in {21/23/10}
+		\draw[mc] (\f,\h) -- (\t,\h);
+		
+		\foreach \f/\t/\h in {5/10/12, 2/18/13, 2/7/11, 4/10/5, 5/8/9, 9/13/7, 9/21/6, 8/11/4, 8/17/2, 13/15/8, 17/20/3}
+		\draw[mc,opacity=.3] (\f,\h) -- (\t,\h);
+		
+		\foreach \x in {7, 11, 15, 20} {
+			\draw[dashed,mc] (\x,0) -- (\x,15);
+			\node[dot] at (\x,0) {};
+		}
+	\end{scope}
+	
+	\begin{scope}[xshift=600mm,yshift=-180mm]
+		\draw[mc,->] (0,0) -- (26,0);
+		
+		%\foreach \f/\t/\h in {21/23/10}
+		%  \draw[myblue] (\f,\h) -- (\t,\h);
+		
+		\foreach \f/\t/\h in {5/10/12, 2/18/13, 2/7/11, 4/10/5, 5/8/9, 9/13/7, 9/21/6, 8/11/4, 8/17/2, 13/15/8, 17/20/3, 21/23/10}
+		\draw[mc,opacity=.3] (\f,\h) -- (\t,\h);
+		
+		\foreach \x in {7, 11, 15, 20, 23} {
+			\draw[dashed,mc] (\x,0) -- (\x,15);
+			\node[dot] at (\x,0) {};
+		}
+	\end{scope}
+	
+\end{scope}

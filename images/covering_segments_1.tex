@@ -1,0 +1,23 @@
+\begin{scope}[scale=0.2]
+	
+	\draw[->] (0,0) -- (26,0);
+	\draw[->] (0,-20) -- (26,-20);
+	
+	\foreach \f/\t/\h in {2/18/13, 5/10/12, 2/7/11, 21/23/10, 5/8/9, 13/15/8, 9/13/7, 9/21/6, 4/10/5, 8/11/4, 17/20/3, 8/17/2} {
+		\draw[mc] (\f,\h) -- (\t,\h);
+		\draw[mc] (\f,\h-20) -- (\t,\h-20);
+	}
+	
+	\foreach \x/\n in {11/2, 14/3, 18/4, 22/5} {
+		\draw[dashed] (\x,0) -- (\x,15);
+		\node[draw=mc, fill=mc, circle, minimum size=1mm, inner sep=0mm] at (\x,0) {};
+		\draw[dashed] (\x,0-20) -- (\x,15-20);
+		\node[draw=mc, fill=mc, circle, minimum size=1mm, inner sep=0mm] at (\x,-20) {};
+	}
+	
+	\draw[dashed] (6,0) -- (6,15);
+	
+	\node[draw=mc, fill=mc, circle, minimum size=1mm, inner sep=0mm,label=below:$x$] at (6,0) {};
+	\draw[dashed, hc] (7,0-20) -- (7,15-20);
+	\node[draw=hc, fill=hc, circle, minimum size=1mm, inner sep=0mm,label=below:\textcolor{hc}{$r_m$}] at (7,-20) {};
+\end{scope}

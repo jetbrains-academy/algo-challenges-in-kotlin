@@ -1,0 +1,9 @@
+\logo{}
+
+\foreach \a/\b/\y in {0.5/1.5/0, 1/4/-.25, 2.5/4.5/-0.5, 2/3.5/-0.75}
+\draw[mc] (\a-2.5,\y+0.5) -- (\b-2.5,\y+0.5);
+\draw[mc,->] (-2.2,-1+0.5) -- (2.2,-1+0.5);
+\foreach \x in {1.25, 3} {
+	\draw[hc,dashed] (\x-2.5,-1) -- (\x-2.5,1);
+	\node[draw=hc, fill=hc, circle,minimum size=1mm,inner sep=0mm] at (\x-2.5,-0.5) {};
+}

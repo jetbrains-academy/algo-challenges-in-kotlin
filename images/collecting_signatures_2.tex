@@ -1,0 +1,11 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		$\myproc{SegmentsCover}(\myvar{segments})$:\\
+		$\myvar{points} \gets \text{empty set}$\\
+		while \myvar{segments} is not empty:\\
+		\quad $r_m \gets \text{minimum right endpoint of a~segment from \myvar{segments}}$\\
+		\quad add $r_m$ to \myvar{points}\\
+		\quad remove segments covered by~$r_m$ from the set \myvar{segments}\\
+		return \myvar{points}
+	\end{pseudocode}
+};
