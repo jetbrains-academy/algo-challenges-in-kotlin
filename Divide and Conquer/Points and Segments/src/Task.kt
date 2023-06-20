@@ -2,12 +2,10 @@
 
 fun countSegmentsForEach(points: IntArray, segments: Array<Pair<Int, Int>>): IntArray {
     val segmentsCnt = segments.size
-    val start = IntArray(segmentsCnt) { segments[it].first }
-    val end = IntArray(segmentsCnt) { segments[it].second }
+    val start = segments.map { it.first }.sorted()
+    val end = segments.map { it.second }.sorted()
     val pointsCnt = points.size
-    val pointIndices = IntArray(pointsCnt) { it }.sortedBy { points[it] }
-    start.sort()
-    end.sort()
+    val pointIndices = points.indices.sortedBy { points[it] }
     val answer = IntArray(pointsCnt)
     var endsBefore = 0
     var startsAfter = 0
