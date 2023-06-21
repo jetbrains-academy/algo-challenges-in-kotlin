@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 78
+    length: 356
+    placeholder_text: |2
+          weights.sortDescending()
+          var capacityLeft = backpackCapacity
+          for (w in weights) {
+              if (capacityLeft >= w) {
+                  capacityLeft -= w
+              }
+          }
+          return backpackCapacity - capacityLeft
+- name: test/Tests.kt
+  visible: true
