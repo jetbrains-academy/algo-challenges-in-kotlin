@@ -52,7 +52,7 @@ class HiddenTests {
         }
 
         fun set(index: Int): Bitset {
-            val newBits = LongArray(bits.size)
+            val newBits = bits.clone()
             newBits[index shr 6] = bits[index shr 6] or (1L shl index)
             return Bitset(newBits)
         }
