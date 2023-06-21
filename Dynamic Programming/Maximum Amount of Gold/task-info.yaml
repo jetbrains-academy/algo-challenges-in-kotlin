@@ -16,3 +16,5 @@ files:
           return backpackCapacity - capacityLeft
 - name: test/Tests.kt
   visible: true
+- name: test/HiddenTests.kt
+  visible: false
