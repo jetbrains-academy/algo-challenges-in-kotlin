@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 
@@ -24,8 +25,8 @@ class Tests {
     fun test(segments: List<Segment>, answer: Int) {
         val output = segmentsCover(segments)
         checkCorrectness(segments, output)
-        assertTrue(output.size == answer) {
-            "Size of the answer is ${output.size}, but optimal solution is $answer"
+        assertEquals(output.size, answer) {
+            "Size of the answer is not optimal"
         }
     }
 
