@@ -11,7 +11,7 @@ class HiddenTests {
     }
 
     @Test
-    fun sample1() {
+    fun sample1() = runTimeout(1.seconds, "sample 1") {
         val a = intArrayOf(1, 2, 3)
         val correct = 6L
         val result = maximumPairwiseProduct(a)
@@ -19,7 +19,7 @@ class HiddenTests {
     }
 
     @Test
-    fun sample2() {
+    fun sample2() = runTimeout(1.seconds, "sample 2") {
         val a = intArrayOf(7, 5, 14, 2, 8, 8, 10, 1, 2, 3)
         val correct = 140L
         val result = maximumPairwiseProduct(a)
@@ -27,7 +27,7 @@ class HiddenTests {
     }
 
     @Test
-    fun sample3() {
+    fun sample3() = runTimeout(1.seconds, "sample 3") {
         val a = intArrayOf(1_000_000, 1_000_000)
         val correct = 1_000_000_000_000L
         val result = maximumPairwiseProduct(a)
@@ -35,7 +35,7 @@ class HiddenTests {
     }
 
     @Test
-    fun small_random_tests() = runTimeout(2.seconds, "random_tests") {
+    fun small_random_tests() = runTimeout(2.seconds, "small_random_tests") {
         val TESTS_NUMBER = 100
         val rand = Random(239)
         for (i in 1..TESTS_NUMBER) {
@@ -48,7 +48,7 @@ class HiddenTests {
     }
 
     @Test
-    fun large_random_tests() = runTimeout(2.seconds, "random_tests") {
+    fun large_random_tests() = runTimeout(2.seconds, "large_random_tests") {
         val TESTS_NUMBER = 5
         val rand = Random(239)
         for (i in 1..TESTS_NUMBER) {
