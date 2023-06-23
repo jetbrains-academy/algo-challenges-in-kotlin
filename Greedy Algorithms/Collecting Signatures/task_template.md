@@ -3,11 +3,16 @@
 # Collecting Signatures
 
 You are responsible for collecting signatures from all tenants in 
-a building. For each tenant, you know a period of time when he or she 
-is at home. You would like to collect all signatures by visiting the 
+a building. For each tenant, you know a period of time when they 
+are at home. You would like to collect all signatures by visiting the 
 building as few times as possible. For simplicity, we assume that when 
 you enter the building, you instantly collect the signatures of all 
 tenants that are in the building at that time.
+
+Let's draw a diagram where each tenant will be represented as a segment
+of time period when they are available. Now we need to solve the following
+problem: find the minimum number of points needed to cover all given segments
+on a line.
 
 Try our an <a href="https://discrete-math-puzzles.github.io/puzzles/touch-all-segments/index.html">interactive puzzle</a> 
 before solving this programming challenge!
@@ -16,54 +21,29 @@ before solving this programming challenge!
     <img src="../../images/collecting_signatures_logo.png">
 </div>
 
-Find the minimum number of points needed to cover all given segments 
-on a line.
-
-TODO: adjust input-output format
 
 ### Input
 
-The first line of the input contains the number $n$ of segments. 
-Each of the following $n$ lines contains two integers $l_i$ and $r_i$ 
-(separated by a space) defining the coordinates of endpoints of 
-the $i$-th segment.
+The input of your function is a list $n$ of segments with borders
+$l_i$ and $r_i$.
 
 ### Output
 
-The minimum number $k$ of points on the first line and the 
-integer coordinates of $k$ points (separated by spaces) on 
-the second line. You can output the points in any order. 
-If there are multiple such sets of points, you can output any of them.
-
+Your function should return the list of points that cover all 
+given segment. The size of that list should be minimal possible.
+If there are multiple solutions, return any of them.
 
 ### Constraints
 
-$1 \le n \le 100$; $0 \le l_i  \le r_i  \le 10^9$ for all $i$.
+$1 \le n \le 100$; $0 \le l_i \le r_i \le 10^9$ for all $i$.
 
 
 <div class="samples">
 
-Sample 1:
-Input:
-3
-1 3
-2 5
-3 6
-Output:
-1
-3
-
-Sample 2:
-Input:
-4 
-4 7 
-1 3 
-2 5 
-5 6
-Output:
-2 
-3 6
-
+| Input                              | Return value |
+|------------------------------------|--------------|
+| `[(1, 3), (2, 5), (3, 6)]`         | `[3]`        |
+| `[(4, 7), (1, 3), (2, 5), (5, 6)]` | `[3, 6]`     |
 
 </div>
 
