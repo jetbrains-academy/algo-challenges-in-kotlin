@@ -1,0 +1,15 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		$\myproc{Knapsack}([w_0, \dotsc, w_{n-1}], W)$:\\
+		$\myvar{pack} \gets \text{two-dimensional array of size $(W+1) \times (n+1)$}$\\
+		initialize all elements of \myvar{pack} to {\tt false}\\
+		$\myvar{pack}[0][0] \gets {\tt true}$\\
+		for~$i$ from~$1$ to~$n$:\\
+		\quad for $w$ from $0$ to $W$:\\
+		\quad\quad if $w_{i-1} > w$:\\
+		\quad\quad\quad $\myvar{pack}[w][i] \gets \myvar{pack}[w][i-1]$\\
+		\quad\quad else:\\
+		\quad\quad\quad $\myvar{pack}[w][i] \gets \myvar{pack}[w][i-1]\text{ OR } \myvar{pack}[w-w_{i-1}][i-1]$\\
+		return $\myvar{pack}[W][n]$
+	\end{pseudocode}
+};

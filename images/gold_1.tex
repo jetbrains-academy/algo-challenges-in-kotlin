@@ -1,0 +1,11 @@
+\node {
+	$
+	\myvar{pack}(w,i)=
+	\begin{cases}
+		{\tt true} &\text{if $i=0$ and $w=0$}\\
+		{\tt false} &\text{if $i=0$ and $w>0$}\\
+		\myvar{pack}(w,i-1) &\text{if $i>0$ and $w_{i-1} > w$}\\
+		\myvar{pack}(w,i-1) \text{ or } \myvar{pack}(w-w_{i-1},i-1) &\text{otherwise}
+	\end{cases}
+	$
+};

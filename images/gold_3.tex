@@ -1,0 +1,18 @@
+\path[use as bounding box] (-5, -2) rectangle (5, 2);
+
+\tikzstyle{M}=[array,
+nodes={arraynodes,scale=0.80,transform shape},
+row 1/.style={nodes={arraynodes,draw=none,scale=.79,transform shape}}, column 1/.style={nodes={arraynodes,draw=none,scale=.79,transform shape}}]
+
+\matrix[M]
+{~\&0\&1\&2\&3\\
+	0\&T\&T\&T\&T\\
+	1\&F\&T\&T\&T\\
+	2\&F\&F\&F\&F\\
+	3\&F\&F\&T\&T\\
+	4\&F\&F\&T\&T\\
+	5\&F\&F\&F\&T\\
+	6\&F\&F\&F\&F\\
+	7\&F\&F\&F\&T\\
+	8\&F\&F\&F\&T\\
+};
