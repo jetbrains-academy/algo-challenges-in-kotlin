@@ -1,0 +1,20 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 54
+    length: 50
+    placeholder_text: "return a.count{it in l..r}"
+  - offset: 108
+    length: 293
+    placeholder_text: // Write your functions here
+- name: test/HiddenTests.kt
+  visible: false
+- name: test/Tests.kt
+  visible: true
+- name: solution.md
+  visible: false
+- name: task_template.md
+  visible: false
+solution_hidden: false
