@@ -12,7 +12,11 @@ moves from $i$ to $i + 2$ twice in a row.
 The game ends on reaching the point $n - 1$.
 Each point has a number associated with it: $a_0, a_1, \ldots, a_{n - 1}$.
 
-The goal is to minimize the total sum of the numbers in the visited points.
+Implement a function that calculates the minimum total sum of the numbers in the visited points.
+
+```Kotlin
+fun minimumSumPath(a: IntArray): Long
+```
 
 ### Input
 
