@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 0
     length: 861
-    placeholder_text: |2
+    placeholder_text: |
       fun findMinimumOperations(n: Int): List<Int> {
           var i = n
           val answer = mutableListOf<Int>()
@@ -25,3 +25,5 @@ files:
   visible: true
 - name: test/HiddenTests.kt
   visible: false
+- name: solution.md
+  visible: true

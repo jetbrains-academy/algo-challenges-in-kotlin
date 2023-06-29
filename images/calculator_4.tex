@@ -1,0 +1,10 @@
+\foreach \n in {1,...,12}
+\node[circle, draw, inner sep=0mm, minimum size=5mm] (\n) at (\n,0) {$\n$};
+\foreach \n in {1,...,12} {
+	\pgfmathtruncatemacro{\a}{\n+1}
+	\ifnumless{\a}{13}{\draw[->] (\n) -- (\a);}{}
+	\pgfmathtruncatemacro{\a}{2*\n}
+	\ifnumless{\a}{13}{\path (\n) edge[->,bend right] (\a);}{}
+	\pgfmathtruncatemacro{\a}{3*\n}
+	\ifnumless{\a}{13}{\path (\n) edge[->,bend left] (\a);}{}
+}

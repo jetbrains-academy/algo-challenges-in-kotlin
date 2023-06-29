@@ -1,0 +1,15 @@
+\node[text width=100mm] {
+	\begin{pseudocode}
+		\myproc{Calculator}($n$):\\
+		$\myvar{table}[1..n] \gets [+\infty, \dotsc, +\infty]$\\
+		$\myvar{table}[1] \gets 0$\\
+		
+		for $k$~from~$2$ to~$n$:\\
+		\quad $\myvar{table}[k]=1+\myvar{table}[k-1]$\\
+		\quad if $k$ is divisible by~$2$:\\
+		\quad\quad $\myvar{table}[k]=\min(\myvar{table}[k], 1+\myvar{table}[k/2]$)\\
+		\quad if $k$ is divisible by~$3$:\\
+		\quad\quad $\myvar{table}[k]=\min(\myvar{table}[k], 1+\myvar{table}[k/3]$)\\
+		return $\myvar{table}[n]$
+	\end{pseudocode}
+};
