@@ -17,6 +17,12 @@ An `IntArray` $x_0, x_1, \ldots, x_{n - 1}$ defining the points,
 and an `Array<Pair<Int, Int>>` $[l_0, r_0], \ldots, [l_{m - 1}, r_{m - 1}]$
 defining the segments.
 
+The number of points doesn't exceed $300\,000$.
+
+The number of segments doesn't exceed $300\,000$.
+
+All the coordinates don't exceed $10^9$ by their absolute value.
+
 ### Output
 An `IntArray` $d$ representing the number of segments containing each point, more formally $d_i$ should contain
 the number of segments $[l_j, r_j]$ that contain point $x_i$.
