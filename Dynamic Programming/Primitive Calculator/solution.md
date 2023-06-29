@@ -19,6 +19,7 @@ to output an optimum sequence of operations. To do this, let us notice that we c
 * it is "$+1$", if ${calculator}(n)=1+{calculator}(n-1)$;
 * it is "$\times 2$", if $n$ is divisible by $2$ and ${calculator}(n)=1+{calculator}(n/2)$;
 * it is "$\times 3$", if $n$ is divisible by $3$ and ${calculator}(n)=1+{calculator}(n/3)$.
+
 This allows us to uncover an optimum sequence as follows:
 * find the last operation;
 * replace $n$ by $n-1$, $n/2$, or $n/3$ (depending on which of the three cases above happens);
@@ -30,4 +31,4 @@ The running time of the algorithm is $O(n)$.
 
 The algorithm finds implicitly a shortest path in a DAG like the one below.
 
-<img src="../../images/calculator_3.png">
+<img src="../../images/calculator_4.png">
