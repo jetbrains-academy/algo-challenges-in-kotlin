@@ -14,7 +14,7 @@ fun findMinimumOperations(n: Int): List<Int>
 
 ### Input
 
-An `Int` $n$, an integer that is needed to acquire from ` by using the operations above.
+An `Int` $n$ ($1 \le n \le 10^6$), an integer to get from 1 by using the operations above.
 
 ### Output
 
