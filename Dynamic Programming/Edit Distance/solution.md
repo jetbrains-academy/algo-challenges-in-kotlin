@@ -44,7 +44,7 @@ Then,
 The base case for this recurrence relation is $i=0$ and $j=0$:
 $$\operatorname{EditDistance}(0,j)=j \quad \text{and} \quad \operatorname{EditDistance}(i,0)=i.$$
 This can be stated more compactly as follows: if $i=0$ or $j=0$, then
-$$\operatorname{EditDistance}(i,j)=\max\{i,j\}.$$
+$$\operatorname{EditDistance}(i,j)=\max\lbrace i,j \rbrace.$$
 
 The pseudocode below converts this recurrence relation into a recursive algorithm and uses memoization to avoid computing the same thing again.
 
