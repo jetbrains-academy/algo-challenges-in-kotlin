@@ -12,6 +12,8 @@
 \colorlet{threefill}{three!20!white}
 \colorlet{fourfill}{four!20!white}
 
+\newcommand{\myalert}[1]{\textcolor{hc}{#1}}
+
 \usepackage{tikz}
 \usepackage{tikz-qtree}
 \usepackage{pgfplots}
@@ -63,3 +65,25 @@
 \newenvironment{pseudocode}
 	{\hrule\medskip}
 	{\medskip\hrule}
+	
+\newcommand{\network}[1]{
+	\begin{scope}[label distance=-1mm]
+		\foreach \x/\y/\t/\l in {0/1/1/s, 1/2/2/a, 1/0/3/b, 2/1/4/c, 3/2/5/d, 3/0/6/e, 4/1/7/t}
+			\node[circle, draw, inner sep=0mm, minimum size=5mm, label=below:$\l$] (\t) at (\x,\y) {};
+		\foreach[count=\n] \l in {#1}
+			\node at (\n) {\textcolor{mc}{$\l$}};
+		\foreach \f/\t in {1/2, 1/3, 2/4, 2/5, 3/4, 3/6, 4/5, 4/7, 5/7, 6/7}
+			\draw[->] (\f) -- (\t);
+	\end{scope}
+}
+
+\newcommand{\spnetwork}[1]{
+	\begin{scope}[xscale=1.4, yscale=1.4, label distance=-1mm]
+		\foreach \x/\y/\t/\l in {0/1/1/s, 1/2/2/a, 1/0/3/b, 2/1/4/c, 3/2/5/d, 3/0/6/e, 4/1/7/t}
+			\node[circle, draw, inner sep=0mm, minimum size=6mm, label=below:$\l$] (\t) at (\x,\y) {};
+		\foreach[count=\n] \l in {#1}
+			\node at (\n) {\textcolor{mc}{$\l$}};
+		\foreach \f/\t/\w in {1/2/4, 1/3/5, 2/4/4, 2/5/7, 3/4/1, 3/6/7, 4/5/2, 4/7/6, 5/7/8, 6/7/4}
+			\path (\f) edge[->,draw] node[below, circle,draw=none,inner sep=.3mm] {\w} (\t);
+	\end{scope}
+}

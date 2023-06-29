@@ -1,0 +1,35 @@
+    \tikzstyle{u}=[draw,circle,inner sep=0mm,minimum size=4mm]
+
+\begin{scope}[label distance=-.6mm]
+	\foreach \x in {1,...,5} \foreach \y in {1,...,4}
+	\node[u] ({\x}{\y}) at (\x,\y) {};
+	\foreach \x in {1,...,4} \foreach \y in {1,...,4} {
+		\pgfmathsetmacro{\z}{int(\x+1)}
+		\draw[->] ({\x}{\y}) -- ({\z}{\y});
+	}
+	\foreach \x in {1,...,5} \foreach \y in {1,...,3} {
+		\pgfmathsetmacro{\z}{int(\y+1)}
+		\draw[->] ({\x}{\y}) -- ({\x}{\z});
+	}
+	\node[u,draw=none,label=left:$s$] at ({1}{1}) {};
+	\node[u,draw=none,label=right:$t$] at ({5}{4}) {};
+\end{scope}
+
+\begin{scope}[label distance=-.6mm]
+	\foreach \n in {6,7,8,9}
+	\node[u] (\n) at (\n,2.5) {};
+	\foreach \f/\t/\a in {6/7/20, 6/7/-20, 6/7/60,6/7/-60, 7/8/20, 7/8/-20,
+		8/9/20, 8/9/-20, 8/9/60, 8/9/-60}
+	\path (\f) edge[->,bend left=\a] (\t);
+	\node[u,draw=none,label=left:$s$] at (6) {};
+	\node[u,draw=none,label=right:$t$] at (9) {};
+\end{scope}
+
+\begin{scope}[label distance=-.6mm]
+	\foreach \n in {10,11,12,13,14,15}
+	\node[u] (\n) at (\n,2.5) {};
+	\foreach \f/\t/\a in {10/11/0, 11/12/0, 12/13/0, 13/14/0, 14/15/0, 10/12/30, 10/13/30, 10/14/30, 10/15/30, 11/13/-30, 11/14/-30, 11/15/-30, 13/15/-50}
+	\path (\f) edge[->,bend right=\a] (\t);
+	\node[u,draw=none,label=left:$s$] at (10) {};
+	\node[u,draw=none,label=right:$t$] at (15) {};
+\end{scope}
