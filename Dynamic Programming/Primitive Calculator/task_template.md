@@ -2,6 +2,36 @@
 
 # Primitive Calculator
 
+Implement a function that finds the minimum number of operations needed
+to get a positive integer $n$ from 1 by using only three operations:
+- add 1,
+- multiply by 2
+- multiply by 3.
+
+```Kotlin
+fun findMinimumOperations(n: Int): List<Int>
+```
+
+### Input
+
+An `Int` $n$, an integer that is needed to acquire from ` by using the operations above.
+
+### Output
+
+Consider an optimal list of $k$ operations that transforms 1 into $n$.
+A returned `List<Int>` should contain $k + 1$ integers that will appear while you make these $k$ operations.
+The integers have to be listed in the order of their appearance, in other words in increasing order.
+
+<div class="samples">
+
+| Input                                 | Return value                                                                  |
+|---------------------------------------|-------------------------------------------------------------------------------|
+| `1`                                   | `[1]`                                                                         |
+| `96234`                               | `[1, 3, 9, 10, 11, 33, 99, 297, 891, 2673, 8019, 16038, 16039, 48117, 96234]` |
+
+Note that in the second example some other return lists are also correct.
+
+</div>
 
 
 <div class="hint">
