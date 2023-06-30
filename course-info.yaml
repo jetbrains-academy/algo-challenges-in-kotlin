@@ -1,27 +1,27 @@
 type: marketplace
 title: Algorithmic Challenges in Kotlin
 language: English
-summary: "Prepare for your next technical interview by practicing solving algorithmic
-  challenges in IDE using Kotlin.
-  
-  The main learning objectives of this hands-on course are the following.
-  * **Practice applying essential algorithmic techniques.** We introduce you to the
+summary: "<p>Prepare for your next technical interview by practicing solving algorithmic
+  challenges in IDE using Kotlin.</p>
+
+<p>The main learning objectives of this hands-on course are the following.</p>
+<ul><li><b>Practice applying essential algorithmic techniques.</b> We introduce you to the
   main algorithmic techniques (brute force, greedy algorithms, divide and conquer, dynamic
   programming). For each topic, you will be solving a number of coding challenges to master
-  the corresponding technique.
-  * **Prepare for your next coding interview.** Solve a suite of carefully selected
-  coding challenges that cover the most popular topics from coding interviews.
-  * **Code like a pro.** Our workflow will push you to code like a pro, whereas IDEA will
+  the corresponding technique.</li>
+<li><b>Prepare for your next coding interview.</b> Solve a suite of carefully selected
+  coding challenges that cover the most popular topics from coding interviews.</li>
+<li><b>Code like a pro.</b> Our workflow will push you to code like a pro, whereas IDEA will
   boost your productivity: implement a solution using various smart features of IDEA
-  (code inspections, auto completion, on-the-fly code analysis, and reliable refactoring tools);
+  (code inspections, auto-completion, on-the-fly code analysis, and reliable refactoring tools);
   then ensure that your solution is correct by implementing various tests; then, debug it right
-  in IDEA.
-  * **Practice writing efficient and reliable code.** For each problem in this course, your
+  in IDEA.</li>
+<li><b>Practice writing efficient and reliable code.</b> For each problem in this course, your
   goal is to implement a solution that works in less than one second even on large datasets.
   When you submit, our automatic grading system checks your solution against a collection of
-  carefully designed test cases that contain both large datasets and various corner cases.
-  * **Practice Kotlin.** Implement your solutions in Kotlin, a cross-platform programming
-  language developed by JetBrains."
+  carefully designed test cases that contain both large datasets and various corner cases.</li>
+<li><b>Practice Kotlin.</b> Implement your solutions in Kotlin, a cross-platform programming
+  language developed by JetBrains.</li></ul>"
 
 programming_language: Kotlin
 content:
