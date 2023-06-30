@@ -7,8 +7,10 @@ files:
     length: 12
     placeholder_text: // Write your code here
 - name: test/Tests.kt
-  visible: false
+  visible: true
 - name: task_template.md
   visible: false
 - name: solution.md
+  visible: false
+- name: test/HiddenTests.kt
   visible: false
