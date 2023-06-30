@@ -2,7 +2,9 @@
 
 # Points and Segments
 
-**TODO**: logo
+<div class="logo">
+    <img src="../../images/points_and_segments_logo.png">
+</div>
 
 Implement a function that given a set of points and a set of segments on a line, computes, for each point, the number of
 segments it is contained in.
@@ -37,4 +39,8 @@ the number of segments $[l_j, r_j]$ that contain point $x_i$.
 | `[1, 6]` `[[0, 5], [-3, 2], [7, 10]]` | `[2, 0]`     |
 
 
+</div>
+
+<div class="hint">
+<%include "solution.md" %>
 </div>

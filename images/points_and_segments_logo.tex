@@ -1,0 +1,13 @@
+\logo{}
+
+\begin{scope}[xshift=-25mm,yshift=-25mm]
+	\foreach \a/\b/\y in {0.5/1.5/2.75, 2.5/4.5/2.5, 2/3.5/2.25}
+	\draw[mc] (\a,\y) -- (\b,\y);
+	
+	\draw[->] (0.5,2) -- (4.5,2);
+	\foreach \x/\n in {1/1, 1.75/0, 3/2, 4/1} {
+		\draw[dashed,hc] (\x,1.75) -- (\x,3.5);
+		\node[below] at (\x,1.75) {\n};
+		\draw[draw=hc, fill=hc] (\x,2) circle (.5mm);
+	}
+\end{scope}
