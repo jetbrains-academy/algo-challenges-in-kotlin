@@ -1,0 +1,17 @@
+\node[text width=125mm] {
+	\begin{pseudocode}
+		$\myproc{Merge}(\myvar{List}_1, \myvar{List}_2)$:\\
+		$\myvar{SortedList} \gets \text{empty list}$\\
+		while both $\myvar{List}_1$ and $\myvar{List}_2$ are non-empty:\\
+		\quad if the smallest element in $\myvar{List}_1$ is smaller than
+		the smallest element in $\myvar{List}_2$:\\
+		\quad\quad move the smallest element from $\myvar{List}_1$
+		to the end of \myvar{SortedList}\\
+		\quad else:\\
+		\quad\quad move the smallest element from $\myvar{List}_2$
+		to the end of \myvar{SortedList}\\
+		move any remaining elements from either
+		$\myvar{List}_1$ or $\myvar{List}_2$ to the end of \myvar{SortedList}\\
+		return \myvar{SortedList}
+	\end{pseudocode}
+};
