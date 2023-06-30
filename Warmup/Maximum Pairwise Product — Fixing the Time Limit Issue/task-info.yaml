@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 48
     length: 290
-    placeholder_text: |-
+    placeholder_text: |2
           val len = a.size
           var res = Long.MIN_VALUE
           for (i in 0 until len) {
