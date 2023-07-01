@@ -23,3 +23,7 @@ Make it work faster to pass the tests.
 The elements we are looking for form a segment. If we find the
 borders of this segment using binary search, we can find its length.
 </div>
+
+<div class="hint">
+<%include "solution.md" %>
+</div>
