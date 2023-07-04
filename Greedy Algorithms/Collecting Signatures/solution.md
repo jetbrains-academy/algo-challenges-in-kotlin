@@ -15,14 +15,14 @@ we can replace $x$ by $r_m$ in $S$.
 Clearly, this does not change the size of the solution $S$. 
 To show that $S$ is still a solution, assume, 
 for the sake of contradiction, that some segment 
-$[l_i,r_i]$ is covered by $x$,
+$[l_i,r_i]$ is covered by $x$
 but is not covered by $r_m$. This means that
 \[l_i \le x \le r_i < r_m  ,\]
 contradicting to the fact that $r_m$ is the smallest right end.
 
 
 This way,
-we arrive to the following algorithm:
+we arrive at the following algorithm:
 add to a solution the minimum right end $r_m$,
 discard all segments that are covered by $r_m$,
 and iterate.
