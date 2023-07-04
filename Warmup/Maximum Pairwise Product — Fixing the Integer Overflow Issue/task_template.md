@@ -1,7 +1,7 @@
-Now, assume that in the Maximum Pairwise Product problem
+Now, assume that in the Maximum Pairwise Product problem,
 the integers $a_i$'s can be as large as $10^6$.
-In this case, perhaps surprisingly, our previous 
-solution does not work. You may want to check this
+In such a case, perhaps surprisingly, our previous 
+solution does not work. You may want to check that
 by pressing the "Check" button.
 
 **Stop and think.** Do you see why the solution fails?
