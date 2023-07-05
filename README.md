@@ -1,4 +1,10 @@
+[![official project](https://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # algo-challenges-in-kotlin
+
+Prepare for your next technical interview by practicing solving algorithmic
+challenges in IDE using Kotlin.
 
 ## Task description templates
 By default, we added `task.md` to `.gitignore`.
