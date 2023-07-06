@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 30
     length: 221
-    placeholder_text: TODO("implement your solution here")
+    placeholder_text: '    TODO("implement your solution here")'
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

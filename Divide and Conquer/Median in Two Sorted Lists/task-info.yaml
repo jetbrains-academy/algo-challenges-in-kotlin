@@ -3,14 +3,14 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 77
-    length: 578
-    placeholder_text: |-
-      assert(first.size == second.size)
-      return (first.asSequence() + second.asSequence())
-              .sorted()
-              .drop(first.size - 1)
-              .first()
+  - offset: 73
+    length: 582
+    placeholder_text: |2
+          assert(first.size == second.size)
+          return (first.asSequence() + second.asSequence())
+                  .sorted()
+                  .drop(first.size - 1)
+                  .first()
 - name: test/Tests.kt
   visible: true
 - name: task_template.md

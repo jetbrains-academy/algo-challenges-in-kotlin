@@ -3,8 +3,8 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 0
-    length: 786
+  - offset: 25
+    length: 760
     placeholder_text: // Implement additional functions and classes here
   - offset: 839
     length: 43

@@ -19,6 +19,6 @@ files:
 - name: test/HiddenTests.kt
   visible: false
 - name: solution.md
-  visible: true
+  visible: false
 - name: task_template.md
-  visible: true
+  visible: false

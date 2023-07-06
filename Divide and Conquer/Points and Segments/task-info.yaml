@@ -17,4 +17,4 @@ files:
 - name: task_template.md
   visible: false
 - name: solution.md
-  visible: true
+  visible: false
