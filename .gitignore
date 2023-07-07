@@ -8,8 +8,6 @@
 *.DS_Store
 images/tmp.tex
 images/main_dark.pdf
-/**/task-remote-info.yaml
-/**/lesson-remote-info.yaml
 /**/task.md
 images/cover.synctex.gz
 images/cover.pdf
