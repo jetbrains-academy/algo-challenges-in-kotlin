@@ -6,7 +6,7 @@ allows one to find the largest element among the union of these prefixes
 (that can be put into the right half of their sorted union).
 
 Since $a_2 \le b_5$, we conclude that
-\[a_0 \le a_1 \le a_2 \le b_5 \le b_6 \le b_7 \, .\].
+$$a_0 \le a_1 \le a_2 \le b_5 \le b_6 \le b_7.$$
 There are only six elements that can be smaller than $a_1$: $a_0, b_0, b_1, b_2, b_3, b_4$.
 Hence, $a_1$ can be among the first seven elements of $c$. Thus, we can discard
 $a_0$ and $a_1$. Similarly, there are only six elements that can be larger than $b_6$:
