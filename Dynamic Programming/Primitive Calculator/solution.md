@@ -32,3 +32,7 @@ The running time of the algorithm is $O(n)$.
 The algorithm finds implicitly the shortest path in a DAG like the one below.
 
 <img src="../../images/calculator_4.png">
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

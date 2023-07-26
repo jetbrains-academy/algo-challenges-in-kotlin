@@ -58,3 +58,7 @@ a starting array of length $n$, we get an array of length $\lceil \frac{n+1}{2} 
 Thus, after revealing the values of at most five cells, we will find a 0-1 pair.
 Indeed, even in the worst possible case, the size of the array will shrink as follows:
 $20 \to 11 \to 6 \to 4 \to 3 \to 2$.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

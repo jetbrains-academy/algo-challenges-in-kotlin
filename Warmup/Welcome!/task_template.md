@@ -52,4 +52,8 @@ In the next two problems, we will guide you through this pipeline step by step.
 
 Happy learning!
 
+Many programming challenges in this course are taken from the book
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+by Alexander Kulikov and Pavel Pevzner.
+
 

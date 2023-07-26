@@ -44,3 +44,8 @@ as all its elements are certainly smaller than $x$:
 <img src="../../images/searching_sorted_data3.png">
 
 This leads us to the implementation shown on the left.
+
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+
