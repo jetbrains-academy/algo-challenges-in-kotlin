@@ -90,3 +90,7 @@ This means that if we keep dividing $n$
 by 2 until we get 1, we will make about $\log_2 n$ divisions.
 What is important here is that $\log_2 n$ is a *slowly growing* function: 
 say, if $n \le 10^9$, then $\log_2 n < 30$.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

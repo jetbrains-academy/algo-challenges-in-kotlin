@@ -20,3 +20,6 @@ It is not difficult to see that they are all different from each other.
 The corresponding algorithm is straightforward:
 find the largest value of $k$ such that $\frac{k(k+1)}{2} \le n$.
 The running time is $O(n)$.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)

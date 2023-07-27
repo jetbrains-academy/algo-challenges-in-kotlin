@@ -80,3 +80,7 @@ The algorithm
 finds the shortest path in this graph from the top-left node to the bottom-right node.
 
 ![](../../images/edit_distance_6.png)
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

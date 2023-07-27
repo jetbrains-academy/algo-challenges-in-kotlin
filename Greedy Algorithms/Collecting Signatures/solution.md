@@ -44,3 +44,7 @@ This algorithm is already sufficiently fast to pass the grader.
 To reduce the running time from $O(n^2)$ to $O(n\log n)$, 
 you can simply sort segments in increasing order of their right 
 endpoints and scan the resulting list just once.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

@@ -40,3 +40,7 @@ $c_1, \dotsc, c_n$ one by one.
 Then, you either find a hole or conclude that
 $\operatorname{changeable}(c_1, \dotsc, c_n)=[p]$, inwhich case the answer
 is $p+1$.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

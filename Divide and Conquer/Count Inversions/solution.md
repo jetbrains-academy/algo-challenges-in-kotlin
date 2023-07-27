@@ -81,3 +81,7 @@ by the length of $\mathit{LeftHalf}$.
 
 The running time $T(n)$ of the resulting algorithm satisfies
 the recurrence $T(n)=2T(n/2)+O(n)$ and hence $T(n)=O(n\log n)$.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+
