@@ -10,7 +10,23 @@ sequence $(7, 2, 5, 6, 11, 3, 2, 9)$ and $4$ is not present in this
 sequence. Given the importance of the search problem, it is not 
 surprising that Kotlin has built-in methods for solving it.
 
-TODO: show how to use the `find` method
+For instance, there is a method called `find`. Here's the example of using it.
+
+```Kotlin
+val a = listOf(7, 2, 5, 6, 11, 3, 2, 9)
+println(a.find { it == 3 } != null)
+println(a.find { it == 4 } != null)
+println(a.find { it % 3 == 0 && it % 2 == 0 })
+println(a.find { it % 3 == 0 && it % 5 == 0 })
+```
+
+The code above prints the following.
+```
+true
+false
+6
+null
+```
 
 What is going on under the hood when one calls this
 `find` method? As you would expect, Kotlin
@@ -44,3 +60,8 @@ as all its elements are certainly smaller than $x$:
 <img src="../../images/searching_sorted_data3.png">
 
 This leads us to the implementation shown on the left.
+
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

@@ -138,3 +138,7 @@ are predecessors of $t$). Networks with such a property are known
 as *directed acyclic graphs* or *DAGs*.
 We will see that many dynamic programming algorithms exploit DAGs, whether explicitly
 or implicitly.
+
+Source:
+[Ace Your Next Coding Interview by Learning Algorithms](https://bit.ly/acecogniterra)
+

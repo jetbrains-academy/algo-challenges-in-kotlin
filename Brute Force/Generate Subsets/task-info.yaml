@@ -3,8 +3,8 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 0
-    length: 786
+  - offset: 25
+    length: 760
     placeholder_text: // Implement additional functions and classes here
   - offset: 839
     length: 43
@@ -17,3 +17,4 @@ files:
   visible: false
 - name: test/HiddenTests.kt
   visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSfxqHNk7ZtD9Br3NqgSlkdbaN6HuDWjJXvP3vFSIyFROZ6nYg/viewform?usp=pp_url&entry.2103429047=Brute+Force+/+Generate+Subsets

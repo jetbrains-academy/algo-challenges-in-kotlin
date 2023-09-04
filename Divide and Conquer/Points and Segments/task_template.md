@@ -6,7 +6,7 @@
     <img src="../../images/points_and_segments_logo.png">
 </div>
 
-Implement a function that given a set of points and a set of segments on a line, computes, for each point, the number of
+Implement a function that given a set of points and a set of segments on a line, computes for each point the number of
 segments it is contained in.
 
 ```Kotlin
@@ -26,7 +26,7 @@ The number of segments doesn't exceed $300\,000$.
 All the coordinates don't exceed $10^9$ by their absolute value.
 
 ### Output
-An `IntArray` $d$ representing the number of segments containing each point, more formally $d_i$ should contain
+An `IntArray` $d$ representing the number of segments containing each point; more formally, $d_i$ should contain
 the number of segments $[l_j, r_j]$ that contain point $x_i$.
 
 

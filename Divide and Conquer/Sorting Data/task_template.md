@@ -8,7 +8,7 @@ algorithms for this task are based on the divide-and-conquer strategy
 and have running time $O(n\log n)$.
 In this module, we describe one such algorithm known as MergeSort.
 
-We begin from the problem of *merging*, in 
+We begin with the problem of *merging*, in 
 which we want to combine two sorted lists 
 ${List}_1$ and ${List}_2$ into a single sorted list.
 
@@ -25,7 +25,7 @@ $Merge$ would be useful for sorting an arbitrary list if we knew
 how to divide an arbitrary (unsorted) list into two already 
 sorted half-sized lists. However, it may seem that we are back to 
 where we started, except now we have to sort two smaller lists instead 
-of one big one. Yet sorting two smaller lists is a preferable algorithmic 
+of one big one. Yet, sorting two smaller lists is a preferable algorithmic 
 problem. To see why, let's consider the $MergeSort$ algorithm, which 
 divides an unsorted list into
 two parts and then recursively conquers each smaller sorting problem 
@@ -33,7 +33,7 @@ before merging the sorted lists.
 
 <img src="../../images/merge_3.png">
 
-The figure below shows the recursion tree of $MergeSort$, 
+The figure below shows the recursion tree of $MergeSort$ 
 consisting of $\log_2 n$  levels, where $n$ is the size of the original unsorted list.
 
 <img src="../../images/merge_4.png">
