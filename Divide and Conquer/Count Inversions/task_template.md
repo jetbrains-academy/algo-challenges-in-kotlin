@@ -1,6 +1,6 @@
 <%css "/util/common.css" %>
 
-# Cound Inversions
+# Count Inversions
 
 <div class="logo">
     <img src="../../images/inversions_logo.png">
