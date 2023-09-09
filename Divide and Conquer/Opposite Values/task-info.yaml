@@ -3,9 +3,9 @@ files:
 - name: src/Task.kt
   visible: true
   placeholders:
-  - offset: 57
-    length: 241
-    placeholder_text: return str.indexOf("01")
+  - offset: 53
+    length: 245
+    placeholder_text: "    return str.indexOf(\"01\")"
 - name: test/HiddenTests.kt
   visible: false
 - name: test/Tests.kt
