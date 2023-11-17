@@ -4,21 +4,7 @@ import org.jetbrains.kotlin.util.capitalizeDecapitalize.toLowerCaseAsciiOnly
 
 plugins {
     java
-    kotlin("jvm")
-    application
-}
-
-buildscript {
-    val kotlinVersion: String by properties
-    extra["kotlin-version"] = kotlinVersion
-
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath(kotlin("gradle-plugin", kotlinVersion))
-    }
+    kotlin("jvm") version "1.7.10" apply true
 }
 
 fun printOutput(output: CharSequence): Task {
@@ -33,7 +19,6 @@ fun printOutput(output: CharSequence): Task {
 }
 
 subprojects {
-    apply(plugin = "application")
     apply(plugin = "java")
     apply(plugin = "kotlin")
 
@@ -55,8 +40,12 @@ subprojects {
     }
 
     tasks {
+        withType<JavaCompile> {
+            sourceCompatibility = "11"
+            targetCompatibility = "11"
+        }
         withType<KotlinCompile> {
-            kotlinOptions.jvmTarget = "1.8"
+            kotlinOptions.jvmTarget = "11"
         }
 
         withType<Test> {
