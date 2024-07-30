@@ -4,7 +4,8 @@ import org.jetbrains.kotlin.util.capitalizeDecapitalize.toLowerCaseAsciiOnly
 
 plugins {
     java
-    kotlin("jvm") version "1.7.10" apply true
+    val kotlinVersion = "1.9.0"
+    id("org.jetbrains.kotlin.jvm") version kotlinVersion apply false
 }
 
 fun printOutput(output: CharSequence): Task {

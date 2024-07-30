@@ -11,9 +11,11 @@ vendor:
   url: https://www.jetbrains.com/
 programming_language: Kotlin
 content:
-- Warmup
-- Queries and Incremental Updates
-- Brute Force
-- Divide and Conquer
-- Greedy Algorithms
-- Dynamic Programming
+  - Warmup
+  - Queries and Incremental Updates
+  - Brute Force
+  - Divide and Conquer
+  - Greedy Algorithms
+  - Dynamic Programming
+environment_settings:
+  jvm_language_level: JDK_16
